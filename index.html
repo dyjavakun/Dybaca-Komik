@@ -1,27 +1,2394 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    
+    <!-- Buat Header Footer -->
+    <link rel='stylesheet' id='madara-css-child-css' href='css/styleae.css' type='text/css' media='all' />
 
-    <title>DyBaca</title>
+    <!-- Ionicons -->
+    <link rel='stylesheet' id='ionicons-css' href='assets/ionicons/css/ionicons.min.css' type='text/css' media='all' />
+
+    <!-- UI -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <script type='text/javascript' src='js/jquery.min.js' id='jquery-core-js'></script>
+    <link rel='stylesheet' id='loaders-css' href='css/loaders.min.css' type='text/css' media='all' />
+
+    <link rel="icon" href="assets/icon/ic-32x32.png" sizes="32x32" />
+    <link rel="icon" href="assets/icon/ic-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="assets/icon/ic-180x180.png" />
+    <meta name="msapplication-TileImage" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjjm4K7olnWiwO1lCysQvu4XSpHBmUx7runbsPnjCz2X9TNNijmDgmOCYlWVCVvgRytEwO0mlItlc10yGIcdyDJQGJtTe0CC5j_wvXEibz9NeRW93sw9Xl5MIvFP-48U2ua6r8YcAE8T73k2z-AZ5_knn-kZnz3PRZt2xhelDw5RSfwEVnKVsf8tbx3/s270/ic-270.png" />
+    <meta property="og:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/  AVvXsEhRju0lWNXTb1Y5h_UKJPlYNmJk0pHs8QHJSW9qVtCF8FBpdutTjNDhwXdzMYqww_v43BNsVam5mwjyr-ViB7DIDFHBYyZf2_P_dNTasVn6rtNaSs-oGRkVEZFNhHbalwnQcBWmRLs4_MJMElc3WfOiWWiAtRtAGOt8x2kX0ZryLighF_h34cCZZied/s320/logo.png"/>
+    <meta property="og:site_name" content="DyBaca" />
+    <meta property="og:title" content="DyBaca" />
+    <meta property="og:description" content="DyBaca n Chilzz" />
+    <meta name="description" content="DyBaca n Chilzz" />
+    <meta name="generator" content="Powered by Dyjavakun - Manusia yang hidup di bumi yang dermawan dan tidak sombong" />
+
+    <title>DyBaca &#8211; Dybaca n Chilzz</title>
   </head>
-  <body>
-    <h1>Web Komik</h1>
+  <body class="home page-template page-template-page-templates page-template-home2 page-template-page-templateshome2-php page page-id-32 wp-embed-responsive header-style-1 text-ui-light">
+    <div class="wrap">
+      <div class="body-wrap">
+        <header class="site-header">
+          <div class="c-header__top">
+            <ul class="search-main-menu">
+              <li>
+                <form id="blog-post-search" class="ajax" action="#" method="get">
+                  <input type="text" placeholder="Masukan nama komik..." name="s" value="">
+                  <input type="submit" value="Cari">
+                  <div class="loader-inner line-scale">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                  </div>
+                </form>
+              </li>
+            </ul>
+            <div class="main-navigation style-1 ">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="main-navigation_wrap">
+                      <div class="wrap_branding">
+                        <a class="logo" href="index.html" title="DyBaca">
+                          <img class="img-responsive" src="assets/icon/logo.png" alt="DyBaca" />
+                        </a>
+                      </div>
+                      <div class="main-menu">
+                        <ul class="nav navbar-nav main-navbar">
+                          <li id="menu-item-84" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-84">
+                            <a href="#">Home</a>
+                          </li>
+                          <li id="menu-item-85" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-85">
+                            <a href="#">Komik</a>
+                          </li>
+                          <li id="menu-item-85" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-85">
+                            <a href="#">Jadwal</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="search-navigation search-sidebar">
+                        <div id="manga-search-2" class="widget col-12 col-md-12   default  no-icon heading-style-1 manga-widget widget-manga-search">
+                          <div class="widget__inner manga-widget widget-manga-search__inner c-widget-wrap">
+                            <div class="widget-content">
+                              <div class="search-navigation__wrap">
+                                <script>
+                                  jQuery(document).ready(function($) {
+                                        if ($('.c-header__top .manga-search-form').length !== 0 && $('.c-header__top .manga-search-form.search-form').length !== 0) {
+                                          $('form#blog-post-search').append(' < input type = "hidden"
+                                              name = "post_type"
+                                              value = "wp-manga" > ');
+                                              $('form#blog-post-search').addClass("manga-search-form"); $('form#blog-post-search input[name="s"]').addClass("manga-search-field"); $('form.manga-search-form.ajax input.manga-search-field').each(function() {
+                                                  var searchIcon = $(this).parent().children('.ion-ios-search-strong');
+                                                  var append = $(this).parent();
+                                                  $(this).autocomplete({
+                                                      appendTo: append,
+                                                      source: function(request, resp) {
+                                                        $.ajax({
+                                                          url: manga.ajax_url,
+                                                          type: 'POST',
+                                                          dataType: 'json',
+                                                          data: {
+                                                            action: 'wp-manga-search-manga',
+                                                            title: request.term,
+                                                          },
+                                                          success: function(data) {
+                                                            resp($.map(data.data, function(item) {
+                                                              if (true == data.success) {
+                                                                return {
+                                                                  label: item.title,
+                                                                  value: item.title,
+                                                                  url: item.url,
+                                                                  type: item.type
+                                                                }
+                                                              } else {
+                                                                return {
+                                                                  label: item.message,
+                                                                  value: item.message,
+                                                                  type: item.type,
+                                                                  click: false
+                                                                }
+                                                              }
+                                                            }))
+                                                          }
+                                                        });
+                                                      },
+                                                      select: function(e, ui) {
+                                                        if (ui.item.url) {
+                                                          window.location.href = ui.item.url;
+                                                        } else {
+                                                          if (ui.item.click) {
+                                                            return true;
+                                                          } else {
+                                                            return false;
+                                                          }
+                                                        }
+                                                      },
+                                                      open: function(e, ui) {
+                                                        var acData = $(this).data('uiAutocomplete');
+                                                        acData.menu.element.addClass('manga-autocomplete').find('li div').each(function() {
+                                                            var $self = $(this),
+                                                              keyword = $.trim(acData.term).split(' ').join('|');
+                                                            $self.html($self.text().replace(new RegExp("(" + keyword + ")", "gi"), ' < span class = "manga-text-highlight" > $1 < /span>' ) );
+                                                            });
+                                                          }
+                                                        }).autocomplete("instance")._renderItem = function(ul, item) {
+                                                        return $(" < li class = 'search-item' > " ).append(" < div class = 'manga-type-" + item.type + "' > " + item.label + " < /div>" ).appendTo(ul);
+                                                          };
+                                                        });
+                                                    }
+                                                  });
+                                </script>
+                                <ul class="main-menu-search nav-menu">
+                                  <li class="menu-search">
+                                    <a href="javascript:;" class="open-search-main-menu">
+                                      <i class="icon ion-ios-search"></i>
+                                      <i class="icon ion-android-close"></i>
+                                    </a>
+                                    <ul ul class="search-main-menu">
+                                      <li>
+                                        <form class="manga-search-form search-form ajax" action="index.html" method="get">
+                                          <input class="manga-search-field" type="text" placeholder="Masukan nama komik..." name="s" value="">
+                                          <input type="hidden" name="post_type" value="wp-manga">
+                                          <i class="icon ion-ios-search"></i>
+                                          <div class="loader-inner ball-clip-rotate-multiple">
+                                            <div></div>
+                                            <div></div>
+                                          </div>
+                                          <input type="submit" value="Cari">
+                                        </form>
+                                      </li>
+                                    </ul>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c-togle__menu">
+                        <button type="button" class="menu_icon__open">
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mobile-menu menu-collapse off-canvas">
+            <div class="close-nav">
+              <button class="menu_icon__close">
+                <span></span>
+                <span></span>
+              </button>
+            </div>
+            <div class="c-modal_item">
+              <span class="c-modal_sign-in">
+                <a href="#" data-toggle="modal" data-target="#form-login" class="btn-active-modal">Sign in</a>
+              </span>
+              <span class="c-modal_sign-up">
+                <a href="javascript:void(0)" data-toggle="modal" data-target="#form-sign-up" class="btn-active-modal">Sign up</a>
+              </span>
+            </div>
+            <nav class="off-menu">
+              <ul id="menu-main-menu-1" class="nav navbar-nav main-navbar">
+                <li id="nav-menu-item-84" class="main-menu-item menu-item-depth-0 menu-item menu-item-type-custom menu-item-object-custom parent dropdown">
+                  <a href="#" class="menu-link disabled main-menu-link">Home </a>
+                </li>
+                <li id="nav-menu-item-85" class="main-menu-item menu-item-depth-0 menu-item menu-item-type-custom menu-item-object-custom">
+                  <a href="#" class="menu-link disabled main-menu-link">Komik </a>
+                </li>
+                <li id="nav-menu-item-1036" class="sub-menu-item menu-item-depth-1 menu-item menu-item-type-post_type menu-item-object-page">
+                  <a href="#" class="menu-link  sub-menu-link">Jadwal </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class=" c-sub-header-nav with-border  hide-sticky-menu">
+            <div class="container-fluid">
+              <div class="c-sub-nav_wrap">
+                <div class="sub-nav_content">
+                  <ul class="sub-nav_list list-inline second-menu">
+                    <li id="menu-item-1123" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1123">
+                    </li>
+                    <i class="mobile-icon icon ion-md-more"></i>
+                  </ul>
+                </div>
+                <div class="c-modal_item">
+                  <a href="javascript:void(0)" data-toggle="modal" data-target="#form-login" class="btn-active-modal no-underline">Sign in</a>
+                  <a href="javascript:void(0)" data-toggle="modal" data-target="#form-sign-up" class="btn-active-modal no-underline">Sign up</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="site-content">
+          <section class="recommendations" style="background-color:#000000">
+            <div class="video-bg">
+              <div class="container">
+                <div class="row">
+                  <div class="col-12"></div>
+                  <div class="col-md-12  col-sm-12 col-xs-12">
+                    <div class="d-flex justify-content-center">
+                      <h1 style="font-weight: 200;">Komik Terpopuler ></h1>
+                    </div>
+                  </div>
+                  <div class="d-flex" style="flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;">
+                    <div class="col-6 col-sm-6 col-md-4 col-xl-2" style="display: flex; flex-flow: column; justify-content: space-between; padding: 0px 9px; margin-bottom: 15px;">
+                      <div class="series-card">
+                        <a class="series-link" href="series/overgeared/index.html">
+                          <span class="manga-title-badges custom manhwa" style="align-self: center; position:absolute; right:0; margin-top:5px; z-index:3;"> Manhwa </span>
+                          <img class="thumb-img" src="assets/cover/Overgeared.jpg" />
+                        </a>
+                      </div>
+                      <div class="series-box">
+                        <a href="series/overgeared/index.html" class="no-underline">
+                          <h5 class="series-title"> Kang Item </h5>
+                        </a>
+                      </div>
+                      <div class="series-content">
+                        <a href="series/overgeared/chapter-180/index.html" class="no-underline">
+                          <div class="series-chapter-item">
+                            <span class="series-badge"> Chapter 180 </span>
+                            <span class="series-time"> 12 mins </span>
+                          </div>
+                        </a>
+                        <a href="series/overgeared/chapter-179/index.html" class="no-underline">
+                          <div class="series-chapter-item">
+                            <span class="series-badge"> Chapter 179 </span>
+                            <span class="series-time"> May 6 </span>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-4 col-xl-2" style="display: flex; flex-flow: column; justify-content: space-between; padding: 0px 9px; margin-bottom: 15px;">
+                      <div class="series-card">
+                        <a class="series-link" href="series/the-return-of-the-crazy-demon/index.html">
+                          <span class="manga-title-badges custom manhwa" style="align-self: center; position:absolute; right:0; margin-top:5px; z-index:3;"> Manhwa </span>
+                          <img class="thumb-img" src="assets/cover/The-Return-Of-the-Crazy-Demon-1.jpg" />
+                        </a>
+                      </div>
+                      <div class="series-box">
+                        <a href="series/the-return-of-the-crazy-demon/index.html" class="no-underline">
+                          <h5 class="series-title"> The Return Of the Crazy Demon </h5>
+                        </a>
+                      </div>
+                      <div class="series-content">
+                        <a href="series/the-return-of-the-crazy-demon/chapter-71/index.html" class="no-underline">
+                          <div class="series-chapter-item">
+                            <span class="series-badge"> Chapter 71 </span>
+                            <span class="series-time"> 2 days </span>
+                          </div>
+                        </a>
+                        <a href="series/the-return-of-the-crazy-demon/chapter-70/index.html" class="no-underline">
+                          <div class="series-chapter-item">
+                            <span class="series-badge"> Chapter 70 </span>
+                            <span class="series-time"> May 5 </span>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-4 col-xl-2" style="display: flex; flex-flow: column; justify-content: space-between; padding: 0px 9px; margin-bottom: 15px;">
+                      <div class="series-card">
+                        <a class="series-link" href="series/second-life-ranker/index.html">
+                          <span class="manga-title-badges custom manhwa" style="align-self: center; position:absolute; right:0; margin-top:5px; z-index:3;"> Manhwa </span>
+                          <img class="thumb-img" src="assets/cover/Second-life-ranker-1-3.jpg" />
+                        </a>
+                      </div>
+                      <div class="series-box">
+                        <a href="series/second-life-ranker/index.html" class="no-underline">
+                          <h5 class="series-title"> Second Life Ranker </h5>
+                        </a>
+                      </div>
+                      <div class="series-content">
+                        <a href="series/second-life-ranker/chapter-155/index.html" class="no-underline">
+                          <div class="series-chapter-item">
+                            <span class="series-badge"> Chapter 155 </span>
+                            <span class="series-time"> 2 days </span>
+                          </div>
+                        </a>
+                        <a href="series/second-life-ranker/chapter-154/index.html" class="no-underline">
+                          <div class="series-chapter-item">
+                            <span class="series-badge"> Chapter 154 </span>
+                            <span class="series-time"> April 27 </span>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-4 col-xl-2" style="display: flex; flex-flow: column; justify-content: space-between; padding: 0px 9px; margin-bottom: 15px;">
+                      <div class="series-card">
+                        <a class="series-link" href="series/nano-machine/index.html">
+                          <span class="manga-title-badges custom manhwa" style="align-self: center; position:absolute; right:0; margin-top:5px; z-index:3;"> Manhwa </span>
+                          <img class="thumb-img" src="assets/cover/nano-S2-1.jpg" />
+                        </a>
+                      </div>
+                      <div class="series-box">
+                        <a href="series/nano-machine/index.html" class="no-underline">
+                          <h5 class="series-title"> Nano Machine </h5>
+                        </a>
+                      </div>
+                      <div class="series-content">
+                        <a href="series/nano-machine/chapter-153/index.html" class="no-underline">
+                          <div class="series-chapter-item">
+                            <span class="series-badge"> Chapter 153 </span>
+                            <span class="series-time"> 3 days </span>
+                          </div>
+                        </a>
+                        <a href="series/nano-machine/chapter-152/index.html" class="no-underline">
+                          <div class="series-chapter-item">
+                            <span class="series-badge"> Chapter 152 </span>
+                            <span class="series-time"> May 3 </span>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-4 col-xl-2" style="display: flex; flex-flow: column; justify-content: space-between; padding: 0px 9px; margin-bottom: 15px;">
+                      <div class="series-card">
+                        <a class="series-link" href="series/solo-leveling-special/index.html">
+                          <span class="manga-title-badges custom manhwa" style="align-self: center; position:absolute; right:0; margin-top:5px; z-index:3;"> Manhwa </span>
+                          <img class="thumb-img" src="assets/cover/Solo-Leveling.jpg" />
+                        </a>
+                      </div>
+                      <div class="series-box">
+                        <a href="series/solo-leveling-special/index.html" class="no-underline">
+                          <h5 class="series-title"> Solo Leveling Special </h5>
+                        </a>
+                      </div>
+                      <div class="series-content">
+                        <a href="series/solo-leveling-special/chapter-18/index.html" class="no-underline">
+                          <div class="series-chapter-item">
+                            <span class="series-badge"> Chapter 18 </span>
+                            <span class="series-time"> 3 days </span>
+                          </div>
+                        </a>
+                        <a href="series/solo-leveling-special/chapter-17/index.html" class="no-underline">
+                          <div class="series-chapter-item">
+                            <span class="series-badge"> Chapter 17 </span>
+                            <span class="series-time"> May 3 </span>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-4 col-xl-2" style="display: flex; flex-flow: column; justify-content: space-between; padding: 0px 9px; margin-bottom: 15px;">
+                      <div class="series-card">
+                        <a class="series-link" href="series/the-world-after-the-fall/index.html">
+                          <span class="manga-title-badges custom manhwa" style="align-self: center; position:absolute; right:0; margin-top:5px; z-index:3;"> Manhwa </span>
+                          <img class="thumb-img" src="assets/cover/After-The-Fall-1.jpg"/>
+                        </a>
+                      </div>
+                      <div class="series-box">
+                        <a href="series/the-world-after-the-fall/index.html" class="no-underline">
+                          <h5 class="series-title"> The World After The Fall </h5>
+                        </a>
+                      </div>
+                      <div class="series-content">
+                        <a href="series/the-world-after-the-fall/chapter-73/index.html" class="no-underline">
+                          <div class="series-chapter-item">
+                            <span class="series-badge"> Chapter 73 </span>
+                            <span class="series-time"> May 10 </span>
+                          </div>
+                        </a>
+                        <a href="series/the-world-after-the-fall/chapter-72/index.html" class="no-underline">
+                          <div class="series-chapter-item">
+                            <span class="series-badge"> Chapter 72 </span>
+                            <span class="series-time"> May 1 </span>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-4 col-xl-2" style="display: flex; flex-flow: column; justify-content: space-between; padding: 0px 9px; margin-bottom: 15px;">
+                      <div class="series-card">
+                        <a class="series-link" href="series/i-obtained-a-mythic-item/index.html">
+                          <span class="manga-title-badges custom manhwa" style="align-self: center; position:absolute; right:0; margin-top:5px; z-index:3;"> Manhwa </span>
+                          <img class="thumb-img" src="assets/cover/I-Obtained-a-Mythic-Item-2.jpg" />
+                        </a>
+                      </div>
+                      <div class="series-box">
+                        <a href="series/i-obtained-a-mythic-item/index.html" class="no-underline">
+                          <h5 class="series-title"> I Obtained a Mythic Item </h5>
+                        </a>
+                      </div>
+                      <div class="series-content">
+                        <a href="series/i-obtained-a-mythic-item/chapter-53/index.html" class="no-underline">
+                          <div class="series-chapter-item">
+                            <span class="series-badge"> Chapter 53 </span>
+                            <span class="series-time"> May 8 </span>
+                          </div>
+                        </a>
+                        <a href="series/i-obtained-a-mythic-item/chapter-52/index.html" class="no-underline">
+                          <div class="series-chapter-item">
+                            <span class="series-badge"> Chapter 52 </span>
+                            <span class="series-time"> May 1 </span>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-4 col-xl-2" style="display: flex; flex-flow: column; justify-content: space-between; padding: 0px 9px; margin-bottom: 15px;">
+                      <div class="series-card">
+                        <a class="series-link" href="series/academys-undercover-professor/index.html">
+                          <span class="manga-title-badges custom manhwa" style="align-self: center; position:absolute; right:0; margin-top:5px; z-index:3;"> Manhwa </span>
+                          <img class="thumb-img" src="assets/cover/Academys-Undercover-Professor-3.jpg" />
+                        </a>
+                      </div>
+                      <div class="series-box">
+                        <a href="series/academys-undercover-professor/index.html" class="no-underline">
+                          <h5 class="series-title"> Academy's Undercover Professor </h5>
+                        </a>
+                      </div>
+                      <div class="series-content">
+                        <a href="series/academys-undercover-professor/chapter-53/index.html" class="no-underline">
+                          <div class="series-chapter-item">
+                            <span class="series-badge"> Chapter 53 </span>
+                            <span class="series-time"> April 9 </span>
+                          </div>
+                        </a>
+                        <a href="series/academys-undercover-professor/chapter-52/index.html" class="no-underline">
+                          <div class="series-chapter-item">
+                            <span class="series-badge"> Chapter 52 </span>
+                            <span class="series-time"> April 3 </span>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="latest" style="background-color:#000000">
+            <div class="video-bg">
+              <div class="container">
+                <div class="row">
+                  <div class="col-12"></div>
+                  <div class="col-md-8  col-sm-12 col-xs-12">
+                    <div class="d-flex justify-content-center">
+                      <h1 style="font-weight: 200;">Komik Terbaru</h1>
+                    </div>
+                    <div class="d-flex justify-content-center" style="flex-wrap:wrap;">
+                      <div class="col-6 col-sm-6 col-md-6 col-xl-3" style="display: flex; flex-flow: column; justify-content: space-between; padding: 0px 9px; margin-bottom: 15px;">
+                        <div class="series-card">
+                          <a class="series-link" href="series/i-returned-as-an-fff-class-witch-doctor/index.html">
+                            <span class="manga-title-badges custom manhwa" style="align-self: center; position:absolute; right:0; margin-top:5px; z-index:3;"> Manhwa </span>
+                            <img class="thumb-img" src="assets/cover/I-Returned-As-An-FFF-Class-Witch-Doctor.jpg" />
+                          </a>
+                        </div>
+                        <div class="series-box">
+                          <a href="series/i-returned-as-an-fff-class-witch-doctor/index.html" class="no-underline">
+                            <h5 class="series-title"> I Returned As An FFF-Class Wit... </h5>
+                          </a>
+                        </div>
+                        <div class="series-content">
+                          <a href="series/i-returned-as-an-fff-class-witch-doctor/chapter-20/index.html" class="no-underline">
+                            <div class="series-chapter-item">
+                              <span class="series-badge"> Chapter 20 </span>
+                              <span class="series-time"> 1 min </span>
+                            </div>
+                          </a>
+                          <a href="series/i-returned-as-an-fff-class-witch-doctor/chapter-19/index.html" class="no-underline">
+                            <div class="series-chapter-item">
+                              <span class="series-badge"> Chapter 19 </span>
+                              <span class="series-time"> 2 mins </span>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="col-6 col-sm-6 col-md-6 col-xl-3" style="display: flex; flex-flow: column; justify-content: space-between; padding: 0px 9px; margin-bottom: 15px;">
+                        <div class="series-card">
+                          <a class="series-link" href="series/overgeared/index.html">
+                            <span class="manga-title-badges custom manhwa" style="align-self: center; position:absolute; right:0; margin-top:5px; z-index:3;"> Manhwa </span>
+                            <img class="thumb-img" src="assets/cover/Overgeared.jpg" />
+                          </a>
+                        </div>
+                        <div class="series-box">
+                          <a href="series/overgeared/index.html" class="no-underline">
+                            <h5 class="series-title"> Kang Item </h5>
+                          </a>
+                        </div>
+                        <div class="series-content">
+                          <a href="series/overgeared/chapter-180/index.html" class="no-underline">
+                            <div class="series-chapter-item">
+                              <span class="series-badge"> Chapter 180 </span>
+                              <span class="series-time"> 12 mins </span>
+                            </div>
+                          </a>
+                          <a href="series/overgeared/chapter-179/index.html" class="no-underline">
+                            <div class="series-chapter-item">
+                              <span class="series-badge"> Chapter 179 </span>
+                              <span class="series-time"> May 6 </span>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="col-6 col-sm-6 col-md-6 col-xl-3" style="display: flex; flex-flow: column; justify-content: space-between; padding: 0px 9px; margin-bottom: 15px;">
+                        <div class="series-card">
+                          <a class="series-link" href="series/demonic-emperor/index.html">
+                            <span class="manga-title-badges custom manhua" style="align-self: center; position:absolute; right:0; margin-top:5px; z-index:3;"> Manhua </span>
+                            <img class="thumb-img" src="assets/cover/dff66ff8776c027322a7c5dd79388840_waifu2x_art_noise1_tta_1.png" />
+                          </a>
+                        </div>
+                        <div class="series-box">
+                          <a href="series/demonic-emperor/index.html" class="no-underline">
+                            <h5 class="series-title"> Demonic Emperor </h5>
+                          </a>
+                        </div>
+                        <div class="series-content">
+                          <a href="series/demonic-emperor/chapter-394/index.html" class="no-underline">
+                            <div class="series-chapter-item">
+                              <span class="series-badge"> Chapter 394 </span>
+                              <span class="series-time"> 2 hours </span>
+                            </div>
+                          </a>
+                          <a href="series/demonic-emperor/chapter-393/index.html" class="no-underline">
+                            <div class="series-chapter-item">
+                              <span class="series-badge"> Chapter 393 </span>
+                              <span class="series-time"> 4 hours </span>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="col-6 col-sm-6 col-md-6 col-xl-3" style="display: flex; flex-flow: column; justify-content: space-between; padding: 0px 9px; margin-bottom: 15px;">
+                        <div class="series-card">
+                          <a class="series-link" href="series/return-of-frozen-player/index.html">
+                            <span class="manga-title-badges custom manhwa" style="align-self: center; position:absolute; right:0; margin-top:5px; z-index:3;"> Manhwa </span>
+                            <img class="thumb-img" src="assets/cover/Return-Of-Frozen-Player.jpg" />
+                          </a>
+                        </div>
+                        <div class="series-box">
+                          <a href="series/return-of-frozen-player/index.html" class="no-underline">
+                            <h5 class="series-title"> Return Of Frozen Player </h5>
+                          </a>
+                        </div>
+                        <div class="series-content">
+                          <a href="series/return-of-frozen-player/chapter-82/index.html" class="no-underline">
+                            <div class="series-chapter-item">
+                              <span class="series-badge"> Chapter 82 </span>
+                              <span class="series-time"> 13 hours </span>
+                            </div>
+                          </a>
+                          <a href="series/return-of-frozen-player/chapter-81/index.html" class="no-underline">
+                            <div class="series-chapter-item">
+                              <span class="series-badge"> Chapter 81 </span>
+                              <span class="series-time"> May 6 </span>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="col-6 col-sm-6 col-md-6 col-xl-3" style="display: flex; flex-flow: column; justify-content: space-between; padding: 0px 9px; margin-bottom: 15px;">
+                        <div class="series-card">
+                          <a class="series-link" href="series/archmage-streamer/index.html">
+                            <span class="manga-title-badges custom manhwa" style="align-self: center; position:absolute; right:0; margin-top:5px; z-index:3;"> Manhwa </span>
+                            <img class="thumb-img" src="assets/cover/Archmage-Streamer2-1.jpg" />
+                          </a>
+                        </div>
+                        <div class="series-box">
+                          <a href="series/archmage-streamer/index.html" class="no-underline">
+                            <h5 class="series-title"> Archmage Streamer </h5>
+                          </a>
+                        </div>
+                        <div class="series-content">
+                          <a href="series/archmage-streamer/chapter-66/index.html" class="no-underline">
+                            <div class="series-chapter-item">
+                              <span class="series-badge"> Chapter 66 </span>
+                              <span class="series-time"> 15 hours </span>
+                            </div>
+                          </a>
+                          <a href="series/archmage-streamer/chapter-65/index.html" class="no-underline">
+                            <div class="series-chapter-item">
+                              <span class="series-badge"> Chapter 65 </span>
+                              <span class="series-time"> May 5 </span>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="col-6 col-sm-6 col-md-6 col-xl-3" style="display: flex; flex-flow: column; justify-content: space-between; padding: 0px 9px; margin-bottom: 15px;">
+                        <div class="series-card">
+                          <a class="series-link" href="series/solo-max-level-newbie/index.html">
+                            <span class="manga-title-badges custom manhwa" style="align-self: center; position:absolute; right:0; margin-top:5px; z-index:3;"> Manhwa </span>
+                            <img class="thumb-img" src="assets/cover/solomax.jpg" />
+                          </a>
+                        </div>
+                        <div class="series-box">
+                          <a href="series/solo-max-level-newbie/index.html" class="no-underline">
+                            <h5 class="series-title"> Solo Max-Level Newbie </h5>
+                          </a>
+                        </div>
+                        <div class="series-content">
+                          <a href="series/solo-max-level-newbie/chapter-99/index.html" class="no-underline">
+                            <div class="series-chapter-item">
+                              <span class="series-badge"> Chapter 99 </span>
+                              <span class="series-time"> 15 hours </span>
+                            </div>
+                          </a>
+                          <a href="series/solo-max-level-newbie/chapter-98/index.html" class="no-underline">
+                            <div class="series-chapter-item">
+                              <span class="series-badge"> Chapter 98 </span>
+                              <span class="series-time"> May 6 </span>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="col-6 col-sm-6 col-md-6 col-xl-3" style="display: flex; flex-flow: column; justify-content: space-between; padding: 0px 9px; margin-bottom: 15px;">
+                        <div class="series-card">
+                          <a class="series-link" href="series/i-used-to-be-the-boss/index.html">
+                            <span class="manga-title-badges custom manhwa" style="align-self: center; position:absolute; right:0; margin-top:5px; z-index:3;"> Manhwa </span>
+                            <img class="thumb-img" src="assets/cover/I_Used_To_Be_The_Boss.jpg" />
+                          </a>
+                        </div>
+                        <div class="series-box">
+                          <a href="series/i-used-to-be-the-boss/index.html" class="no-underline">
+                            <h5 class="series-title"> I Used To Be The Boss </h5>
+                          </a>
+                        </div>
+                        <div class="series-content">
+                          <a href="series/i-used-to-be-the-boss/chapter-28/index.html" class="no-underline">
+                            <div class="series-chapter-item">
+                              <span class="series-badge"> Chapter 28 </span>
+                              <span class="series-time"> 16 hours </span>
+                            </div>
+                          </a>
+                          <a href="series/i-used-to-be-the-boss/chapter-27/index.html" class="no-underline">
+                            <div class="series-chapter-item">
+                              <span class="series-badge"> Chapter 27 </span>
+                              <span class="series-time"> May 4 </span>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="col-6 col-sm-6 col-md-6 col-xl-3" style="display: flex; flex-flow: column; justify-content: space-between; padding: 0px 9px; margin-bottom: 15px;">
+                        <div class="series-card">
+                          <a class="series-link" href="series/the-greatest-estate-developer/index.html">
+                            <span class="manga-title-badges custom manhwa" style="align-self: center; position:absolute; right:0; margin-top:5px; z-index:3;"> Manhwa </span>
+                            <img class="thumb-img" src="assets/cover/The-Greatest-Estate-Developer.jpg" />
+                          </a>
+                        </div>
+                        <div class="series-box">
+                          <a href="series/the-greatest-estate-developer/index.html" class="no-underline">
+                            <h5 class="series-title"> The Greatest Estate Developer </h5>
+                          </a>
+                        </div>
+                        <div class="series-content">
+                          <a href="series/the-greatest-estate-developer/chapter-99/index.html" class="no-underline">
+                            <div class="series-chapter-item">
+                              <span class="series-badge"> Chapter 99 </span>
+                              <span class="series-time"> 1 day </span>
+                            </div>
+                          </a>
+                          <a href="series/the-greatest-estate-developer/chapter-98/index.html" class="no-underline">
+                            <div class="series-chapter-item">
+                              <span class="series-badge"> Chapter 98 </span>
+                              <span class="series-time"> May 6 </span>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="col-6 col-sm-6 col-md-6 col-xl-3" style="display: flex; flex-flow: column; justify-content: space-between; padding: 0px 9px; margin-bottom: 15px;">
+                        <div class="series-card">
+                          <a class="series-link" href="series/heavenly-inquisition-sword/index.html">
+                            <span class="manga-title-badges custom manhwa" style="align-self: center; position:absolute; right:0; margin-top:5px; z-index:3;"> Manhwa </span>
+                            <img class="thumb-img" src="assets/cover/Heavenly-Inquisition-Sword.jpg" />
+                          </a>
+                        </div>
+                        <div class="series-box">
+                          <a href="series/heavenly-inquisition-sword/index.html" class="no-underline">
+                            <h5 class="series-title"> Heavenly Inquisition Sword </h5>
+                          </a>
+                        </div>
+                        <div class="series-content">
+                          <a href="series/heavenly-inquisition-sword/chapter-48/index.html" class="no-underline">
+                            <div class="series-chapter-item">
+                              <span class="series-badge"> Chapter 48 </span>
+                              <span class="series-time"> 1 day </span>
+                            </div>
+                          </a>
+                          <a href="series/heavenly-inquisition-sword/chapter-47/index.html" class="no-underline">
+                            <div class="series-chapter-item">
+                              <span class="series-badge"> Chapter 47 </span>
+                              <span class="series-time"> May 4 </span>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="col-6 col-sm-6 col-md-6 col-xl-3" style="display: flex; flex-flow: column; justify-content: space-between; padding: 0px 9px; margin-bottom: 15px;">
+                        <div class="series-card">
+                          <a class="series-link" href="series/the-return-of-the-crazy-demon/index.html">
+                            <span class="manga-title-badges custom manhwa" style="align-self: center; position:absolute; right:0; margin-top:5px; z-index:3;"> Manhwa </span>
+                            <img class="thumb-img" src="assets/cover/The-Return-Of-the-Crazy-Demon-1.jpg" />
+                          </a>
+                        </div>
+                        <div class="series-box">
+                          <a href="series/the-return-of-the-crazy-demon/index.html" class="no-underline">
+                            <h5 class="series-title"> The Return Of the Crazy Demon </h5>
+                          </a>
+                        </div>
+                        <div class="series-content">
+                          <a href="series/the-return-of-the-crazy-demon/chapter-71/index.html" class="no-underline">
+                            <div class="series-chapter-item">
+                              <span class="series-badge"> Chapter 71 </span>
+                              <span class="series-time"> 2 days </span>
+                            </div>
+                          </a>
+                          <a href="series/the-return-of-the-crazy-demon/chapter-70/index.html" class="no-underline">
+                            <div class="series-chapter-item">
+                              <span class="series-badge"> Chapter 70 </span>
+                              <span class="series-time"> May 5 </span>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="col-6 col-sm-6 col-md-6 col-xl-3" style="display: flex; flex-flow: column; justify-content: space-between; padding: 0px 9px; margin-bottom: 15px;">
+                        <div class="series-card">
+                          <a class="series-link" href="series/a-returners-magic-should-be-special/index.html">
+                            <span class="manga-title-badges custom manhwa" style="align-self: center; position:absolute; right:0; margin-top:5px; z-index:3;"> Manhwa </span>
+                            <img class="thumb-img" src="assets/cover/RMSBS_new_cover.jpg" />
+                          </a>
+                        </div>
+                        <div class="series-box">
+                          <a href="series/a-returners-magic-should-be-special/index.html" class="no-underline">
+                            <h5 class="series-title"> A Returner's Magic Should be S... </h5>
+                          </a>
+                        </div>
+                        <div class="series-content">
+                          <a href="series/a-returners-magic-should-be-special/chapter-224/index.html" class="no-underline">
+                            <div class="series-chapter-item">
+                              <span class="series-badge"> Chapter 224 </span>
+                              <span class="series-time"> 2 days </span>
+                            </div>
+                          </a>
+                          <a href="series/a-returners-magic-should-be-special/chapter-223/index.html" class="no-underline">
+                            <div class="series-chapter-item">
+                              <span class="series-badge"> Chapter 223 </span>
+                              <span class="series-time"> May 1 </span>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="col-6 col-sm-6 col-md-6 col-xl-3" style="display: flex; flex-flow: column; justify-content: space-between; padding: 0px 9px; margin-bottom: 15px;">
+                        <div class="series-card">
+                          <a class="series-link" href="series/lookism/index.html">
+                            <img class="thumb-img" src="assets/cover/Lookism-2.jpg" />
+                          </a>
+                        </div>
+                        <div class="series-box">
+                          <a href="series/lookism/index.html" class="no-underline">
+                            <h5 class="series-title"> Lookism </h5>
+                          </a>
+                        </div>
+                        <div class="series-content">
+                          <a href="series/lookism/chapter-448/index.html" class="no-underline">
+                            <div class="series-chapter-item">
+                              <span class="series-badge"> Chapter 448 </span>
+                              <span class="series-time"> 2 days </span>
+                            </div>
+                          </a>
+                          <a href="series/lookism/chapter-447/index.html" class="no-underline">
+                            <div class="series-chapter-item">
+                              <span class="series-badge"> Chapter 447 </span>
+                              <span class="series-time"> May 5 </span>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="col-6 col-sm-6 col-md-6 col-xl-3" style="display: flex; flex-flow: column; justify-content: space-between; padding: 0px 9px; margin-bottom: 15px;">
+                        <div class="series-card">
+                          <a class="series-link" href="series/second-life-ranker/index.html">
+                            <span class="manga-title-badges custom manhwa" style="align-self: center; position:absolute; right:0; margin-top:5px; z-index:3;"> Manhwa </span>
+                            <img class="thumb-img" src="assets/cover/Second-life-ranker-1-3.jpg" />
+                          </a>
+                        </div>
+                        <div class="series-box">
+                          <a href="series/second-life-ranker/index.html" class="no-underline">
+                            <h5 class="series-title"> Second Life Ranker </h5>
+                          </a>
+                        </div>
+                        <div class="series-content">
+                          <a href="series/second-life-ranker/chapter-155/index.html" class="no-underline">
+                            <div class="series-chapter-item">
+                              <span class="series-badge"> Chapter 155 </span>
+                              <span class="series-time"> 2 days </span>
+                            </div>
+                          </a>
+                          <a href="series/second-life-ranker/chapter-154/index.html" class="no-underline">
+                            <div class="series-chapter-item">
+                              <span class="series-badge"> Chapter 154 </span>
+                              <span class="series-time"> April 27 </span>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="col-6 col-sm-6 col-md-6 col-xl-3" style="display: flex; flex-flow: column; justify-content: space-between; padding: 0px 9px; margin-bottom: 15px;">
+                        <div class="series-card">
+                          <a class="series-link" href="series/relife-player/index.html">
+                            <span class="manga-title-badges custom manhwa" style="align-self: center; position:absolute; right:0; margin-top:5px; z-index:3;"> Manhwa </span>
+                            <img class="thumb-img" src="assets/cover/ReLife_Player.jpg" />
+                          </a>
+                        </div>
+                        <div class="series-box">
+                          <a href="series/relife-player/index.html" class="no-underline">
+                            <h5 class="series-title"> Re:Life Player </h5>
+                          </a>
+                        </div>
+                        <div class="series-content">
+                          <a href="series/relife-player/chapter-42/index.html" class="no-underline">
+                            <div class="series-chapter-item">
+                              <span class="series-badge"> Chapter 42 </span>
+                              <span class="series-time"> 2 days </span>
+                            </div>
+                          </a>
+                          <a href="series/relife-player/chapter-41/index.html" class="no-underline">
+                            <div class="series-chapter-item">
+                              <span class="series-badge"> Chapter 41 </span>
+                              <span class="series-time"> May 4 </span>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="col-6 col-sm-6 col-md-6 col-xl-3" style="display: flex; flex-flow: column; justify-content: space-between; padding: 0px 9px; margin-bottom: 15px;">
+                        <div class="series-card">
+                          <a class="series-link" href="series/the-constellations-are-my-disciples/index.html">
+                            <span class="manga-title-badges custom manhwa" style="align-self: center; position:absolute; right:0; margin-top:5px; z-index:3;"> Manhwa </span>
+                            <img class="thumb-img" src="assets/cover/The-Greatest-Estate-Developer.jpg" />
+                          </a>
+                        </div>
+                        <div class="series-box">
+                          <a href="series/the-constellations-are-my-disciples/index.html" class="no-underline">
+                            <h5 class="series-title"> The Constellations Are My Disc... </h5>
+                          </a>
+                        </div>
+                        <div class="series-content">
+                          <a href="series/the-constellations-are-my-disciples/chapter-24/index.html" class="no-underline">
+                            <div class="series-chapter-item">
+                              <span class="series-badge"> Chapter 24 </span>
+                              <span class="series-time"> 2 days </span>
+                            </div>
+                          </a>
+                          <a href="series/the-constellations-are-my-disciples/chapter-23/index.html" class="no-underline">
+                            <div class="series-chapter-item">
+                              <span class="series-badge"> Chapter 23 </span>
+                              <span class="series-time"> May 1 </span>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="col-6 col-sm-6 col-md-6 col-xl-3" style="display: flex; flex-flow: column; justify-content: space-between; padding: 0px 9px; margin-bottom: 15px;">
+                        <div class="series-card">
+                          <a class="series-link" href="series/i-picked-a-hammer-to-save-the-world/index.html">
+                            <span class="manga-title-badges custom manhwa" style="align-self: center; position:absolute; right:0; margin-top:5px; z-index:3;"> Manhwa </span>
+                            <img class="thumb-img" src="assets/cover/I-Picked-A-Hammer-To-Save-The-World.jpg" />
+                          </a>
+                        </div>
+                        <div class="series-box">
+                          <a href="series/i-picked-a-hammer-to-save-the-world/index.html" class="no-underline">
+                            <h5 class="series-title"> I Picked A Hammer To Save The ... </h5>
+                          </a>
+                        </div>
+                        <div class="series-content">
+                          <a href="series/i-picked-a-hammer-to-save-the-world/chapter-27/index.html" class="no-underline">
+                            <div class="series-chapter-item">
+                              <span class="series-badge"> Chapter 27 </span>
+                              <span class="series-time"> 2 days </span>
+                            </div>
+                          </a>
+                          <a href="series/i-picked-a-hammer-to-save-the-world/chapter-26/index.html" class="no-underline">
+                            <div class="series-chapter-item">
+                              <span class="series-badge"> Chapter 26 </span>
+                              <span class="series-time"> May 1 </span>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                      <a href="#" style="width:100%;display:flex;justify-content:center;padding-bottom: 10px;" class="no-underline">
+                        <button style="padding: 15px 15px 15px;color: white;background-color: #3c40c6;border-radius: 20px;border:none;font-size: 16px;"> Lihat Komik Lain </button>
+                      </a>
+                      <div class="col-12" style="justify-content: center;display: flex;"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-sm-12 col-xs-12">
+                    <div class="col-md-12">
+                      <div class="d-flex justify-content-center"></div>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                      <h1 style="font-weight: 200;">Trending</h1>
+                    </div>
+                    <nav class="nav-fill">
+                      <div class="nav nav-tabs gu" id="nav-tab" role="tablist">
+                        <a class="gu nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Harian</a>
+                        <a class="gu nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-roi" role="tab" aria-controls="nav-profile" aria-selected="false">Mingguan</a>
+                        <a class="gu nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Semua</a>
+                      </div>
+                    </nav>
+                    <div class="tab-content" id="nav-tabContent">
+                      <div class="gu tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                        <ul style="list-style: none; padding-left:0;">
+                          <li class="get-lost-fucker">
+                            <div class="posic">
+                              <span>1</span>
+                            </div>
+                            <div class="fotinhofofa">
+                              <a href="series/demonic-emperor/index.html">
+                                <img class="list-trending" src="assets/cover/dff66ff8776c027322a7c5dd79388840_waifu2x_art_noise1_tta_1-125x180.png" width="125" height="180">
+                              </a>
+                            </div>
+                            <div class="title-and-infos">
+                              <a href="series/demonic-emperor/index.html" class="no-underline">
+                                <h2 style=" font-size: .98em;font-weight: 500; margin: 0 0 3px; line-height: 1.4em;">Demonic Emperor</h2>
+                              </a>
+                              <div class="rt">
+                                <div class="rating">
+                                  <div class="rating-prc">
+                                    <div class="rtp">
+                                      <div class="rtb">
+                                        <span style="width:86%"></span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="numscore"> 4.6</div>
+                                </div>
+                              </div>
+                              <div>
+                                <i class="fas fa-bookmark mr-1"></i> 1952
+                              </div>
+                            </div>
+                          </li>
+                          <li class="get-lost-fucker">
+                            <div class="posic">
+                              <span>2</span>
+                            </div>
+                            <div class="fotinhofofa">
+                              <a href="series/return-of-frozen-player/index.html">
+                                <img class="list-trending" src="assets/cover/Return-Of-Frozen-Player-125x180.jpg" width="125" height="180">
+                              </a>
+                            </div>
+                            <div class="title-and-infos">
+                              <a href="series/return-of-frozen-player/index.html" class="no-underline">
+                                <h2 style=" font-size: .98em;font-weight: 500; margin: 0 0 3px; line-height: 1.4em;">Return Of Frozen Player</h2>
+                              </a>
+                              <div class="rt">
+                                <div class="rating">
+                                  <div class="rating-prc">
+                                    <div class="rtp">
+                                      <div class="rtb">
+                                        <span style="width:86%"></span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="numscore"> 4.4</div>
+                                </div>
+                              </div>
+                              <div>
+                                <i class="fas fa-bookmark mr-1"></i> 2562
+                              </div>
+                            </div>
+                          </li>
+                          <li class="get-lost-fucker">
+                            <div class="posic">
+                              <span>3</span>
+                            </div>
+                            <div class="fotinhofofa">
+                              <a href="series/solo-max-level-newbie/index.html">
+                                <img class="list-trending" src="assets/cover/solomax-125x180.jpg" width="125" height="180">
+                              </a>
+                            </div>
+                            <div class="title-and-infos">
+                              <a href="series/solo-max-level-newbie/index.html" class="no-underline">
+                                <h2 style=" font-size: .98em;font-weight: 500; margin: 0 0 3px; line-height: 1.4em;">Solo Max-Level Newbie</h2>
+                              </a>
+                              <div class="rt">
+                                <div class="rating">
+                                  <div class="rating-prc">
+                                    <div class="rtp">
+                                      <div class="rtb">
+                                        <span style="width:82%"></span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="numscore"> 4.1</div>
+                                </div>
+                              </div>
+                              <div>
+                                <i class="fas fa-bookmark mr-1"></i> 1387
+                              </div>
+                            </div>
+                          </li>
+                          <li class="get-lost-fucker">
+                            <div class="posic">
+                              <span>4</span>
+                            </div>
+                            <div class="fotinhofofa">
+                              <a href="series/the-return-of-the-crazy-demon/index.html">
+                                <img class="list-trending" src="assets/cover/The-Return-Of-the-Crazy-Demon-1-125x180.jpg" width="125" height="180">
+                              </a>
+                            </div>
+                            <div class="title-and-infos">
+                              <a href="series/the-return-of-the-crazy-demon/index.html" class="no-underline">
+                                <h2 style=" font-size: .98em;font-weight: 500; margin: 0 0 3px; line-height: 1.4em;">The Return Of the Crazy Demon</h2>
+                              </a>
+                              <div class="rt">
+                                <div class="rating">
+                                  <div class="rating-prc">
+                                    <div class="rtp">
+                                      <div class="rtb">
+                                        <span style="width:98%"></span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="numscore"> 4.9</div>
+                                </div>
+                              </div>
+                              <div>
+                                <i class="fas fa-bookmark mr-1"></i> 1396
+                              </div>
+                            </div>
+                          </li>
+                          <li class="get-lost-fucker">
+                            <div class="posic">
+                              <span>5</span>
+                            </div>
+                            <div class="fotinhofofa">
+                              <a href="series/i-used-to-be-the-boss/index.html">
+                                <img class="list-trending" src="assets/cover/I_Used_To_Be_The_Boss-125x180.jpg" width="125" height="180">
+                              </a>
+                            </div>
+                            <div class="title-and-infos">
+                              <a href="series/i-used-to-be-the-boss/index.html" class="no-underline">
+                                <h2 style=" font-size: .98em;font-weight: 500; margin: 0 0 3px; line-height: 1.4em;">I Used To Be The Boss</h2>
+                              </a>
+                              <div class="rt">
+                                <div class="rating">
+                                  <div class="rating-prc">
+                                    <div class="rtp">
+                                      <div class="rtb">
+                                        <span style="width:94%"></span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="numscore"> 4.7</div>
+                                </div>
+                              </div> 
+                              <div>
+                                <i class="fas fa-bookmark mr-1"></i> 1381
+                              </div>
+                            </div>
+                          </li>
+                          <li class="get-lost-fucker">
+                            <div class="posic">
+                              <span>6</span>
+                            </div>
+                            <div class="fotinhofofa">
+                              <a href="series/a-returners-magic-should-be-special/index.html">
+                                <img class="list-trending" src="assets/cover/RMSBS_new_cover-125x180.jpg" width="125" height="180">
+                              </a>
+                            </div>
+                            <div class="title-and-infos">
+                              <a href="series/a-returners-magic-should-be-special/index.html" class="no-underline">
+                                <h2 style=" font-size: .98em;font-weight: 500; margin: 0 0 3px; line-height: 1.4em;">A Returner's Magic Should be Special</h2>
+                              </a>
+                              <div class="rt">
+                                <div class="rating">
+                                  <div class="rating-prc">
+                                    <div class="rtp">
+                                      <div class="rtb">
+                                        <span style="width:96%"></span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="numscore"> 4.8</div>
+                                </div>
+                              </div>
+                              <div>
+                                <i class="fas fa-bookmark mr-1"></i> 903
+                              </div>
+                            </div>
+                          </li>
+                          <li class="get-lost-fucker">
+                            <div class="posic">
+                              <span>7</span>
+                            </div>
+                            <div class="fotinhofofa">
+                              <a href="series/second-life-ranker/index.html">
+                                <img class="list-trending" src="assets/cover/Second-life-ranker-1-3-125x180.jpg" width="125" height="180">
+                              </a>
+                            </div>
+                            <div class="title-and-infos">
+                              <a href="series/second-life-ranker/index.html" class="no-underline">
+                                <h2 style=" font-size: .98em;font-weight: 500; margin: 0 0 3px; line-height: 1.4em;">Second Life Ranker</h2>
+                              </a>
+                              <div class="rt">
+                                <div class="rating">
+                                  <div class="rating-prc">
+                                    <div class="rtp">
+                                      <div class="rtb">
+                                        <span style="width:94%"></span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="numscore"> 4.7</div>
+                                </div>
+                              </div>
+                              <div>
+                                <i class="fas fa-bookmark mr-1"></i> 2545
+                              </div>
+                            </div>
+                          </li>
+                          <li class="get-lost-fucker">
+                            <div class="posic">
+                              <span>8</span>
+                            </div>
+                            <div class="fotinhofofa">
+                              <a href="series/the-greatest-estate-developer/index.html">
+                                <img class="list-trending" src="assets/cover/The-Greatest-Estate-Developer-125x180.jpg" width="125" height="180">
+                              </a>
+                            </div>
+                            <div class="title-and-infos">
+                              <a href="series/the-greatest-estate-developer/index.html" class="no-underline">
+                                <h2 style=" font-size: .98em;font-weight: 500; margin: 0 0 3px; line-height: 1.4em;">The Greatest Estate Developer</h2>
+                              </a>
+                              <div class="rt">
+                                <div class="rating">
+                                  <div class="rating-prc">
+                                    <div class="rtp">
+                                      <div class="rtb">
+                                        <span style="width:88%"></span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="numscore"> 4.4</div>
+                                </div>
+                              </div>
+                              <div>
+                                <i class="fas fa-bookmark mr-1"></i> 1019
+                              </div>
+                            </div>
+                          </li>
+                          <li class="get-lost-fucker">
+                            <div class="posic">
+                              <span>9</span>
+                            </div>
+                            <div class="fotinhofofa">
+                              <a href="series/infinite-level-up-in-murim/index.html">
+                                <img class="list-trending" src="assets/cover/61609-e1614173643487-125x180.jpg" width="125" height="180">
+                              </a>
+                            </div>
+                            <div class="title-and-infos">
+                              <a href="series/infinite-level-up-in-murim/index.html" class="no-underline">
+                                <h2 style=" font-size: .98em;font-weight: 500; margin: 0 0 3px; line-height: 1.4em;">Infinite Level Up in Murim</h2>
+                              </a>
+                              <div class="rt">
+                                <div class="rating">
+                                  <div class="rating-prc">
+                                    <div class="rtp">
+                                      <div class="rtb">
+                                        <span style="width:88%"></span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="numscore"> 4.4</div>
+                                </div>
+                              </div>
+                              <div>
+                                <i class="fas fa-bookmark mr-1"></i> 198
+                              </div>
+                            </div>
+                          </li>
+                          <li class="get-lost-fucker">
+                            <div class="posic">
+                              <span>10</span>
+                            </div>
+                            <div class="fotinhofofa">
+                              <a href="series/overgeared/index.html">
+                                <img class="list-trending" src="assets/cover/Overgeared-125x180.jpg" width="125" height="180">
+                              </a>
+                            </div>
+                            <div class="title-and-infos">
+                              <a href="series/overgeared/index.html" class="no-underline">
+                                <h2 style=" font-size: .98em;font-weight: 500; margin: 0 0 3px; line-height: 1.4em;">Kang Item</h2>
+                              </a>
+                              <div class="rt">
+                                <div class="rating">
+                                  <div class="rating-prc">
+                                    <div class="rtp">
+                                      <div class="rtb">
+                                        <span style="width:96%"></span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="numscore"> 4.8</div>
+                                </div>
+                              </div>
+                              <div>
+                                <i class="fas fa-bookmark mr-1"></i> 2617
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="gu tab-pane fade" id="nav-roi" role="tabpanel" aria-labelledby="nav-profile-tab">
+                        <ul style="list-style: none; padding-left:0;">
+                          <li class="get-lost-fucker">
+                            <div class="posic">
+                              <span>1</span>
+                            </div>
+                            <div class="fotinhofofa">
+                              <a href="series/swordmasters-youngest-son/index.html">
+                                <img class="list-trending" src="assets/cover/Swordmasters-Youngest-Son-125x180.jpg" width="125" height="180">
+                              </a>
+                            </div>
+                            <div class="title-and-infos">
+                              <a href="series/swordmasters-youngest-son/index.html" class="no-underline">
+                                <h2 style=" font-size: .98em;font-weight: 500; margin: 0 0 3px; line-height: 1.4em;">Swordmaster's Youngest Son</h2>
+                              </a>
+                              <div class="rt">
+                                <div class="rating">
+                                  <div class="rating-prc">
+                                    <div class="rtp">
+                                      <div class="rtb">
+                                        <span style="width:92%"></span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="numscore"> 4.6</div>
+                                </div>
+                              </div>
+                              <div>
+                                <i class="fas fa-bookmark mr-1"></i> 3933
+                              </div>
+                            </div>
+                          </li>
+                          <li class="get-lost-fucker">
+                            <div class="posic">
+                              <span>2</span>
+                            </div>
+                            <div class="fotinhofofa">
+                              <a href="series/i-obtained-a-mythic-item/index.html">
+                                <img class="list-trending" src="assets/cover/I-Obtained-a-Mythic-Item-2-125x180.jpg" width="125" height="180">
+                              </a>
+                            </div>
+                            <div class="title-and-infos">
+                              <a href="series/i-obtained-a-mythic-item/index.html" class="no-underline">
+                                <h2 style=" font-size: .98em;font-weight: 500; margin: 0 0 3px; line-height: 1.4em;">I Obtained a Mythic Item</h2>
+                              </a>
+                              <div class="rt">
+                                <div class="rating">
+                                  <div class="rating-prc">
+                                    <div class="rtp">
+                                      <div class="rtb">
+                                        <span style="width:94%"></span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="numscore"> 4.7</div>
+                                </div>
+                              </div>
+                              <div>
+                                <i class="fas fa-bookmark mr-1"></i> 3956
+                              </div>
+                            </div>
+                          </li>
+                          <li class="get-lost-fucker">
+                            <div class="posic">
+                              <span>3</span>
+                            </div>
+                            <div class="fotinhofofa">
+                              <a href="series/player-who-returned-10000-years-later/index.html">
+                                <img class="list-trending" src="assets/cover/Player_Who_Returned_10.000_Years_Later-125x180.jpg" width="125" height="180">
+                              </a>
+                            </div>
+                            <div class="title-and-infos">
+                              <a href="series/player-who-returned-10000-years-later/index.html" class="no-underline">
+                                <h2 style=" font-size: .98em;font-weight: 500; margin: 0 0 3px; line-height: 1.4em;">Player Who Returned 10,000 Years Later</h2>
+                              </a>
+                              <div class="rt">
+                                <div class="rating">
+                                  <div class="rating-prc">
+                                    <div class="rtp">
+                                      <div class="rtb">
+                                        <span style="width:92%"></span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="numscore"> 4.6</div>
+                                </div>
+                              </div>
+                              <div>
+                                <i class="fas fa-bookmark mr-1"></i> 3692
+                              </div>
+                            </div>
+                          </li>
+                          <li class="get-lost-fucker">
+                            <div class="posic">
+                              <span>4</span>
+                            </div>
+                            <div class="fotinhofofa">
+                              <a href="series/demonic-emperor/index.html">
+                                <img class="list-trending" src="assets/cover/dff66ff8776c027322a7c5dd79388840_waifu2x_art_noise1_tta_1-125x180.png" width="125" height="180">
+                              </a>
+                            </div>
+                            <div class="title-and-infos">
+                              <a href="series/demonic-emperor/index.html" class="no-underline">
+                                <h2 style=" font-size: .98em;font-weight: 500; margin: 0 0 3px; line-height: 1.4em;">Demonic Emperor</h2>
+                              </a>
+                              <div class="rt">
+                                <div class="rating">
+                                  <div class="rating-prc">
+                                    <div class="rtp">
+                                      <div class="rtb">
+                                        <span style="width:92%"></span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="numscore"> 4.6</div>
+                                </div>
+                              </div>
+                              <div>
+                                <i class="fas fa-bookmark mr-1"></i> 1952
+                              </div>
+                            </div>
+                          </li>
+                          <li class="get-lost-fucker">
+                            <div class="posic">
+                              <span>5</span>
+                            </div>
+                            <div class="fotinhofofa">
+                              <a href="series/nano-machine/index.html">
+                                <img class="list-trending" src="assets/cover/nano-S2-1-125x180.jpg" width="125" height="180">
+                              </a>
+                            </div>
+                            <div class="title-and-infos">
+                              <a href="series/nano-machine/index.html" class="no-underline">
+                                <h2 style=" font-size: .98em;font-weight: 500; margin: 0 0 3px; line-height: 1.4em;">Nano Machine</h2>
+                              </a>
+                              <div class="rt">
+                                <div class="rating">
+                                  <div class="rating-prc">
+                                    <div class="rtp">
+                                      <div class="rtb">
+                                        <span style="width:94%"></span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="numscore"> 4.7</div>
+                                </div>
+                              </div>
+                              <div>
+                                <i class="fas fa-bookmark mr-1"></i> 3119
+                              </div>
+                            </div>
+                          </li>
+                          <li class="get-lost-fucker">
+                            <div class="posic">
+                              <span>6</span>
+                            </div>
+                            <div class="fotinhofofa">
+                              <a href="series/the-world-after-the-fall/index.html">
+                                <img class="list-trending" src="assets/cover/After-The-Fall-1-125x180.jpg" width="125" height="180">
+                              </a>
+                            </div>
+                            <div class="title-and-infos">
+                              <a href="series/the-world-after-the-fall/index.html" class="no-underline">
+                                <h2 style=" font-size: .98em;font-weight: 500; margin: 0 0 3px; line-height: 1.4em;">The World After The Fall</h2>
+                              </a>
+                              <div class="rt">
+                                <div class="rating">
+                                  <div class="rating-prc">
+                                    <div class="rtp">
+                                      <div class="rtb">
+                                        <span style="width:96%"></span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="numscore"> 4.8</div>
+                                </div>
+                              </div>
+                              <div>
+                                <i class="fas fa-bookmark mr-1"></i> 2775
+                              </div>
+                            </div>
+                          </li>
+                          <li class="get-lost-fucker">
+                            <div class="posic">
+                              <span>7</span>
+                            </div>
+                            <div class="fotinhofofa">
+                              <a href="series/reaper-of-the-drifting-moon/index.html">
+                                <img class="list-trending" src="assets/cover/Reaper-Drifting-of-the-moon-1-125x180.jpg" width="125" height="180">
+                              </a>
+                            </div>
+                            <div class="title-and-infos">
+                              <a href="series/reaper-of-the-drifting-moon/index.html" class="no-underline">
+                                <h2 style=" font-size: .98em;font-weight: 500; margin: 0 0 3px; line-height: 1.4em;">Reaper of the Drifting Moon</h2>
+                              </a>
+                              <div class="rt">
+                                <div class="rating">
+                                  <div class="rating-prc">
+                                    <div class="rtp">
+                                      <div class="rtb">
+                                        <span style="width:92%"></span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="numscore"> 4.6</div>
+                                </div>
+                              </div>
+                              <div>
+                                <i class="fas fa-bookmark mr-1"></i> 2268
+                              </div>
+                            </div>
+                          </li>
+                          <li class="get-lost-fucker">
+                            <div class="posic">
+                              <span>8</span>
+                            </div>
+                            <div class="fotinhofofa">
+                              <a href="series/reincarnation-of-suicidal-battle-god/index.html">
+                                <img class="list-trending" src="assets/cover/Reincarnation-Of-Suicidal-Battle-God2-125x180.jpg" width="125" height="180">
+                              </a>
+                            </div>
+                            <div class="title-and-infos">
+                              <a href="series/reincarnation-of-suicidal-battle-god/index.html" class="no-underline">
+                                <h2 style=" font-size: .98em;font-weight: 500; margin: 0 0 3px; line-height: 1.4em;">Reincarnation Of Suicidal Battle God</h2>
+                              </a>
+                              <div class="rt">
+                                <div class="rating">
+                                  <div class="rating-prc">
+                                    <div class="rtp">
+                                      <div class="rtb">
+                                        <span style="width:96%"></span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="numscore"> 4.8</div>
+                                </div>
+                              </div>
+                              <div>
+                                <i class="fas fa-bookmark mr-1"></i> 2988
+                              </div>
+                            </div>
+                          </li>
+                          <li class="get-lost-fucker">
+                            <div class="posic">
+                              <span>9</span>
+                            </div>
+                            <div class="fotinhofofa">
+                              <a href="series/solo-leveling-special/index.html">
+                                <img class="list-trending" src="assets/cover/Solo-Leveling-125x180.jpg" width="125" height="180">
+                              </a>
+                            </div>
+                            <div class="title-and-infos">
+                              <a href="series/solo-leveling-special/index.html" class="no-underline">
+                                <h2 style=" font-size: .98em;font-weight: 500; margin: 0 0 3px; line-height: 1.4em;">Solo Leveling Special</h2>
+                              </a>
+                              <div class="rt">
+                                <div class="rating">
+                                  <div class="rating-prc">
+                                    <div class="rtp">
+                                      <div class="rtb">
+                                        <span style="width:96%"></span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="numscore"> 4.8</div>
+                                </div>
+                              </div>
+                              <div>
+                                <i class="fas fa-bookmark mr-1"></i> 3179
+                              </div>
+                            </div>
+                          </li>
+                          <li class="get-lost-fucker">
+                            <div class="posic">
+                              <span>10</span>
+                            </div>
+                            <div class="fotinhofofa">
+                              <a href="series/return-of-the-sss-class-ranker/index.html">
+                                <img class="list-trending" src="assets/cover/Return_of_the_sss_classs_ranker-3-125x180.jpg" width="125" height="180">
+                              </a>
+                            </div>
+                            <div class="title-and-infos">
+                              <a href="series/return-of-the-sss-class-ranker/index.html" class="no-underline">
+                                <h2 style=" font-size: .98em;font-weight: 500; margin: 0 0 3px; line-height: 1.4em;">Return of the SSS-Class Ranker</h2>
+                              </a>
+                              <div class="rt">
+                                <div class="rating">
+                                  <div class="rating-prc">
+                                    <div class="rtp">
+                                      <div class="rtb">
+                                        <span style="width:88%"></span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="numscore"> 4.4</div>
+                                </div>
+                              </div>
+                              <div>
+                                <i class="fas fa-bookmark mr-1"></i> 2009
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="gu tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                        <ul style="list-style: none; padding-left:0;">
+                          <li class="get-lost-fucker">
+                            <div class="posic">
+                              <span>1</span>
+                            </div>
+                            <div class="fotinhofofa">
+                              <a href="series/swordmasters-youngest-son/index.html">
+                                <img class="list-trending" src="assets/cover/Swordmasters-Youngest-Son-125x180.jpg" width="125" height="180">
+                              </a>
+                            </div>
+                            <div class="title-and-infos">
+                              <a href="series/swordmasters-youngest-son/index.html" class="no-underline">
+                                <h2 style=" font-size: .98em;font-weight: 500; margin: 0 0 3px; line-height: 1.4em;">Swordmaster's Youngest Son</h2>
+                              </a>
+                              <div class="rt">
+                                <div class="rating">
+                                  <div class="rating-prc">
+                                    <div class="rtp">
+                                      <div class="rtb">
+                                        <span style="width:100%"></span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="numscore"> 4.6</div>
+                                </div>
+                                <div>
+                                  <i class="fas fa-bookmark mr-1"></i> 3933
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="get-lost-fucker">
+                            <div class="posic">
+                              <span>2</span>
+                            </div>
+                            <div class="fotinhofofa">
+                              <a href="series/i-obtained-a-mythic-item/index.html">
+                                <img class="list-trending" src="assets/cover/I-Obtained-a-Mythic-Item-2-125x180.jpg" width="125" height="180">
+                              </a>
+                            </div>
+                            <div class="title-and-infos">
+                              <a href="series/i-obtained-a-mythic-item/index.html" class="no-underline">
+                                <h2 style=" font-size: .98em;font-weight: 500; margin: 0 0 3px; line-height: 1.4em;">I Obtained a Mythic Item</h2>
+                              </a>
+                              <div class="rt">
+                                <div class="rating">
+                                  <div class="rating-prc">
+                                    <div class="rtp">
+                                      <div class="rtb">
+                                        <span style="width:100%"></span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="numscore"> 4.7</div>
+                                </div>
+                                <div>
+                                  <i class="fas fa-bookmark mr-1"></i> 3956
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="get-lost-fucker">
+                            <div class="posic">
+                              <span>3</span>
+                            </div>
+                            <div class="fotinhofofa">
+                              <a href="series/player-who-returned-10000-years-later/index.html">
+                                <img class="list-trending" src="assets/cover/Player_Who_Returned_10.000_Years_Later-125x180.jpg" width="125" height="180">
+                              </a>
+                            </div>
+                            <div class="title-and-infos">
+                              <a href="series/player-who-returned-10000-years-later/index.html" class="no-underline">
+                                <h2 style=" font-size: .98em;font-weight: 500; margin: 0 0 3px; line-height: 1.4em;">Player Who Returned 10,000 Years Later</h2>
+                              </a>
+                              <div class="rt">
+                                <div class="rating">
+                                  <div class="rating-prc">
+                                    <div class="rtp">
+                                      <div class="rtb">
+                                        <span style="width:100%"></span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="numscore"> 4.6</div>
+                                </div>
+                                <div>
+                                  <i class="fas fa-bookmark mr-1"></i> 3692
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="get-lost-fucker">
+                            <div class="posic">
+                              <span>4</span>
+                            </div>
+                            <div class="fotinhofofa">
+                              <a href="series/demonic-emperor/index.html">
+                                <img class="list-trending" src="assets/cover/dff66ff8776c027322a7c5dd79388840_waifu2x_art_noise1_tta_1-125x180.png" width="125" height="180">
+                              </a>
+                            </div>
+                            <div class="title-and-infos">
+                              <a href="series/demonic-emperor/index.html" class="no-underline">
+                                <h2 style=" font-size: .98em;font-weight: 500; margin: 0 0 3px; line-height: 1.4em;">Demonic Emperor</h2>
+                              </a>
+                              <div class="rt">
+                                <div class="rating">
+                                  <div class="rating-prc">
+                                    <div class="rtp">
+                                      <div class="rtb">
+                                        <span style="width:100%"></span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="numscore"> 4.6</div>
+                                </div>
+                                <div>
+                                  <i class="fas fa-bookmark mr-1"></i> 1952
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="get-lost-fucker">
+                            <div class="posic">
+                              <span>5</span>
+                            </div>
+                            <div class="fotinhofofa">
+                              <a href="series/nano-machine/index.html">
+                                <img class="list-trending" src="assets/cover/nano-S2-1-125x180.jpg" width="125" height="180">
+                              </a>
+                            </div>
+                            <div class="title-and-infos">
+                              <a href="series/nano-machine/index.html" class="no-underline">
+                                <h2 style=" font-size: .98em;font-weight: 500; margin: 0 0 3px; line-height: 1.4em;">Nano Machine</h2>
+                              </a>
+                              <div class="rt">
+                                <div class="rating">
+                                  <div class="rating-prc">
+                                    <div class="rtp">
+                                      <div class="rtb">
+                                        <span style="width:100%"></span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="numscore"> 4.7</div>
+                                </div>
+                                <div>
+                                  <i class="fas fa-bookmark mr-1"></i> 3119
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="get-lost-fucker">
+                            <div class="posic">
+                              <span>6</span>
+                            </div>
+                            <div class="fotinhofofa">
+                              <a href="series/overgeared/index.html">
+                                <img class="list-trending" src="assets/cover/Overgeared-125x180.jpg" width="125" height="180">
+                              </a>
+                            </div>
+                            <div class="title-and-infos">
+                              <a href="series/overgeared/index.html" class="no-underline">
+                                <h2 style=" font-size: .98em;font-weight: 500; margin: 0 0 3px; line-height: 1.4em;">Kang Item</h2>
+                              </a>
+                              <div class="rt">
+                                <div class="rating">
+                                  <div class="rating-prc">
+                                    <div class="rtp">
+                                      <div class="rtb">
+                                        <span style="width:100%"></span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="numscore"> 4.8</div>
+                                </div>
+                                <div>
+                                  <i class="fas fa-bookmark mr-1"></i> 2617
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="get-lost-fucker">
+                            <div class="posic">
+                              <span>7</span>
+                            </div>
+                            <div class="fotinhofofa">
+                              <a href="series/reaper-of-the-drifting-moon/index.html">
+                                <img class="list-trending" src="assets/cover/Reaper-Drifting-of-the-moon-1-125x180.jpg" width="125" height="180">
+                              </a>
+                            </div>
+                            <div class="title-and-infos">
+                              <a href="series/reaper-of-the-drifting-moon/index.html" class="no-underline">
+                                <h2 style=" font-size: .98em;font-weight: 500; margin: 0 0 3px; line-height: 1.4em;">Reaper of the Drifting Moon</h2>
+                              </a>
+                              <div class="rt">
+                                <div class="rating">
+                                  <div class="rating-prc">
+                                    <div class="rtp">
+                                      <div class="rtb">
+                                        <span style="width:100%"></span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="numscore"> 4.6</div>
+                                </div>
+                                <div>
+                                  <i class="fas fa-bookmark mr-1"></i> 2268
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="get-lost-fucker">
+                            <div class="posic">
+                              <span>8</span>
+                            </div>
+                            <div class="fotinhofofa">
+                              <a href="series/superhuman-battlefield/index.html">
+                                <img class="list-trending" src="assets/cover/Superhuman-Battlefield-1-125x180.jpg" width="125" height="180">
+                              </a>
+                            </div>
+                            <div class="title-and-infos">
+                              <a href="series/superhuman-battlefield/index.html" class="no-underline">
+                                <h2 style=" font-size: .98em;font-weight: 500; margin: 0 0 3px; line-height: 1.4em;">Superhuman Battlefield</h2>
+                              </a>
+                              <div class="rt">
+                                <div class="rating">
+                                  <div class="rating-prc">
+                                    <div class="rtp">
+                                      <div class="rtb">
+                                        <span style="width:100%"></span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="numscore"> 4.5</div>
+                                </div>
+                                <div>
+                                  <i class="fas fa-bookmark mr-1"></i> 2046
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="get-lost-fucker">
+                            <div class="posic">
+                              <span>9</span>
+                            </div>
+                            <div class="fotinhofofa">
+                              <a href="series/damn-reincarnation/index.html">
+                                <img class="list-trending" src="assets/cover/Damn_Reincarnation-2-125x180.jpg" width="125" height="180">
+                              </a>
+                            </div>
+                            <div class="title-and-infos">
+                              <a href="series/damn-reincarnation/index.html" class="no-underline">
+                                <h2 style=" font-size: .98em;font-weight: 500; margin: 0 0 3px; line-height: 1.4em;">Damn Reincarnation</h2>
+                              </a>
+                              <div class="rt">
+                                <div class="rating">
+                                  <div class="rating-prc">
+                                    <div class="rtp">
+                                      <div class="rtb">
+                                        <span style="width:100%"></span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="numscore"> 4.7</div>
+                                </div>
+                                <div>
+                                  <i class="fas fa-bookmark mr-1"></i> 2851
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="get-lost-fucker">
+                            <div class="posic">
+                              <span>10</span>
+                            </div>
+                            <div class="fotinhofofa">
+                              <a href="series/reincarnation-of-suicidal-battle-god/index.html">
+                                <img class="list-trending" src="assets/cover/Reincarnation-Of-Suicidal-Battle-God2-125x180.jpg" width="125" height="180">
+                              </a>
+                            </div>
+                            <div class="title-and-infos">
+                              <a href="series/reincarnation-of-suicidal-battle-god/index.html" class="no-underline">
+                                <h2 style=" font-size: .98em;font-weight: 500; margin: 0 0 3px; line-height: 1.4em;">Reincarnation Of Suicidal Battle God</h2>
+                              </a>
+                              <div class="rt">
+                                <div class="rating">
+                                  <div class="rating-prc">
+                                    <div class="rtp">
+                                      <div class="rtb">
+                                        <span style="width:100%"></span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="numscore"> 4.8</div>
+                                </div>
+                                <div>
+                                  <i class="fas fa-bookmark mr-1"></i> 2988
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="recommendations2" style="background-color:#000000">
+            <div class="video-bg">
+              <div class="container">
+                <div class="row">
+                  <div class="col-12"></div>
+                  <div class="col-md-12  col-sm-12 col-xs-12">
+                    <div class="d-flex justify-content-center">
+                      <h1 style="font-weight: 200;">Mirror</h1>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-center" style="flex-wrap:wrap;">
+                    <div class="col-6 col-sm-6 col-md-4 col-xl-2" style="display: flex; flex-flow: column; justify-content: space-between; padding: 0px 9px; margin-bottom: 15px;">
+                      <div class="series-card">
+                        <a class="series-link" href="series/the-constellation-that-returned-from-hell/index.html">
+                          <span class="manga-title-badges custom manhwa" style="align-self: center; position:absolute; right:0; margin-top:5px; z-index:3;"> Manhwa </span>
+                          <img class="thumb-img" src="assets/cover/IMG_20210721_220559-e1626913294789.jpg" />
+                        </a>
+                      </div>
+                      <div class="series-box">
+                        <a href="series/the-constellation-that-returned-from-hell/index.html" class="no-underline">
+                          <h5 class="series-title"> The Constellation That Returned From Hell </h5>
+                        </a>
+                      </div>
+                      <div class="series-content">
+                        <a href="series/the-constellation-that-returned-from-hell/chapter-126/index.html" class="no-underline">
+                          <div class="series-chapter-item">
+                            <span class="series-badge"> Chapter 126 </span>
+                            <span class="series-time"> 4 hours </span>
+                          </div>
+                        </a>
+                        <a href="series/the-constellation-that-returned-from-hell/chapter-125/index.html" class="no-underline">
+                          <div class="series-chapter-item">
+                            <span class="series-badge"> Chapter 125 </span>
+                            <span class="series-time"> May 3 </span>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-4 col-xl-2" style="display: flex; flex-flow: column; justify-content: space-between; padding: 0px 9px; margin-bottom: 15px;">
+                      <div class="series-card">
+                        <a class="series-link" href="series/how-to-live-as-an-illegal-healer/index.html">
+                          <span class="manga-title-badges custom manhwa" style="align-self: center; position:absolute; right:0; margin-top:5px; z-index:3;"> Manhwa </span>
+                          <img class="thumb-img" src="assets/cover/adawf5464.jpg" />
+                        </a>
+                      </div>
+                      <div class="series-box">
+                        <a href="series/how-to-live-as-an-illegal-healer/index.html" class="no-underline">
+                          <h5 class="series-title"> How To Live As An Illegal Healer </h5>
+                        </a>
+                      </div>
+                      <div class="series-content">
+                        <a href="series/how-to-live-as-an-illegal-healer/chapter-08/index.html" class="no-underline">
+                          <div class="series-chapter-item">
+                            <span class="series-badge"> Chapter 08 </span>
+                            <span class="series-time"> 4 hours </span>
+                          </div>
+                        </a>
+                        <a href="series/how-to-live-as-an-illegal-healer/chapter-07/index.html" class="no-underline">
+                          <div class="series-chapter-item">
+                            <span class="series-badge"> Chapter 07 </span>
+                            <span class="series-time"> May 8 </span>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-4 col-xl-2" style="display: flex; flex-flow: column; justify-content: space-between; padding: 0px 9px; margin-bottom: 15px;">
+                      <div class="series-card">
+                        <a class="series-link" href="series/return-of-the-bloodthirsty-police/index.html">
+                          <span class="manga-title-badges custom manhwa" style="align-self: center; position:absolute; right:0; margin-top:5px; z-index:3;"> Manhwa </span>
+                          <img class="thumb-img" src="assets/cover/return.jpg" />
+                        </a>
+                      </div>
+                      <div class="series-box">
+                        <a href="series/return-of-the-bloodthirsty-police/index.html" class="no-underline">
+                          <h5 class="series-title"> Return Of The Bloodthirsty Police </h5>
+                        </a>
+                      </div>
+                      <div class="series-content">
+                        <a href="series/return-of-the-bloodthirsty-police/chapter-10/index.html" class="no-underline">
+                          <div class="series-chapter-item">
+                            <span class="series-badge"> Chapter 10 </span>
+                            <span class="series-time"> 4 hours </span>
+                          </div>
+                        </a>
+                        <a href="series/return-of-the-bloodthirsty-police/chapter-09/index.html" class="no-underline">
+                          <div class="series-chapter-item">
+                            <span class="series-badge"> Chapter 9 </span>
+                            <span class="series-time"> May 6 </span>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-4 col-xl-2" style="display: flex; flex-flow: column; justify-content: space-between; padding: 0px 9px; margin-bottom: 15px;">
+                      <div class="series-card">
+                        <a class="series-link" href="series/the-youngest-son-of-a-rich-family-reborn-rich/index.html">
+                          <span class="manga-title-badges custom manhwa" style="align-self: center; position:absolute; right:0; margin-top:5px; z-index:3;"> Manhwa </span>
+                          <img class="thumb-img" src="assets/cover/rr1245123412-e1668612724252.jpg" />
+                        </a>
+                      </div>
+                      <div class="series-box">
+                        <a href="series/the-youngest-son-of-a-rich-family-reborn-rich/index.html" class="no-underline">
+                          <h5 class="series-title"> The Youngest Son Of A Rich Family (Reborn Rich) </h5>
+                        </a>
+                      </div>
+                      <div class="series-content">
+                        <a href="series/the-youngest-son-of-a-rich-family-reborn-rich/chapter-46/index.html" class="no-underline">
+                          <div class="series-chapter-item">
+                            <span class="series-badge"> Chapter 46 </span>
+                            <span class="series-time"> 4 hours </span>
+                          </div>
+                        </a>
+                        <a href="series/the-youngest-son-of-a-rich-family-reborn-rich/chapter-45/index.html" class="no-underline">
+                          <div class="series-chapter-item">
+                            <span class="series-badge"> Chapter 45 </span>
+                            <span class="series-time"> May 5 </span>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-4 col-xl-2" style="display: flex; flex-flow: column; justify-content: space-between; padding: 0px 9px; margin-bottom: 15px;">
+                      <div class="series-card">
+                        <a class="series-link" href="series/peace-restaurant/index.html">
+                          <span class="manga-title-badges custom manhwa" style="align-self: center; position:absolute; right:0; margin-top:5px; z-index:3;"> Manhwa </span>
+                          <img class="thumb-img" src="assets/cover/peace.png" />
+                        </a>
+                      </div>
+                      <div class="series-box">
+                        <a href="series/peace-restaurant/index.html" class="no-underline">
+                          <h5 class="series-title"> Peace Restaurant </h5>
+                        </a>
+                      </div>
+                      <div class="series-content">
+                        <a href="series/peace-restaurant/chapter-07/index.html" class="no-underline">
+                          <div class="series-chapter-item">
+                            <span class="series-badge"> Chapter 07 </span>
+                            <span class="series-time"> 4 hours </span>
+                          </div>
+                        </a>
+                        <a href="series/peace-restaurant/chapter-06/index.html" class="no-underline">
+                          <div class="series-chapter-item">
+                            <span class="series-badge"> Chapter 06 </span>
+                            <span class="series-time"> May 9 </span>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-4 col-xl-2" style="display: flex; flex-flow: column; justify-content: space-between; padding: 0px 9px; margin-bottom: 15px;">
+                      <div class="series-card">
+                        <a class="series-link" href="series/infinite-level-up-in-murim/index.html">
+                          <span class="manga-title-badges custom manhwa" style="align-self: center; position:absolute; right:0; margin-top:5px; z-index:3;"> Manhwa </span>
+                          <img class="thumb-img" src="assets/cover/61609-e1614173643487.jpg" />
+                        </a>
+                      </div>
+                      <div class="series-box">
+                        <a href="series/infinite-level-up-in-murim/index.html" class="no-underline">
+                          <h5 class="series-title"> Infinite Level Up in Murim </h5>
+                        </a>
+                      </div>
+                      <div class="series-content">
+                        <a href="series/infinite-level-up-in-murim/chapter-145/index.html" class="no-underline">
+                          <div class="series-chapter-item">
+                            <span class="series-badge"> Chapter 145 </span>
+                            <span class="series-time"> 9 hours </span>
+                          </div>
+                        </a>
+                        <a href="series/infinite-level-up-in-murim/chapter-144/index.html" class="no-underline">
+                          <div class="series-chapter-item">
+                            <span class="series-badge"> Chapter 144 </span>
+                            <span class="series-time"> 2 days </span>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-4 col-xl-2" style="display: flex; flex-flow: column; justify-content: space-between; padding: 0px 9px; margin-bottom: 15px;">
+                      <div class="series-card">
+                        <a class="series-link" href="series/apotheosis/index.html">
+                          <span class="manga-title-badges custom manhua" style="align-self: center; position:absolute; right:0; margin-top:5px; z-index:3;"> Manhua </span>
+                          <img class="thumb-img" src="assets/cover/1-e1645641187520.jpg" />
+                        </a>
+                      </div>
+                      <div class="series-box">
+                        <a href="series/apotheosis/index.html" class="no-underline">
+                          <h5 class="series-title"> Apotheosis </h5>
+                        </a>
+                      </div>
+                      <div class="series-content">
+                        <a href="series/apotheosis/chapter-1072/index.html" class="no-underline">
+                          <div class="series-chapter-item">
+                            <span class="series-badge"> Chapter 1072 </span>
+                            <span class="series-time"> 13 hours </span>
+                          </div>
+                        </a>
+                        <a href="series/apotheosis/chapter-1071/index.html" class="no-underline">
+                          <div class="series-chapter-item">
+                            <span class="series-badge"> Chapter 1071 </span>
+                            <span class="series-time"> 18 hours </span>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-4 col-xl-2" style="display: flex; flex-flow: column; justify-content: space-between; padding: 0px 9px; margin-bottom: 15px;">
+                      <div class="series-card">
+                        <a class="series-link" href="series/solo-max-level-newbie/index.html">
+                          <span class="manga-title-badges custom manhwa" style="align-self: center; position:absolute; right:0; margin-top:5px; z-index:3;"> Manhwa </span>
+                          <img class="thumb-img" src="assets/cover/solomax.jpg" />
+                        </a>
+                      </div>
+                      <div class="series-box">
+                        <a href="series/solo-max-level-newbie/index.html" class="no-underline">
+                          <h5 class="series-title"> Solo Max-Level Newbie </h5>
+                        </a>
+                      </div>
+                      <div class="series-content">
+                        <a href="series/solo-max-level-newbie/chapter-99/index.html" class="no-underline">
+                          <div class="series-chapter-item">
+                            <span class="series-badge"> Chapter 99 </span>
+                            <span class="series-time"> 15 hours </span>
+                          </div>
+                        </a>
+                        <a href="series/solo-max-level-newbie/chapter-98/index.html" class="no-underline">
+                          <div class="series-chapter-item">
+                            <span class="series-badge"> Chapter 98 </span>
+                            <span class="series-time"> May 6 </span>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-4 col-xl-2" style="display: flex; flex-flow: column; justify-content: space-between; padding: 0px 9px; margin-bottom: 15px;">
+                      <div class="series-card">
+                        <a class="series-link" href="series/boss-in-school/index.html">
+                          <span class="manga-title-badges custom manhwa" style="align-self: center; position:absolute; right:0; margin-top:5px; z-index:3;"> Manhwa </span>
+                          <img class="thumb-img" src="assets/cover/boos.jpg" />
+                        </a>
+                      </div>
+                      <div class="series-box">
+                        <a href="series/boss-in-school/index.html" class="no-underline">
+                          <h5 class="series-title"> Boss in School </h5>
+                        </a>
+                      </div>
+                      <div class="series-content">
+                        <a href="series/boss-in-school/chapter-218/index.html" class="no-underline">
+                          <div class="series-chapter-item">
+                            <span class="series-badge"> Chapter 218 </span>
+                            <span class="series-time"> 16 hours </span>
+                          </div>
+                        </a>
+                        <a href="series/boss-in-school/chapter-217/index.html" class="no-underline">
+                          <div class="series-chapter-item">
+                            <span class="series-badge"> Chapter 217 </span>
+                            <span class="series-time"> April 16 </span>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-4 col-xl-2" style="display: flex; flex-flow: column; justify-content: space-between; padding: 0px 9px; margin-bottom: 15px;">
+                      <div class="series-card">
+                        <a class="series-link" href="series/im-really-not-the-demon-gods-lackey/index.html">
+                          <span class="manga-title-badges custom manhua" style="align-self: center; position:absolute; right:0; margin-top:5px; z-index:3;"> Manhua </span>
+                          <img class="thumb-img" src="assets/cover/Im-Really-Not-The-Demon-Gods-Lackey.jpg" />
+                        </a>
+                      </div>
+                      <div class="series-box">
+                        <a href="series/im-really-not-the-demon-gods-lackey/index.html" class="no-underline">
+                          <h5 class="series-title"> I’m Really Not The Demon God’s Lackey </h5>
+                        </a>
+                      </div>
+                      <div class="series-content">
+                        <a href="series/im-really-not-the-demon-gods-lackey/chapter-80/index.html" class="no-underline">
+                          <div class="series-chapter-item">
+                            <span class="series-badge"> Chapter 80 </span>
+                            <span class="series-time"> 17 hours </span>
+                          </div>
+                        </a>
+                        <a href="series/im-really-not-the-demon-gods-lackey/chapter-79/index.html" class="no-underline">
+                          <div class="series-chapter-item">
+                            <span class="series-badge"> Chapter 79 </span>
+                            <span class="series-time"> March 31 </span>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-4 col-xl-2" style="display: flex; flex-flow: column; justify-content: space-between; padding: 0px 9px; margin-bottom: 15px;">
+                      <div class="series-card">
+                        <a class="series-link" href="series/king-mma/index.html">
+                          <span class="manga-title-badges custom manhwa" style="align-self: center; position:absolute; right:0; margin-top:5px; z-index:3;"> Manhwa </span>
+                          <img class="thumb-img" src="assets/cover/wdawdhawe.png" />
+                        </a>
+                      </div>
+                      <div class="series-box">
+                        <a href="series/king-mma/index.html" class="no-underline">
+                          <h5 class="series-title"> King MMA </h5>
+                        </a>
+                      </div>
+                      <div class="series-content">
+                        <a href="series/king-mma/chapter-51/index.html" class="no-underline">
+                          <div class="series-chapter-item">
+                            <span class="series-badge"> Chapter 51 </span>
+                            <span class="series-time"> 18 hours </span>
+                          </div>
+                        </a>
+                        <a href="series/king-mma/chapter-50/index.html" class="no-underline">
+                          <div class="series-chapter-item">
+                            <span class="series-badge"> Chapter 50 </span>
+                            <span class="series-time"> May 5 </span>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-4 col-xl-2" style="display: flex; flex-flow: column; justify-content: space-between; padding: 0px 9px; margin-bottom: 15px;">
+                      <div class="series-card">
+                        <a class="series-link" href="series/juvenile-offender/index.html">
+                          <span class="manga-title-badges custom manhwa" style="align-self: center; position:absolute; right:0; margin-top:5px; z-index:3;"> Manhwa </span>
+                          <img class="thumb-img" src="assets/cover/jo63426242-e1680789079142.jpg" />
+                        </a>
+                      </div>
+                      <div class="series-box">
+                        <a href="series/juvenile-offender/index.html" class="no-underline">
+                          <h5 class="series-title"> Juvenile Offender </h5>
+                        </a>
+                      </div>
+                      <div class="series-content">
+                        <a href="series/juvenile-offender/chapter-11/index.html" class="no-underline">
+                          <div class="series-chapter-item">
+                            <span class="series-badge"> Chapter 11 </span>
+                            <span class="series-time"> 18 hours </span>
+                          </div>
+                        </a>
+                        <a href="series/juvenile-offender/chapter-10/index.html" class="no-underline">
+                          <div class="series-chapter-item">
+                            <span class="series-badge"> Chapter 10 </span>
+                            <span class="series-time"> May 4 </span>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <a href="#" style="width:100%;display:flex;justify-content:center;padding-bottom: 10px;" class="no-underline">
+                      <button style="padding: 15px 15px 15px;color: white;background-color: #3c40c6;border-radius: 20px;border:none;font-size: 16px;"> Komik Mirror Lain </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <footer class="site-footer">
+          <div class="bottom-footer">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="nav-footer">
+                    <ul class="list-inline font-nav">
+                      <li id="menu-item-1010" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1010">
+                        <a href="#" class="no-underline">Kontak Kami</a>
+                      </li>
+                      <li id="menu-item-1011" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1011">
+                        <a href="#" class="no-underline">Terms and Conditions</a>
+                      </li>
+                      <li id="menu-item-1012" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-1012">
+                        <a rel="privacy-policy" href="#" class="no-underline">Privacy Policy</a>
+                      </li>
+                      <li id="menu-item-1013" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1013">
+                        <a href="#" class="no-underline">Disclaimer</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="copyright">
+                    <p>DyBaca, 2023</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <div class="wp-manga-section">
+      <input type="hidden" name="bookmarking" value="0" />
+      <div class="modal fade" id="form-login" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div id="login" class="login">
+                <h3>
+                  <a href="index.html" title="DyBaca" tabindex="-1">Sign in</a>
+                </h3>
+                <p class="message login"></p>
+                <form name="loginform" id="loginform" method="post">
+                  <p>
+                    <label>Username or Email Address * <br>
+                      <input type="text" name="log" class="input user_login" value="" size="20">
+                    </label>
+                  </p>
+                  <p>
+                    <label>Password * <br>
+                      <input type="password" autocomplete="" name="pwd" class="input user_pass" value="" size="20">
+                    </label>
+                  </p>
+                  <p></p>
+                  <p class="forgetmenot">
+                    <label>
+                      <input name="rememberme" type="checkbox" id="rememberme" value="forever">Remember Me </label>
+                  </p>
+                  <p class="submit">
+                    <input type="submit" name="wp-submit" class="button button-primary button-large wp-submit" value="Log In">
+                    <input type="hidden" name="redirect_to" value="index.html">
+                    <input type="hidden" name="testcookie" value="1">
+                  </p>
+                </form>
+                <p class="nav">
+                  <a href="javascript:avoid(0)" class="to-reset">Lost your password?</a>
+                </p>
+                <p class="backtoblog">
+                  <a href="javascript:void(0)">&larr; Back to DyBaca</a>
+                </p>
+              </div>
+            </div>
+            <div class="modal-footer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="form-sign-up" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div id="sign-up" class="login">
+                <h3>
+                  <a href="index.html" title="DyBaca" tabindex="-1">Sign Up</a>
+                </h3>
+                <p class="message register">Register For This Site.</p>
+                <form name="registerform" id="registerform" novalidate="novalidate">
+                  <p>
+                    <label>Username * <br>
+                      <input type="text" name="user_sign-up" class="input user_login" value="" size="20">
+                    </label>
+                  </p>
+                  <p>
+                    <label>Email Address * <br>
+                      <input type="email" name="email_sign-up" class="input user_email" value="" size="20">
+                    </label>
+                  </p>
+                  <p>
+                    <label>Password * <br>
+                      <input type="password" name="pass_sign-up" autocomplete="" class="input user_pass" value="" size="25">
+                    </label>
+                  </p>
+                  <p></p>
+                  <input type="hidden" name="redirect_to" value="">
+                  <p class="submit">
+                    <input type="submit" name="wp-submit" class="button button-primary button-large wp-submit" value="Register">
+                  </p>
+                </form>
+                <p class="nav">
+                  <a href="javascript:void(0)" class="to-login">Log in</a> | <a href="javascript:void(0)" class="to-reset">Lost your password?</a>
+                </p>
+                <p class="backtoblog">
+                  <a href="javascript:void(0)">&larr; Back to DyBaca</a>
+                </p>
+              </div>
+            </div>
+            <div class="modal-footer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="form-reset" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div id="reset" class="login">
+                <h3>
+                  <a href="javascript:void(0)" class="to-reset">Lost your password?</a>
+                </h3>
+                <p class="message reset">Please enter your username or email address. You will receive a link to create a new password via email.</p>
+                <form name="resetform" id="resetform" method="post">
+                  <p>
+                    <label>Username or Email Address <br>
+                      <input type="text" name="user_reset" id="user_reset" class="input" value="" size="20">
+                    </label>
+                  </p>
+                  <p class="submit">
+                    <input type="submit" name="wp-submit" class="button button-primary button-large wp-submit" value="Get New Password">
+                    <input type="hidden" name="testcookie" value="1">
+                  </p>
+                </form>
+                <p>
+                  <a class="backtoblog" href="javascript:void(0)">&larr; Back to DyBaca</a>
+                </p>
+              </div>
+            </div>
+            <div class="modal-footer"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="go-to-top active">
+      <i class="icon ion-md-arrow-up"></i>
+    </div>
 
-    <!-- Optional JavaScript; choose one of the two! -->
+    <script type='text/javascript' id='wp-manga-login-ajax-js-extra'>
+      /* 																																							<![CDATA[ */
+      var wpMangaLogin = {
+        "admin_ajax": "https:\/\/dybaca.care\/admin-ajax.php",
+        "home_url": "https:\/\/dybaca.care",
+        "messages": {
+          "please_enter_username": "Please enter username",
+          "please_enter_password": "Please enter password",
+          "invalid_username_or_password": "Invalid username or password",
+          "server_error": "Server Error!",
+          "username_or_email_cannot_be_empty": "Username or Email cannot be empty",
+          "please_fill_all_fields": "Please fill in all password fields.",
+          "password_cannot_less_than_12": "Password cannot has less than 12 characters",
+          "password_doesnot_match": "Password doesn&#039;t match. Please  try again.",
+          "username_cannot_empty": "Username cannot be empty",
+          "email_cannot_empty": "Email cannot be empty",
+          "password_cannot_empty": "Password cannot be empty"
+        }
+      };
+      /* ]]> */
+    </script>
+    <script type='text/javascript' src='js/loginae.js' id='wp-manga-login-ajax-js'></script>
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script type='text/javascript' src='js/template.js' id='madara-js-js'></script>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    -->
+    <script type='text/javascript' src='js/bootstrap.min.js' id='bootstrap-js'></script>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/53789f630c.js" crossorigin="anonymous"></script>
   </body>
 </html>
