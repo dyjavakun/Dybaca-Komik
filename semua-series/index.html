@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Semua Komik &#8211; Shinigami ID</title>
+
+    <link rel='stylesheet' id='fontawesome-css' href='../assets/fontawesome/web-fonts-with-css/css/all.min52d5.css' type='text/css' media='all' />
+
+    <link rel='stylesheet' id='bootstrap-css' href='../css/bootstrap.min.css' type='text/css' media='all' />
+ 
+    <link rel='stylesheet' id='madara-css-child-css' href='../css/styleae.css' type='text/css' media='all' />
+
+    <link rel='stylesheet' id='ionicons-css' href='../assets/ionicons/css/ionicons.min.css' media='all' />
+
+    <link rel='stylesheet' id='loaders-css' href='../css/loaders.min.css' type='text/css' media='all' />
+
+   <link rel="stylesheet" href="../css/style.css">
+
+
+    <script type='text/javascript' src='../js/jquery.min.js' id='jquery-core-js'></script>
+
+    <link rel="icon" href="../assets/icon/ic-32x32.png" sizes="32x32" />
+    <link rel="icon" href="../assets/icon/ic-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="../assets/icon/ic-180x180.png" />
+    <meta name="msapplication-TileImage" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjjm4K7olnWiwO1lCysQvu4XSpHBmUx7runbsPnjCz2X9TNNijmDgmOCYlWVCVvgRytEwO0mlItlc10yGIcdyDJQGJtTe0CC5j_wvXEibz9NeRW93sw9Xl5MIvFP-48U2ua6r8YcAE8T73k2z-AZ5_knn-kZnz3PRZt2xhelDw5RSfwEVnKVsf8tbx3/s270/ic-270.png" />
+  </head>
+  <body class="page-template page-template-page-templates page-template-front-page page-template-page-templatesfront-page-php page page-id-15 wp-embed-responsive wp-manga-page header-style-1 text-ui-light">
+    <div class="wrap">
+      <div class="body-wrap">
+        <header class="site-header">
+            <div class="c-header__top">
+              <ul class="search-main-menu">
+                <li>
+                  <form id="blog-post-search" class="ajax" action="#" method="get">
+                    <input type="text" placeholder="Masukan nama komik..." name="s" value="">
+                    <input type="submit" value="Cari">
+                    <div class="loader-inner line-scale">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                    </div>
+                  </form>
+                </li>
+              </ul>
+              <div class="main-navigation style-1 ">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="main-navigation_wrap">
+                        <div class="wrap_branding">
+                          <a class="logo" href="../index.html" title="DyBaca">
+                            <img class="img-responsive" src="../assets/icon/logo.png" alt="DyBaca" />
+                          </a>
+                        </div>
+                        <div class="main-menu">
+                          <ul class="nav navbar-nav main-navbar">
+                            <li id="menu-item-84" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-84">
+                              <a href="../index.html">Home</a>
+                            </li>
+                            <li id="menu-item-85" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-85">
+                              <a href="index.html">Komik</a>
+                            </li>
+                            <li id="menu-item-85" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-85">
+                              <a href="../construction.html">Jadwal</a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="search-navigation search-sidebar">
+                          <div id="manga-search-2" class="widget col-12 col-md-12   default  no-icon heading-style-1 manga-widget widget-manga-search">
+                            <div class="widget__inner manga-widget widget-manga-search__inner c-widget-wrap">
+                              <div class="widget-content">
+                                <div class="search-navigation__wrap">
+                                  <script>
+                                    jQuery(document).ready(function($) {
+                                          if ($('.c-header__top .manga-search-form').length !== 0 && $('.c-header__top .manga-search-form.search-form').length !== 0) {
+                                            $('form#blog-post-search').append(' < input type = "hidden"
+                                                name = "post_type"
+                                                value = "wp-manga" > ');
+                                                $('form#blog-post-search').addClass("manga-search-form"); $('form#blog-post-search input[name="s"]').addClass("manga-search-field"); $('form.manga-search-form.ajax input.manga-search-field').each(function() {
+                                                    var searchIcon = $(this).parent().children('.ion-ios-search-strong');
+                                                    var append = $(this).parent();
+                                                    $(this).autocomplete({
+                                                        appendTo: append,
+                                                        source: function(request, resp) {
+                                                          $.ajax({
+                                                            url: manga.ajax_url,
+                                                            type: 'POST',
+                                                            dataType: 'json',
+                                                            data: {
+                                                              action: 'wp-manga-search-manga',
+                                                              title: request.term,
+                                                            },
+                                                            success: function(data) {
+                                                              resp($.map(data.data, function(item) {
+                                                                if (true == data.success) {
+                                                                  return {
+                                                                    label: item.title,
+                                                                    value: item.title,
+                                                                    url: item.url,
+                                                                    type: item.type
+                                                                  }
+                                                                } else {
+                                                                  return {
+                                                                    label: item.message,
+                                                                    value: item.message,
+                                                                    type: item.type,
+                                                                    click: false
+                                                                  }
+                                                                }
+                                                              }))
+                                                            }
+                                                          });
+                                                        },
+                                                        select: function(e, ui) {
+                                                          if (ui.item.url) {
+                                                            window.location.href = ui.item.url;
+                                                          } else {
+                                                            if (ui.item.click) {
+                                                              return true;
+                                                            } else {
+                                                              return false;
+                                                            }
+                                                          }
+                                                        },
+                                                        open: function(e, ui) {
+                                                          var acData = $(this).data('uiAutocomplete');
+                                                          acData.menu.element.addClass('manga-autocomplete').find('li div').each(function() {
+                                                              var $self = $(this),
+                                                                keyword = $.trim(acData.term).split(' ').join('|');
+                                                              $self.html($self.text().replace(new RegExp("(" + keyword + ")", "gi"), ' < span class = "manga-text-highlight" > $1 < /span>' ) );
+                                                              });
+                                                            }
+                                                          }).autocomplete("instance")._renderItem = function(ul, item) {
+                                                          return $(" < li class = 'search-item' > " ).append(" < div class = 'manga-type-" + item.type + "' > " + item.label + " < /div>" ).appendTo(ul);
+                                                            };
+                                                          });
+                                                      }
+                                                    });
+                                  </script>
+                                  <ul class="main-menu-search nav-menu">
+                                    <li class="menu-search">
+                                      <a href="javascript:;" class="open-search-main-menu">
+                                        <i class="icon ion-ios-search"></i>
+                                        <i class="icon ion-android-close"></i>
+                                      </a>
+                                      <ul ul class="search-main-menu">
+                                        <li>
+                                          <form class="manga-search-form search-form ajax" action="index.html" method="get">
+                                            <input class="manga-search-field" type="text" placeholder="Masukan nama komik..." name="s" value="">
+                                            <input type="hidden" name="post_type" value="wp-manga">
+                                            <i class="icon ion-ios-search"></i>
+                                            <div class="loader-inner ball-clip-rotate-multiple">
+                                              <div></div>
+                                              <div></div>
+                                            </div>
+                                            <input type="submit" value="Cari">
+                                          </form>
+                                        </li>
+                                      </ul>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="c-togle__menu">
+                          <button type="button" class="menu_icon__open">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mobile-menu menu-collapse off-canvas">
+              <div class="close-nav">
+                <button class="menu_icon__close">
+                  <span></span>
+                  <span></span>
+                </button>
+              </div>
+              <div class="c-modal_item">
+                <span class="c-modal_sign-in">
+                  <a href="#" data-toggle="modal" data-target="#form-login" class="btn-active-modal">Sign in</a>
+                </span>
+                <span class="c-modal_sign-up">
+                  <a href="javascript:void(0)" data-toggle="modal" data-target="#form-sign-up" class="btn-active-modal">Sign up</a>
+                </span>
+              </div>
+              <nav class="off-menu">
+                <ul id="menu-main-menu-1" class="nav navbar-nav main-navbar">
+                  <li id="nav-menu-item-84" class="main-menu-item menu-item-depth-0 menu-item menu-item-type-custom menu-item-object-custom parent dropdown">
+                    <a href="../index.html" class="menu-link disabled main-menu-link">Home </a>
+                  </li>
+                  <li id="nav-menu-item-85" class="main-menu-item menu-item-depth-0 menu-item menu-item-type-custom menu-item-object-custom">
+                    <a href="index.html" class="menu-link disabled main-menu-link">Komik </a>
+                  </li>
+                  <li id="nav-menu-item-1036" class="sub-menu-item menu-item-depth-1 menu-item menu-item-type-post_type menu-item-object-page">
+                    <a href="../construction.html" class="menu-link  sub-menu-link">Jadwal </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class=" c-sub-header-nav with-border  hide-sticky-menu">
+              <div class="container-fluid">
+                <div class="c-sub-nav_wrap">
+                  <div class="sub-nav_content">
+                    <ul class="sub-nav_list list-inline second-menu">
+                      <li id="menu-item-1123" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1123">
+                      </li>
+                      <i class="mobile-icon icon ion-md-more"></i>
+                    </ul>
+                  </div>
+                  <div class="c-modal_item">
+                    <a href="javascript:void(0)" data-toggle="modal" data-target="#form-login" class="btn-active-modal no-underline">Sign in</a>
+                    <a href="javascript:void(0)" data-toggle="modal" data-target="#form-sign-up" class="btn-active-modal no-underline">Sign up</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </header>
+        <div class="site-content">
+          <div class="c-breadcrumb-wrapper" style="background-color:#000000; ">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="c-breadcrumb">
+                    <ol class="breadcrumb">
+                      <li>
+                        <a href="../index.html"> Home </a>
+                      </li>
+                      <li>
+                        <a href="index.html"> All Series </a>
+                      </li>
+                    </ol>
+                  </div>
+                  <div class="c-genres-block archive-page">
+                    <div class="genres_wrap">
+                      <div class="c-blog__heading style-3 font-heading active">
+                        <h5>GENRES</h5>
+                      </div>
+                      <a class="btn btn-genres icon ion-md-arrow-dropdown float-right active"></a>
+                      <div class="genres__collapse" style="display: block">
+                        <div class="row genres">
+                          <ul class="list-unstyled">
+                            <li class="col-6 col-sm-4 col-md-2">
+                              <a href="../genre/action/index.html"> Action <span class="count"> (242) </span>
+                              </a>
+                            </li>
+                            <li class="col-6 col-sm-4 col-md-2">
+                              <a href="../genre/adventure/index.html"> Adventure <span class="count"> (193) </span>
+                              </a>
+                            </li>
+                            <li class="col-6 col-sm-4 col-md-2">
+                              <a href="../genre/comedy/index.html"> Comedy <span class="count"> (59) </span>
+                              </a>
+                            </li>
+                            <li class="col-6 col-sm-4 col-md-2">
+                              <a href="../genre/demon/index.html"> Demon <span class="count"> (25) </span>
+                              </a>
+                            </li>
+                            <li class="col-6 col-sm-4 col-md-2">
+                              <a href="../genre/drama/index.html"> Drama <span class="count"> (91) </span>
+                              </a>
+                            </li>
+                            <li class="col-6 col-sm-4 col-md-2">
+                              <a href="../genre/fantasy/index.html"> Fantasy <span class="count"> (176) </span>
+                              </a>
+                            </li>
+                            <li class="col-6 col-sm-4 col-md-2">
+                              <a href="../genre/game/index.html"> Game <span class="count"> (3) </span>
+                              </a>
+                            </li>
+                            <li class="col-6 col-sm-4 col-md-2">
+                              <a href="../genre/game-2/index.html"> Game <span class="count"> (10) </span>
+                              </a>
+                            </li>
+                            <li class="col-6 col-sm-4 col-md-2">
+                              <a href="../genre/horror/index.html"> Horror <span class="count"> (2) </span>
+                              </a>
+                            </li>
+                            <li class="col-6 col-sm-4 col-md-2">
+                              <a href="../genre/isekai/index.html"> Isekai <span class="count"> (10) </span>
+                              </a>
+                            </li>
+                            <li class="col-6 col-sm-4 col-md-2">
+                              <a href="../genre/magic/index.html"> Magic <span class="count"> (13) </span>
+                              </a>
+                            </li>
+                            <li class="col-6 col-sm-4 col-md-2">
+                              <a href="../genre/manhwa/index.html"> Manhwa <span class="count"> (52) </span>
+                              </a>
+                            </li>
+                            <li class="col-6 col-sm-4 col-md-2">
+                              <a href="../genre/martial-arts/index.html"> Martial Arts <span class="count"> (22) </span>
+                              </a>
+                            </li>
+                            <li class="col-6 col-sm-4 col-md-2">
+                              <a href="../genre/mature/index.html"> Mature <span class="count"> (2) </span>
+                              </a>
+                            </li>
+                            <li class="col-6 col-sm-4 col-md-2">
+                              <a href="../genre/medical/index.html"> Medical <span class="count"> (3) </span>
+                              </a>
+                            </li>
+                            <li class="col-6 col-sm-4 col-md-2">
+                              <a href="../genre/mirror/index.html"> Mirror <span class="count"> (155) </span>
+                              </a>
+                            </li>
+                            <li class="col-6 col-sm-4 col-md-2">
+                              <a href="../genre/murim/index.html"> Murim <span class="count"> (9) </span>
+                              </a>
+                            </li>
+                            <li class="col-6 col-sm-4 col-md-2">
+                              <a href="../genre/mystery/index.html"> Mystery <span class="count"> (2) </span>
+                              </a>
+                            </li>
+                            <li class="col-6 col-sm-4 col-md-2">
+                              <a href="../genre/novel/index.html"> Novel <span class="count"> (0) </span>
+                              </a>
+                            </li>
+                            <li class="col-6 col-sm-4 col-md-2">
+                              <a href="../genre/project/index.html"> Project <span class="count"> (96) </span>
+                              </a>
+                            </li>
+                            <li class="col-6 col-sm-4 col-md-2">
+                              <a href="../genre/psychological/index.html"> Psychological <span class="count"> (7) </span>
+                              </a>
+                            </li>
+                            <li class="col-6 col-sm-4 col-md-2">
+                              <a href="../genre/revenge/index.html"> Revenge <span class="count"> (5) </span>
+                              </a>
+                            </li>
+                            <li class="col-6 col-sm-4 col-md-2">
+                              <a href="../genre/romance/index.html"> Romance <span class="count"> (6) </span>
+                              </a>
+                            </li>
+                            <li class="col-6 col-sm-4 col-md-2">
+                              <a href="../genre/school-life/index.html"> School Life <span class="count"> (10) </span>
+                              </a>
+                            </li>
+                            <li class="col-6 col-sm-4 col-md-2">
+                              <a href="../genre/seinen/index.html"> Seinen <span class="count"> (4) </span>
+                              </a>
+                            </li>
+                            <li class="col-6 col-sm-4 col-md-2">
+                              <a href="../genre/shoujo/index.html"> Shoujo <span class="count"> (0) </span>
+                              </a>
+                            </li>
+                            <li class="col-6 col-sm-4 col-md-2">
+                              <a href="../genre/shounen/index.html"> Shounen <span class="count"> (33) </span>
+                              </a>
+                            </li>
+                            <li class="col-6 col-sm-4 col-md-2">
+                              <a href="../genre/slice-of-life/index.html"> Slice of Life <span class="count"> (1) </span>
+                              </a>
+                            </li>
+                            <li class="col-6 col-sm-4 col-md-2">
+                              <a href="../genre/sports/index.html"> Sports <span class="count"> (4) </span>
+                              </a>
+                            </li>
+                            <li class="col-6 col-sm-4 col-md-2">
+                              <a href="../genre/supranatural/index.html"> Supranatural <span class="count"> (2) </span>
+                              </a>
+                            </li>
+                            <li class="col-6 col-sm-4 col-md-2">
+                              <a href="../genre/violence/index.html"> Violence <span class="count"> (8) </span>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="c-page-content style-1">
+            <div class="content-area">
+              <div class="container">
+                <div class="row ">
+                  <div class="main-col sidebar-hidden col-md-12 col-sm-12">
+                    <div class="main-col-inner">
+                      <div class="c-page">
+                        <div class="entry-header">
+                          <div class="entry-header_wrap">
+                            <div class="entry-title">
+                              <h1 class="item-title h4">All Mangas</h1>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="c-page__content">
+                          <div class="tab-wrap">
+                            <div class="c-blog__heading style-2 font-heading">
+                              <div class="h4">
+                                <i class="icon ion-ios-star"></i> 255 results
+                              </div>
+                              <div class="c-nav-tabs">
+                                <span> Order by </span>
+                                <ul class="c-tabs-content">
+                                  <li class="">
+                                    <a href="index7d49.html?m_orderby=latest"> Latest </a>
+                                  </li>
+                                  <li class="">
+                                    <a href="indexb20f.html?m_orderby=alphabet"> A-Z </a>
+                                  </li>
+                                  <li class="">
+                                    <a href="index3dbe.html?m_orderby=rating"> Rating </a>
+                                  </li>
+                                  <li class="">
+                                    <a href="indexc32a.html?m_orderby=trending"> Trending </a>
+                                  </li>
+                                  <li class="">
+                                    <a href="index38af.html?m_orderby=views"> Most Views </a>
+                                  </li>
+                                  <li class="">
+                                    <a href="index8ed2.html?m_orderby=new-manga"> New </a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="tab-content-wrap">
+                            <div role="tabpanel" class="c-tabs-item">
+                              <div class="page-content-listing item-small_thumbnail">
+                                <div class="page-listing-item">
+                                  <div class="row row-eq-height">
+                                    <div class="col-12 col-md-4 badge-pos-2">
+                                      <div class="page-item-detail manga">
+                                        <div id="manga-item-14541" class="item-thumb  c-image-hover" data-post-id="14541">
+                                          <a href="../series/i-returned-as-an-fff-class-witch-doctor/index.html" title="I Returned As An FFF-Class Witch Doctor">
+                                            <img width="503" height="720" data-src="https://wuz.shinigami.id/wp-content/uploads/2023/04/13064611/I-Returned-As-An-FFF-Class-Witch-Doctor.jpg" data-srcset="https://wuz.shinigami.id/wp-content/uploads/2023/04/13064611/I-Returned-As-An-FFF-Class-Witch-Doctor.jpg 720w, https://wuz.shinigami.id/wp-content/uploads/2023/04/13064611/I-Returned-As-An-FFF-Class-Witch-Doctor-210x300.jpg 210w, https://wuz.shinigami.id/wp-content/uploads/2023/04/13064611/I-Returned-As-An-FFF-Class-Witch-Doctor-75x106.jpg 75w, https://wuz.shinigami.id/wp-content/uploads/2023/04/13064611/I-Returned-As-An-FFF-Class-Witch-Doctor-125x180.jpg 125w" data-sizes="(max-width: 503px) 100vw, 503px" class="img-responsive lazyload effect-fade" src="../assets/icon/dflazy.jpg" style="padding-top:720px;" alt="I Returned As An FFF-Class Witch Doctor" />
+                                            <span class="manga-title-badges custom manhwa">Manhwa</span>
+                                          </a>
+                                        </div>
+                                        <div class="item-summary">
+                                          <div class="post-title font-title">
+                                            <h3 class="h6">
+                                              <a href="../series/i-returned-as-an-fff-class-witch-doctor/index.html">I Returned As An FFF-Class Witch Doctor</a>
+                                            </h3>
+                                          </div>
+                                          <div class="meta-item rating">
+                                            <div class="post-total-rating ">
+                                              <i class="ion-ios-star ratings_stars rating_current"></i>
+                                              <i class="ion-ios-star ratings_stars rating_current"></i>
+                                              <i class="ion-ios-star ratings_stars rating_current"></i>
+                                              <i class="ion-ios-star ratings_stars rating_current"></i>
+                                              <i class="ion-ios-star-outline ratings_stars"></i>
+                                              <span class="score font-meta total_votes">4.2</span>
+                                            </div>
+                                          </div>
+                                          <div class="list-chapter">
+                                            <div class="chapter-item  has-thumb">
+                                              <span class="chapter font-meta">
+                                                <a href="../series/i-returned-as-an-fff-class-witch-doctor/chapter-20/index.html" class="btn-link"> Chapter 20 </a>
+                                              </span>
+                                              <span class="post-on font-meta"> 1 min ago </span>
+                                            </div>
+                                            <div class="chapter-item  has-thumb">
+                                              <span class="chapter font-meta">
+                                                <a href="../series/i-returned-as-an-fff-class-witch-doctor/chapter-19/index.html" class="btn-link"> Chapter 19 </a>
+                                              </span>
+                                              <span class="post-on font-meta"> 2 mins ago </span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-12 col-md-4 badge-pos-2">
+                                      <div class="page-item-detail manga">
+                                        <div id="manga-item-467" class="item-thumb  c-image-hover" data-post-id="467">
+                                          <a href="../series/overgeared/index.html" title="Kang Item">
+                                            <img width="503" height="720" data-src="https://wuz.shinigami.id/wp-content/uploads/2022/04/20030405/Overgeared.jpg" data-srcset="https://wuz.shinigami.id/wp-content/uploads/2022/04/20030405/Overgeared.jpg 720w, https://wuz.shinigami.id/wp-content/uploads/2022/04/20030405/Overgeared-210x300.jpg 210w, https://wuz.shinigami.id/wp-content/uploads/2022/04/20030405/Overgeared-75x106.jpg 75w, https://wuz.shinigami.id/wp-content/uploads/2022/04/20030405/Overgeared-125x180.jpg 125w" data-sizes="(max-width: 503px) 100vw, 503px" class="img-responsive lazyload effect-fade" src="../assets/icon/dflazy.jpg" style="padding-top:720px;" alt="Overgeared" />
+                                            <span class="manga-title-badges custom manhwa">Manhwa</span>
+                                          </a>
+                                        </div>
+                                        <div class="item-summary">
+                                          <div class="post-title font-title">
+                                            <h3 class="h5">
+                                              <a href="../series/overgeared/index.html">Kang Item</a>
+                                            </h3>
+                                          </div>
+                                          <div class="meta-item rating">
+                                            <div class="post-total-rating ">
+                                              <i class="ion-ios-star ratings_stars rating_current"></i>
+                                              <i class="ion-ios-star ratings_stars rating_current"></i>
+                                              <i class="ion-ios-star ratings_stars rating_current"></i>
+                                              <i class="ion-ios-star ratings_stars rating_current"></i>
+                                              <i class="ion-ios-star ratings_stars rating_current"></i>
+                                              <span class="score font-meta total_votes">4.8</span>
+                                            </div>
+                                          </div>
+                                          <div class="list-chapter">
+                                            <div class="chapter-item  has-thumb">
+                                              <span class="chapter font-meta">
+                                                <a href="../series/overgeared/chapter-180/index.html" class="btn-link"> Chapter 180 </a>
+                                              </span>
+                                              <span class="post-on font-meta"> 12 mins ago </span>
+                                            </div>
+                                            <div class="chapter-item  has-thumb">
+                                              <span class="chapter font-meta">
+                                                <a href="../series/overgeared/chapter-179/index.html" class="btn-link"> Chapter 179 </a>
+                                              </span>
+                                              <span class="post-on font-meta"> May 6, 2023 </span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-12 col-md-4 badge-pos-2">
+                                      <div class="page-item-detail manga">
+                                        <div id="manga-item-2748" class="item-thumb  c-image-hover" data-post-id="2748">
+                                          <a href="../series/demonic-emperor/index.html" title="Demonic Emperor">
+                                            <img width="488" height="720" data-src="https://wuz.shinigami.id/wp-content/uploads/2022/06/20055510/dff66ff8776c027322a7c5dd79388840_waifu2x_art_noise1_tta_1.png" data-srcset="https://wuz.shinigami.id/wp-content/uploads/2022/06/20055510/dff66ff8776c027322a7c5dd79388840_waifu2x_art_noise1_tta_1.png 564w, https://wuz.shinigami.id/wp-content/uploads/2022/06/20055510/dff66ff8776c027322a7c5dd79388840_waifu2x_art_noise1_tta_1-203x300.png 203w" data-sizes="(max-width: 488px) 100vw, 488px" class="img-responsive lazyload effect-fade" src="../assets/icon/dflazy.jpg" style="padding-top:720px;" alt="dff66ff8776c027322a7c5dd79388840_waifu2x_art_noise1_tta_1" />
+                                            <span class="manga-title-badges custom manhua">Manhua</span>
+                                          </a>
+                                        </div>
+                                        <div class="item-summary">
+                                          <div class="post-title font-title">
+                                            <h3 class="h5">
+                                              <a href="../series/demonic-emperor/index.html">Demonic Emperor</a>
+                                            </h3>
+                                          </div>
+                                          <div class="meta-item rating">
+                                            <div class="post-total-rating ">
+                                              <i class="ion-ios-star ratings_stars rating_current"></i>
+                                              <i class="ion-ios-star ratings_stars rating_current"></i>
+                                              <i class="ion-ios-star ratings_stars rating_current"></i>
+                                              <i class="ion-ios-star ratings_stars rating_current"></i>
+                                              <i class="ion-ios-star-half ratings_stars rating_current_half"></i>
+                                              <span class="score font-meta total_votes">4.6</span>
+                                            </div>
+                                          </div>
+                                          <div class="list-chapter">
+                                            <div class="chapter-item  has-thumb">
+                                              <span class="chapter font-meta">
+                                                <a href="../series/demonic-emperor/chapter-394/index.html" class="btn-link"> Chapter 394 </a>
+                                              </span>
+                                              <span class="post-on font-meta"> 2 hours ago </span>
+                                            </div>
+                                            <div class="chapter-item  has-thumb">
+                                              <span class="chapter font-meta">
+                                                <a href="../series/demonic-emperor/chapter-393/index.html" class="btn-link"> Chapter 393 </a>
+                                              </span>
+                                              <span class="post-on font-meta"> 4 hours ago </span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="page-listing-item">
+                                  <div class="row row-eq-height">
+                                    <div class="col-12 col-md-4 badge-pos-2">
+                                      <div class="page-item-detail manga">
+                                        <div id="manga-item-11605" class="item-thumb  c-image-hover" data-post-id="11605">
+                                          <a href="../series/the-constellation-that-returned-from-hell/index.html" title="The Constellation That Returned From Hell">
+                                            <img width="524" height="720" data-src="https://wuz.shinigami.id/wp-content/uploads/2023/02/28004105/IMG_20210721_220559-e1626913294789.jpg" data-srcset="https://wuz.shinigami.id/wp-content/uploads/2023/02/28004105/IMG_20210721_220559-e1626913294789.jpg 824w, https://wuz.shinigami.id/wp-content/uploads/2023/02/28004105/IMG_20210721_220559-e1626913294789-218x300.jpg 218w, https://wuz.shinigami.id/wp-content/uploads/2023/02/28004105/IMG_20210721_220559-e1626913294789-768x1055.jpg 768w, https://wuz.shinigami.id/wp-content/uploads/2023/02/28004105/IMG_20210721_220559-e1626913294789-110x150.jpg 110w" data-sizes="(max-width: 524px) 100vw, 524px" class="img-responsive lazyload effect-fade" src="../assets/icon/dflazy.jpg" style="padding-top:720px;" alt="IMG_20210721_220559-e1626913294789" />
+                                            <span class="manga-title-badges custom manhwa">Manhwa</span>
+                                          </a>
+                                        </div>
+                                        <div class="item-summary">
+                                          <div class="post-title font-title">
+                                            <h3 class="h6">
+                                              <a href="../series/the-constellation-that-returned-from-hell/index.html">The Constellation That Returned From Hell</a>
+                                            </h3>
+                                          </div>
+                                          <div class="meta-item rating">
+                                            <div class="post-total-rating ">
+                                              <i class="ion-ios-star ratings_stars rating_current"></i>
+                                              <i class="ion-ios-star ratings_stars rating_current"></i>
+                                              <i class="ion-ios-star ratings_stars rating_current"></i>
+                                              <i class="ion-ios-star-half ratings_stars rating_current_half"></i>
+                                              <i class="ion-ios-star-outline ratings_stars"></i>
+                                              <span class="score font-meta total_votes">3.4</span>
+                                            </div>
+                                          </div>
+                                          <div class="list-chapter">
+                                            <div class="chapter-item  has-thumb">
+                                              <span class="chapter font-meta">
+                                                <a href="../series/the-constellation-that-returned-from-hell/chapter-126/index.html" class="btn-link"> Chapter 126 </a>
+                                              </span>
+                                              <span class="post-on font-meta"> 4 hours ago </span>
+                                            </div>
+                                            <div class="chapter-item  has-thumb">
+                                              <span class="chapter font-meta">
+                                                <a href="../series/the-constellation-that-returned-from-hell/chapter-125/index.html" class="btn-link"> Chapter 125 </a>
+                                              </span>
+                                              <span class="post-on font-meta"> May 3, 2023 </span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-12 col-md-4 badge-pos-2">
+                                      <div class="page-item-detail manga">
+                                        <div id="manga-item-15752" class="item-thumb  c-image-hover" data-post-id="15752">
+                                          <a href="../series/how-to-live-as-an-illegal-healer/index.html" title="How To Live As An Illegal Healer">
+                                            <img width="497" height="720" data-src="https://wuz.shinigami.id/wp-content/uploads/2023/04/30020605/adawf5464.jpg" data-srcset="https://wuz.shinigami.id/wp-content/uploads/2023/04/30020605/adawf5464.jpg 800w, https://wuz.shinigami.id/wp-content/uploads/2023/04/30020605/adawf5464-207x300.jpg 207w, https://wuz.shinigami.id/wp-content/uploads/2023/04/30020605/adawf5464-768x1113.jpg 768w, https://wuz.shinigami.id/wp-content/uploads/2023/04/30020605/adawf5464-125x180.jpg 125w" data-sizes="(max-width: 497px) 100vw, 497px" class="img-responsive lazyload effect-fade" src="../assets/icon/dflazy.jpg" style="padding-top:720px;" alt="adawf5464" />
+                                            <span class="manga-title-badges custom manhwa">Manhwa</span>
+                                          </a>
+                                        </div>
+                                        <div class="item-summary">
+                                          <div class="post-title font-title">
+                                            <h3 class="h5">
+                                              <a href="../series/how-to-live-as-an-illegal-healer/index.html">How To Live As An Illegal Healer</a>
+                                            </h3>
+                                          </div>
+                                          <div class="meta-item rating">
+                                            <div class="post-total-rating ">
+                                              <i class="ion-ios-star ratings_stars rating_current"></i>
+                                              <i class="ion-ios-star ratings_stars rating_current"></i>
+                                              <i class="ion-ios-star ratings_stars rating_current"></i>
+                                              <i class="ion-ios-star ratings_stars rating_current"></i>
+                                              <i class="ion-ios-star-half ratings_stars rating_current_half"></i>
+                                              <span class="score font-meta total_votes">4.7</span>
+                                            </div>
+                                          </div>
+                                          <div class="list-chapter">
+                                            <div class="chapter-item  has-thumb">
+                                              <span class="chapter font-meta">
+                                                <a href="../series/how-to-live-as-an-illegal-healer/chapter-08/index.html" class="btn-link"> Chapter 08 </a>
+                                              </span>
+                                              <span class="post-on font-meta"> 4 hours ago </span>
+                                            </div>
+                                            <div class="chapter-item  has-thumb">
+                                              <span class="chapter font-meta">
+                                                <a href="../series/how-to-live-as-an-illegal-healer/chapter-07/index.html" class="btn-link"> Chapter 07 </a>
+                                              </span>
+                                              <span class="post-on font-meta"> May 8, 2023 </span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-12 col-md-4 badge-pos-2">
+                                      <div class="page-item-detail manga">
+                                        <div id="manga-item-15758" class="item-thumb  c-image-hover" data-post-id="15758">
+                                          <a href="../series/return-of-the-bloodthirsty-police/index.html" title="Return Of The Bloodthirsty Police">
+                                            <img width="497" height="720" data-src="https://wuz.shinigami.id/wp-content/uploads/2023/04/30020554/return.jpg" data-srcset="https://wuz.shinigami.id/wp-content/uploads/2023/04/30020554/return.jpg 690w, https://wuz.shinigami.id/wp-content/uploads/2023/04/30020554/return-207x300.jpg 207w, https://wuz.shinigami.id/wp-content/uploads/2023/04/30020554/return-125x180.jpg 125w" data-sizes="(max-width: 497px) 100vw, 497px" class="img-responsive lazyload effect-fade" src="../assets/icon/dflazy.jpg" style="padding-top:720px;" alt="return" />
+                                            <span class="manga-title-badges custom manhwa">Manhwa</span>
+                                          </a>
+                                        </div>
+                                        <div class="item-summary">
+                                          <div class="post-title font-title">
+                                            <h3 class="h6">
+                                              <a href="../series/return-of-the-bloodthirsty-police/index.html">Return Of The Bloodthirsty Police</a>
+                                            </h3>
+                                          </div>
+                                          <div class="meta-item rating">
+                                            <div class="post-total-rating ">
+                                              <i class="ion-ios-star ratings_stars rating_current"></i>
+                                              <i class="ion-ios-star ratings_stars rating_current"></i>
+                                              <i class="ion-ios-star ratings_stars rating_current"></i>
+                                              <i class="ion-ios-star-half ratings_stars rating_current_half"></i>
+                                              <i class="ion-ios-star-outline ratings_stars"></i>
+                                              <span class="score font-meta total_votes">3.7</span>
+                                            </div>
+                                          </div>
+                                          <div class="list-chapter">
+                                            <div class="chapter-item  has-thumb">
+                                              <span class="chapter font-meta">
+                                                <a href="../series/return-of-the-bloodthirsty-police/chapter-10/index.html" class="btn-link"> Chapter 10 </a>
+                                              </span>
+                                              <span class="post-on font-meta"> 4 hours ago </span>
+                                            </div>
+                                            <div class="chapter-item  has-thumb">
+                                              <span class="chapter font-meta">
+                                                <a href="../series/return-of-the-bloodthirsty-police/chapter-09/index.html" class="btn-link"> Chapter 09 </a>
+                                              </span>
+                                              <span class="post-on font-meta"> May 6, 2023 </span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="page-listing-item">
+                                  <div class="row row-eq-height">
+                                    <div class="col-12 col-md-4 badge-pos-2">
+                                      <div class="page-item-detail manga">
+                                        <div id="manga-item-11519" class="item-thumb  c-image-hover" data-post-id="11519">
+                                          <a href="../series/the-youngest-son-of-a-rich-family-reborn-rich/index.html" title="The Youngest Son Of A Rich Family (Reborn Rich)">
+                                            <img width="497" height="720" data-src="https://wuz.shinigami.id/wp-content/uploads/2023/02/27105831/rr1245123412-e1668612724252.jpg" data-srcset="https://wuz.shinigami.id/wp-content/uploads/2023/02/27105831/rr1245123412-e1668612724252.jpg 824w, https://wuz.shinigami.id/wp-content/uploads/2023/02/27105831/rr1245123412-e1668612724252-207x300.jpg 207w, https://wuz.shinigami.id/wp-content/uploads/2023/02/27105831/rr1245123412-e1668612724252-768x1113.jpg 768w, https://wuz.shinigami.id/wp-content/uploads/2023/02/27105831/rr1245123412-e1668612724252-125x180.jpg 125w" data-sizes="(max-width: 497px) 100vw, 497px" class="img-responsive lazyload effect-fade" src="../assets/icon/dflazy.jpg" style="padding-top:720px;" alt="rr1245123412-e1668612724252" />
+                                            <span class="manga-title-badges custom manhwa">Manhwa</span>
+                                          </a>
+                                        </div>
+                                        <div class="item-summary">
+                                          <div class="post-title font-title">
+                                            <h3 class="h6">
+                                              <a href="../series/the-youngest-son-of-a-rich-family-reborn-rich/index.html">The Youngest Son Of A Rich Family (Reborn Rich)</a>
+                                            </h3>
+                                          </div>
+                                          <div class="meta-item rating">
+                                            <div class="post-total-rating ">
+                                              <i class="ion-ios-star ratings_stars rating_current"></i>
+                                              <i class="ion-ios-star ratings_stars rating_current"></i>
+                                              <i class="ion-ios-star ratings_stars rating_current"></i>
+                                              <i class="ion-ios-star ratings_stars rating_current"></i>
+                                              <i class="ion-ios-star ratings_stars rating_current"></i>
+                                              <span class="score font-meta total_votes">4.8</span>
+                                            </div>
+                                          </div>
+                                          <div class="list-chapter">
+                                            <div class="chapter-item  has-thumb">
+                                              <span class="chapter font-meta">
+                                                <a href="../series/the-youngest-son-of-a-rich-family-reborn-rich/chapter-46/index.html" class="btn-link"> Chapter 46 </a>
+                                              </span>
+                                              <span class="post-on font-meta"> 4 hours ago </span>
+                                            </div>
+                                            <div class="chapter-item  has-thumb">
+                                              <span class="chapter font-meta">
+                                                <a href="../series/the-youngest-son-of-a-rich-family-reborn-rich/chapter-45/index.html" class="btn-link"> Chapter 45 </a>
+                                              </span>
+                                              <span class="post-on font-meta"> May 5, 2023 </span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-12 col-md-4 badge-pos-2">
+                                      <div class="page-item-detail manga">
+                                        <div id="manga-item-16013" class="item-thumb  c-image-hover" data-post-id="16013">
+                                          <a href="../series/peace-restaurant/index.html" title="Peace Restaurant">
+                                            <img width="480" height="623" data-src="https://wuz.shinigami.id/wp-content/uploads/2023/05/04073834/peace.png" data-srcset="https://wuz.shinigami.id/wp-content/uploads/2023/05/04073834/peace.png 480w, https://wuz.shinigami.id/wp-content/uploads/2023/05/04073834/peace-231x300.png 231w" data-sizes="(max-width: 480px) 100vw, 480px" class="img-responsive lazyload effect-fade" src="../assets/icon/dflazy.jpg" style="padding-top:623px;" alt="peace" />
+                                            <span class="manga-title-badges custom manhwa">Manhwa</span>
+                                          </a>
+                                        </div>
+                                        <div class="item-summary">
+                                          <div class="post-title font-title">
+                                            <h3 class="h5">
+                                              <a href="../series/peace-restaurant/index.html">Peace Restaurant</a>
+                                            </h3>
+                                          </div>
+                                          <div class="meta-item rating">
+                                            <div class="post-total-rating ">
+                                              <i class="ion-ios-star ratings_stars rating_current"></i>
+                                              <i class="ion-ios-star ratings_stars rating_current"></i>
+                                              <i class="ion-ios-star ratings_stars rating_current"></i>
+                                              <i class="ion-ios-star ratings_stars rating_current"></i>
+                                              <i class="ion-ios-star-outline ratings_stars"></i>
+                                              <span class="score font-meta total_votes">4.2</span>
+                                            </div>
+                                          </div>
+                                          <div class="list-chapter">
+                                            <div class="chapter-item  has-thumb">
+                                              <span class="chapter font-meta">
+                                                <a href="../series/peace-restaurant/chapter-07/index.html" class="btn-link"> Chapter 07 </a>
+                                              </span>
+                                              <span class="post-on font-meta"> 4 hours ago </span>
+                                            </div>
+                                            <div class="chapter-item  has-thumb">
+                                              <span class="chapter font-meta">
+                                                <a href="../series/peace-restaurant/chapter-06/index.html" class="btn-link"> Chapter 06 </a>
+                                              </span>
+                                              <span class="post-on font-meta"> May 9, 2023 </span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-12 col-md-4 badge-pos-2">
+                                      <div class="page-item-detail manga">
+                                        <div id="manga-item-12055" class="item-thumb  c-image-hover" data-post-id="12055">
+                                          <a href="../series/infinite-level-up-in-murim/index.html" title="Infinite Level Up in Murim">
+                                            <img width="472" height="720" data-src="https://wuz.shinigami.id/wp-content/uploads/2023/03/06092737/61609-e1614173643487.jpg" data-srcset="https://wuz.shinigami.id/wp-content/uploads/2023/03/06092737/61609-e1614173643487.jpg 824w, https://wuz.shinigami.id/wp-content/uploads/2023/03/06092737/61609-e1614173643487-197x300.jpg 197w, https://wuz.shinigami.id/wp-content/uploads/2023/03/06092737/61609-e1614173643487-768x1171.jpg 768w" data-sizes="(max-width: 472px) 100vw, 472px" class="img-responsive lazyload effect-fade" src="../assets/icon/dflazy.jpg" style="padding-top:720px;" alt="61609-e1614173643487" />
+                                            <span class="manga-title-badges custom manhwa">Manhwa</span>
+                                          </a>
+                                        </div>
+                                        <div class="item-summary">
+                                          <div class="post-title font-title">
+                                            <h3 class="h5">
+                                              <a href="../series/infinite-level-up-in-murim/index.html">Infinite Level Up in Murim</a>
+                                            </h3>
+                                          </div>
+                                          <div class="meta-item rating">
+                                            <div class="post-total-rating ">
+                                              <i class="ion-ios-star ratings_stars rating_current"></i>
+                                              <i class="ion-ios-star ratings_stars rating_current"></i>
+                                              <i class="ion-ios-star ratings_stars rating_current"></i>
+                                              <i class="ion-ios-star ratings_stars rating_current"></i>
+                                              <i class="ion-ios-star-half ratings_stars rating_current_half"></i>
+                                              <span class="score font-meta total_votes">4.4</span>
+                                            </div>
+                                          </div>
+                                          <div class="list-chapter">
+                                            <div class="chapter-item  has-thumb">
+                                              <span class="chapter font-meta">
+                                                <a href="../series/infinite-level-up-in-murim/chapter-145/index.html" class="btn-link"> Chapter 145 </a>
+                                              </span>
+                                              <span class="post-on font-meta"> 9 hours ago </span>
+                                            </div>
+                                            <div class="chapter-item  has-thumb">
+                                              <span class="chapter font-meta">
+                                                <a href="../series/infinite-level-up-in-murim/chapter-144/index.html" class="btn-link"> Chapter 144 </a>
+                                              </span>
+                                              <span class="post-on font-meta"> 2 days ago </span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="page-listing-item">
+                                  <div class="row row-eq-height">
+                                    <div class="col-12 col-md-4 badge-pos-2">
+                                      <div class="page-item-detail manga">
+                                        <div id="manga-item-11484" class="item-thumb  c-image-hover" data-post-id="11484">
+                                          <a href="../series/how-to-fight/index.html" title="How To Fight">
+                                            <img width="500" height="700" data-src="https://wuz.shinigami.id/wp-content/uploads/2023/02/27063515/57.jpg" data-srcset="https://wuz.shinigami.id/wp-content/uploads/2023/02/27063515/57.jpg 500w, https://wuz.shinigami.id/wp-content/uploads/2023/02/27063515/57-214x300.jpg 214w, https://wuz.shinigami.id/wp-content/uploads/2023/02/27063515/57-75x106.jpg 75w" data-sizes="(max-width: 500px) 100vw, 500px" class="img-responsive lazyload effect-fade" src="../assets/icon/dflazy.jpg" style="padding-top:700px;" alt="$_57" />
+                                            <span class="manga-title-badges custom manhwa">Manhwa</span>
+                                          </a>
+                                        </div>
+                                        <div class="item-summary">
+                                          <div class="post-title font-title">
+                                            <h3 class="h5">
+                                              <a href="../series/how-to-fight/index.html">How To Fight</a>
+                                            </h3>
+                                          </div>
+                                          <div class="meta-item rating">
+                                            <div class="post-total-rating ">
+                                              <i class="ion-ios-star ratings_stars rating_current"></i>
+                                              <i class="ion-ios-star ratings_stars rating_current"></i>
+                                              <i class="ion-ios-star ratings_stars rating_current"></i>
+                                              <i class="ion-ios-star ratings_stars rating_current"></i>
+                                              <i class="ion-ios-star-outline ratings_stars"></i>
+                                              <span class="score font-meta total_votes">4.2</span>
+                                            </div>
+                                          </div>
+                                          <div class="list-chapter">
+                                            <div class="chapter-item  has-thumb">
+                                              <span class="chapter font-meta">
+                                                <a href="../series/how-to-fight/chapter-180/index.html" class="btn-link"> Chapter 180 </a>
+                                              </span>
+                                              <span class="post-on font-meta"> April 30, 2023 </span>
+                                            </div>
+                                            <div class="chapter-item  has-thumb">
+                                              <span class="chapter font-meta">
+                                                <a href="../series/how-to-fight/chapter-179/index.html" class="btn-link"> Chapter 179 </a>
+                                              </span>
+                                              <span class="post-on font-meta"> April 23, 2023 </span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-12 col-md-12">
+                                <div class='wp-pagenavi' role='navigation'>
+                                  <span aria-current='page' class='current'>1</span>
+                                  <a class="page larger" title="Page 2" href="page/2/index.html">2</a>
+                                  <a class="page larger" title="Page 3" href="page/3/index.html">3</a>
+                                  <a class="page larger" title="Page 4" href="page/4/index.html">4</a>
+                                  <a class="nextpostslink" rel="next" aria-label="Next Page" href="page/2/index.html">»</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="site-footer">
+          <div class="bottom-footer">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="nav-footer">
+                    <ul class="list-inline font-nav">
+                      <li id="menu-item-1010" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1010">
+                        <a href="#">Kontak Kami</a>
+                      </li>
+                      <li id="menu-item-1011" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1011">
+                        <a href="#">Terms and Conditions</a>
+                      </li>
+                      <li id="menu-item-1012" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-1012">
+                        <a rel="privacy-policy" href="#">Privacy Policy</a>
+                      </li>
+                      <li id="menu-item-1013" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1013">
+                        <a href="#">Disclaimer</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="copyright">
+                    <p>DyBaca, 2023</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <div class="wp-manga-section">
+      <input type="hidden" name="bookmarking" value="0" />
+      <div class="modal fade" id="form-login" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div id="login" class="login">
+                <h3>
+                  <a href="index.html" title="DyBaca" tabindex="-1">Sign in</a>
+                </h3>
+                <p class="message login"></p>
+                <form name="loginform" id="loginform" method="post">
+                  <p>
+                    <label>Username or Email Address * <br>
+                      <input type="text" name="log" class="input user_login" value="" size="20">
+                    </label>
+                  </p>
+                  <p>
+                    <label>Password * <br>
+                      <input type="password" autocomplete="" name="pwd" class="input user_pass" value="" size="20">
+                    </label>
+                  </p>
+                  <p></p>
+                  <p class="forgetmenot">
+                    <label>
+                      <input name="rememberme" type="checkbox" id="rememberme" value="forever">Remember Me </label>
+                  </p>
+                  <p class="submit">
+                    <input type="submit" name="wp-submit" class="button button-primary button-large wp-submit" value="Log In">
+                    <input type="hidden" name="redirect_to" value="index.html">
+                    <input type="hidden" name="testcookie" value="1">
+                  </p>
+                </form>
+                <p class="nav">
+                  <a href="javascript:avoid(0)" class="to-reset">Lost your password?</a>
+                </p>
+                <p class="backtoblog">
+                  <a href="javascript:void(0)">&larr; Back to DyBaca</a>
+                </p>
+              </div>
+            </div>
+            <div class="modal-footer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="form-sign-up" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div id="sign-up" class="login">
+                <h3>
+                  <a href="index.html" title="DyBaca" tabindex="-1">Sign Up</a>
+                </h3>
+                <p class="message register">Register For This Site.</p>
+                <form name="registerform" id="registerform" novalidate="novalidate">
+                  <p>
+                    <label>Username * <br>
+                      <input type="text" name="user_sign-up" class="input user_login" value="" size="20">
+                    </label>
+                  </p>
+                  <p>
+                    <label>Email Address * <br>
+                      <input type="email" name="email_sign-up" class="input user_email" value="" size="20">
+                    </label>
+                  </p>
+                  <p>
+                    <label>Password * <br>
+                      <input type="password" name="pass_sign-up" autocomplete="" class="input user_pass" value="" size="25">
+                    </label>
+                  </p>
+                  <p></p>
+                  <input type="hidden" name="redirect_to" value="">
+                  <p class="submit">
+                    <input type="submit" name="wp-submit" class="button button-primary button-large wp-submit" value="Register">
+                  </p>
+                </form>
+                <p class="nav">
+                  <a href="javascript:void(0)" class="to-login">Log in</a> | <a href="javascript:void(0)" class="to-reset">Lost your password?</a>
+                </p>
+                <p class="backtoblog">
+                  <a href="javascript:void(0)">&larr; Back to DyBaca</a>
+                </p>
+              </div>
+            </div>
+            <div class="modal-footer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="form-reset" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div id="reset" class="login">
+                <h3>
+                  <a href="javascript:void(0)" class="to-reset">Lost your password?</a>
+                </h3>
+                <p class="message reset">Please enter your username or email address. You will receive a link to create a new password via email.</p>
+                <form name="resetform" id="resetform" method="post">
+                  <p>
+                    <label>Username or Email Address <br>
+                      <input type="text" name="user_reset" id="user_reset" class="input" value="" size="20">
+                    </label>
+                  </p>
+                  <p class="submit">
+                    <input type="submit" name="wp-submit" class="button button-primary button-large wp-submit" value="Get New Password">
+                    <input type="hidden" name="testcookie" value="1">
+                  </p>
+                </form>
+                <p>
+                  <a class="backtoblog" href="javascript:void(0)">&larr; Back to DyBaca</a>
+                </p>
+              </div>
+            </div>
+            <div class="modal-footer"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="go-to-top active">
+      <i class="icon ion-md-arrow-up"></i>
+    </div>
+    <script type='text/javascript' src='../js/lazysizes.min.js' id='lazysizes-js'></script>
+    <script type='text/javascript' src='../js/bootstrap.min.js' id='bootstrap-js'></script>
+  
+    <script type='text/javascript' src='../js/template.js' id='madara-js-js'></script>
+    
+    <script type='text/javascript' src='../js/loginae.js' id='wp-manga-login-ajax-js'></script>
+   
+    <script type='text/javascript' src='../js/script.js' id='wp-manga-js'></script>
+
+    <script type='text/javascript' id='wp-manga-login-ajax-js-extra'>
+      /* 
+																																																																				<![CDATA[ */
+      var wpMangaLogin = {
+        "admin_ajax": "https:\/\/shinigami.id\/wp-admin\/admin-ajax.php",
+        "home_url": "https:\/\/shinigami.id",
+        "messages": {
+          "please_enter_username": "Please enter username",
+          "please_enter_password": "Please enter password",
+          "invalid_username_or_password": "Invalid username or password",
+          "server_error": "Server Error!",
+          "username_or_email_cannot_be_empty": "Username or Email cannot be empty",
+          "please_fill_all_fields": "Please fill in all password fields.",
+          "password_cannot_less_than_12": "Password cannot has less than 12 characters",
+          "password_doesnot_match": "Password doesn&#039;t match. Please  try again.",
+          "username_cannot_empty": "Username cannot be empty",
+          "email_cannot_empty": "Email cannot be empty",
+          "password_cannot_empty": "Password cannot be empty"
+        }
+      };
+      /* ]]> */
+    </script>
+  </body>
+</html>
