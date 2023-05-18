@@ -5,30 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel='stylesheet' id='fontawesome-css' href='../../assets/fontawesome/web-fonts-with-css/css/all.min52d5.css' type='text/css' media='all' />
-
     <link rel='stylesheet' id='bootstrap-css' href='../../css/bootstrap.min.css' type='text/css' media='all' />
-    
     <link rel='stylesheet' id='madara-css-child-css' href='../../css/styleae.css' type='text/css' media='all' />
-    
     <link rel='stylesheet' id='ionicons-css' href='../../assets/ionicons/css/ionicons.min.css' media='all' />
-
     <link rel='stylesheet' id='loaders-css' href='../../css/loaders.min.css' type='text/css' media='all' />
-
     <link rel="stylesheet" href="../../css/detail.css">
-    
     <script type='text/javascript' src='../../js/jquery.min.js' id='jquery-core-js'></script>
-
     <link rel="icon" href="../../assets/icon/ic-32x32.png" sizes="32x32" />
-    <link rel="icon" href="../../assets/icon/ic-192x192.png sizes="192x192" />
+    <link rel="icon" href="../../assets/icon/ic-192x192.png sizes=" 192x192" />
     <link rel="apple-touch-icon" href="../../assets/icon/ic-180x180.png" />
     <meta name="msapplication-TileImage" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjjm4K7olnWiwO1lCysQvu4XSpHBmUx7runbsPnjCz2X9TNNijmDgmOCYlWVCVvgRytEwO0mlItlc10yGIcdyDJQGJtTe0CC5j_wvXEibz9NeRW93sw9Xl5MIvFP-48U2ua6r8YcAE8T73k2z-AZ5_knn-kZnz3PRZt2xhelDw5RSfwEVnKVsf8tbx3/s270/ic-270.png" />
-
-    <title>Overgeared&#8211; DyBaca</title>
-    
+    <title>The Return Of the Crazy Demon &#8211; DyBaca</title>
   </head>
-  <body class="wp-manga-template-default single single-wp-manga postid-467 wp-embed-responsive wp-manga-page manga-page page header-style-1 text-ui-light">
+  <body class="wp-manga-template-default single single-wp-manga postid-5250 wp-embed-responsive wp-manga-page manga-page page header-style-1 text-ui-light">
     <div class="wrap">
       <div class="body-wrap">
         <header class="site-header">
@@ -80,68 +70,68 @@
                                   jQuery(document).ready(function($) {
                                         if ($('.c-header__top .manga-search-form').length !== 0 && $('.c-header__top .manga-search-form.search-form').length !== 0) {
                                           $('form#blog-post-search').append(' < input type = "hidden"
-                                              name = "post_type"
-                                              value = "wp-manga" > ');
-                                              $('form#blog-post-search').addClass("manga-search-form"); $('form#blog-post-search input[name="s"]').addClass("manga-search-field"); $('form.manga-search-form.ajax input.manga-search-field').each(function() {
-                                                  var searchIcon = $(this).parent().children('.ion-ios-search-strong');
-                                                  var append = $(this).parent();
-                                                  $(this).autocomplete({
-                                                      appendTo: append,
-                                                      source: function(request, resp) {
-                                                        $.ajax({
-                                                          url: manga.ajax_url,
-                                                          type: 'POST',
-                                                          dataType: 'json',
-                                                          data: {
-                                                            action: 'wp-manga-search-manga',
-                                                            title: request.term,
-                                                          },
-                                                          success: function(data) {
-                                                            resp($.map(data.data, function(item) {
-                                                              if (true == data.success) {
-                                                                return {
-                                                                  label: item.title,
-                                                                  value: item.title,
-                                                                  url: item.url,
-                                                                  type: item.type
-                                                                }
-                                                              } else {
-                                                                return {
-                                                                  label: item.message,
-                                                                  value: item.message,
-                                                                  type: item.type,
-                                                                  click: false
-                                                                }
-                                                              }
-                                                            }))
+                                            name = "post_type"
+                                            value = "wp-manga" > ');
+                                            $('form#blog-post-search').addClass("manga-search-form"); $('form#blog-post-search input[name="s"]').addClass("manga-search-field"); $('form.manga-search-form.ajax input.manga-search-field').each(function() {
+                                              var searchIcon = $(this).parent().children('.ion-ios-search-strong');
+                                              var append = $(this).parent();
+                                              $(this).autocomplete({
+                                                appendTo: append,
+                                                source: function(request, resp) {
+                                                  $.ajax({
+                                                    url: manga.ajax_url,
+                                                    type: 'POST',
+                                                    dataType: 'json',
+                                                    data: {
+                                                      action: 'wp-manga-search-manga',
+                                                      title: request.term,
+                                                    },
+                                                    success: function(data) {
+                                                      resp($.map(data.data, function(item) {
+                                                        if (true == data.success) {
+                                                          return {
+                                                            label: item.title,
+                                                            value: item.title,
+                                                            url: item.url,
+                                                            type: item.type
                                                           }
-                                                        });
-                                                      },
-                                                      select: function(e, ui) {
-                                                        if (ui.item.url) {
-                                                          window.location.href = ui.item.url;
                                                         } else {
-                                                          if (ui.item.click) {
-                                                            return true;
-                                                          } else {
-                                                            return false;
+                                                          return {
+                                                            label: item.message,
+                                                            value: item.message,
+                                                            type: item.type,
+                                                            click: false
                                                           }
                                                         }
-                                                      },
-                                                      open: function(e, ui) {
-                                                        var acData = $(this).data('uiAutocomplete');
-                                                        acData.menu.element.addClass('manga-autocomplete').find('li div').each(function() {
-                                                            var $self = $(this),
-                                                              keyword = $.trim(acData.term).split(' ').join('|');
-                                                            $self.html($self.text().replace(new RegExp("(" + keyword + ")", "gi"), ' < span class = "manga-text-highlight" > $1 < /span>' ) );
-                                                            });
-                                                          }
-                                                        }).autocomplete("instance")._renderItem = function(ul, item) {
-                                                        return $(" < li class = 'search-item' > " ).append(" < div class = 'manga-type-" + item.type + "' > " + item.label + " < /div>" ).appendTo(ul);
-                                                          };
-                                                        });
+                                                      }))
                                                     }
                                                   });
+                                                },
+                                                select: function(e, ui) {
+                                                  if (ui.item.url) {
+                                                    window.location.href = ui.item.url;
+                                                  } else {
+                                                    if (ui.item.click) {
+                                                      return true;
+                                                    } else {
+                                                      return false;
+                                                    }
+                                                  }
+                                                },
+                                                open: function(e, ui) {
+                                                  var acData = $(this).data('uiAutocomplete');
+                                                  acData.menu.element.addClass('manga-autocomplete').find('li div').each(function() {
+                                                    var $self = $(this),
+                                                      keyword = $.trim(acData.term).split(' ').join('|');
+                                                    $self.html($self.text().replace(new RegExp("(" + keyword + ")", "gi"), ' < span class = "manga-text-highlight" > $1 < /span>'));
+                                                  });
+                                                }
+                                              }).autocomplete("instance")._renderItem = function(ul, item) {
+                                                return $(" < li class = 'search-item' > ").append(" < div class = 'manga-type-" + item.type + "' > " + item.label + " < /div>").appendTo(ul);
+                                              };
+                                            });
+                                          }
+                                        });
                                 </script>
                                 <ul class="main-menu-search nav-menu">
                                   <li class="menu-search">
@@ -217,8 +207,7 @@
               <div class="c-sub-nav_wrap">
                 <div class="sub-nav_content">
                   <ul class="sub-nav_list list-inline second-menu">
-                    <li id="menu-item-1123" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1123">
-                    </li>
+                    <li id="menu-item-1123" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1123"></li>
                     <i class="mobile-icon icon ion-md-more"></i>
                   </ul>
                 </div>
@@ -239,19 +228,19 @@
               console.log(seila)
             });
           </script>
-          <div class="post-467 wp-manga type-wp-manga status-publish has-post-thumbnail hentry wp-manga-tag-baca-manhwa wp-manga-tag-baca-manhwa-overgeared wp-manga-release-64 wp-manga-author-monohumbug wp-manga-author-saenal wp-manga-artist-team-argo wp-manga-genre-action wp-manga-genre-adventure wp-manga-genre-fantasy wp-manga-genre-game-2 wp-manga-genre-magic wp-manga-genre-project">
+          <div class="post-5250 wp-manga type-wp-manga status-publish has-post-thumbnail hentry wp-manga-release-40 wp-manga-author-yoo-jinseung wp-manga-artist-ihy- wp-manga-genre-action wp-manga-genre-adventure wp-manga-genre-fantasy wp-manga-genre-manhwa wp-manga-genre-martial-arts wp-manga-genre-murim wp-manga-genre-project">
             <div class="profile-manga summary-layout-1" style="background-color:#000000;  ">
               <div class="container">
                 <div class="row">
                   <div class="col-12 col-sm-12 col-md-12" style="padding-bottom:70px;">
                     <div class="post-title">
                       <span class="manga-title-badges custom manhwa">Manhwa</span>
-                      <h1 style="margin-bottom:5px;"> Kang Item </h1>
+                      <h1 style="margin-bottom:5px;"> The Return Of the Crazy Demon </h1>
                     </div>
                     <div class="tab-summary ">
                       <div class="summary_image">
                         <a href="index.html">
-                          <img width="276" height="395" data-src="https://wuz.shinigami.id/wp-content/uploads/2022/04/20030405/Overgeared.jpg" data-srcset="https://wuz.shinigami.id/wp-content/uploads/2022/04/20030405/Overgeared.jpg 720w, https://wuz.  shinigami.id/wp-content/uploads/2022/04/20030405/Overgeared-210x300.jpg 210w, https://wuz.shinigami.id/wp-content/uploads/2022/04/20030405/Overgeared-75x106.jpg 75w, https://wuz.shinigami.id/wp-content/uploads/2022/04/20030405/Overgeared-125x180.jpg 125w" data-sizes="(max-width: 276px) 100vw, 276px" class="img-responsive lazyload effect-fade" src="../../assets/icon/dflazy.jpg" style="padding-top:395px;" alt="Overgeared" />
+                          <img width="276" height="395" data-src="https://wuz.shinigami.id/wp-content/uploads/2022/09/27182651/The-Return-Of-the-Crazy-Demon-1.jpg" data-srcset="https://wuz.shinigami.id/wp-content/uploads/2022/09/27182651/The-Return-Of-the-Crazy-Demon-1.jpg 720w, https://wuz.shinigami.id/wp-content/uploads/2022/09/27182651/The-Return-Of-the-Crazy-Demon-1-210x300.jpg 210w, https://wuz.shinigami.id/wp-content/uploads/2022/09/27182651/The-Return-Of-the-Crazy-Demon-1-75x106.jpg 75w, https://wuz.shinigami.id/wp-content/uploads/2022/09/27182651/The-Return-Of-the-Crazy-Demon-1-125x180.jpg 125w" data-sizes="(max-width: 276px) 100vw, 276px" class="img-responsive lazyload effect-fade" src="../../wp-content/themes/madara/images/dflazy.jpg" style="padding-top:395px;" alt="The-Return-Of-the-Crazy-Demon" />
                         </a>
                       </div>
                       <div class="summary_content_wrap">
@@ -277,7 +266,7 @@
                                     <i class="ion-ios-star ratings_stars rating_current"></i>
                                     <i class="ion-ios-star ratings_stars rating_current"></i>
                                     <i class="ion-ios-star ratings_stars rating_current"></i>
-                                    <span class="score font-meta total_votes">4.8</span>
+                                    <span class="score font-meta total_votes">4.9</span>
                                   </div>
                                   <div class="user-rating ">
                                     <i class="ion-ios-star-outline ratings_stars"></i>
@@ -287,7 +276,7 @@
                                     <i class="ion-ios-star-outline ratings_stars"></i>
                                     <span class="score font-meta total_votes">Your Rating</span>
                                   </div>
-                                  <input type="hidden" class="rating-post-id" value="467">
+                                  <input type="hidden" class="rating-post-id" value="5250">
                                 </div>
                                 <div class="post-content_item">
                                   <div class="summary-heading">
@@ -295,25 +284,25 @@
                                   </div>
                                   <div class="summary-content vote-details" vocab="https://schema.org/" typeof="AggregateRating">
                                     <span property="itemReviewed" typeof="Book">
-                                      <span class="rate-title" property="name" title="Kang Item">Kang Item</span>
+                                      <span class="rate-title" property="name" title="The Return Of the Crazy Demon">The Return Of the Crazy Demon</span>
                                     </span>
                                     <span>
-                                      <span> Average <span property="ratingValue" id="averagerate"> 4.8</span> / <span property="bestRating">5</span>
+                                      <span> Average <span property="ratingValue" id="averagerate"> 4.9</span> / <span property="bestRating">5</span>
                                       </span>
-                                    </span> out of <span property="ratingCount" id="countrate">160</span>
+                                    </span> out of <span property="ratingCount" id="countrate">67</span>
                                   </div>
                                 </div>
                                 <div class="post-content_item">
                                   <div class="summary-heading">
                                     <h5> Rank </h5>
                                   </div>
-                                  <div class="summary-content"> 6th in Comics </div>
+                                  <div class="summary-content"> 50th in Comics </div>
                                 </div>
                                 <div class="post-content_item">
                                   <div class="summary-heading">
                                     <h5> Alternative </h5>
                                   </div>
-                                  <div class="summary-content"> Overgeared </div>
+                                  <div class="summary-content"> 광마회귀 , Return of The Mad Demon </div>
                                 </div>
                                 <div class="post-content_item">
                                   <div class="summary-heading">
@@ -321,7 +310,7 @@
                                   </div>
                                   <div class="summary-content">
                                     <div class="author-content">
-                                      <a href="../../author/monohumbug/index.html" rel="tag">Monohumbug</a>, <a href="../../author/saenal/index.html" rel="tag">Saenal</a>
+                                      <a href="../../author/yoo-jinseung/index.html" rel="tag">Yoo Jinseung</a>
                                     </div>
                                   </div>
                                 </div>
@@ -331,7 +320,7 @@
                                   </div>
                                   <div class="summary-content">
                                     <div class="artist-content">
-                                      <a href="../../artist/team-argo/index.html" rel="tag">Team Argo</a>
+                                      <a href="../../artist/ihy-%ec%9d%b4%ed%9e%88/index.html" rel="tag">Ihy (이히)</a>
                                     </div>
                                   </div>
                                 </div>
@@ -341,7 +330,7 @@
                                   </div>
                                   <div class="summary-content">
                                     <div class="genres-content">
-                                      <a href="../../genre/action/index.html" rel="tag">Action</a>, <a href="../../genre/adventure/index.html" rel="tag">Adventure</a>, <a href="../../genre/fantasy/index.html" rel="tag">Fantasy</a>, <a href="../../genre/game-2/index.html" rel="tag">Game</a>, <a href="../../genre/magic/index.html" rel="tag">Magic</a>, <a href="../../genre/project/index.html" rel="tag">Project</a>
+                                      <a href="../../genre/action/index.html" rel="tag">Action</a>, <a href="../../genre/adventure/index.html" rel="tag">Adventure</a>, <a href="../../genre/fantasy/index.html" rel="tag">Fantasy</a>, <a href="../../genre/manhwa/index.html" rel="tag">Manhwa</a>, <a href="../../genre/martial-arts/index.html" rel="tag">Martial Arts</a>, <a href="../../genre/murim/index.html" rel="tag">Murim</a>, <a href="../../genre/project/index.html" rel="tag">Project</a>
                                     </div>
                                   </div>
                                 </div>
@@ -356,9 +345,7 @@
                                     <h5> Tag(s) </h5>
                                   </div>
                                   <div class="summary-content">
-                                    <div class="tags-content">
-                                      <a href="../../tag/baca-manhwa/index.html" rel="tag">baca manhwa</a>, <a href="../../tag/baca-manhwa-overgeared/index.html" rel="tag">Baca Manhwa Overgeared</a>
-                                    </div>
+                                    <div class="tags-content"> Updating </div>
                                   </div>
                                 </div>
                               </div>
@@ -368,7 +355,7 @@
                                     <h5> Release </h5>
                                   </div>
                                   <div class="summary-content">
-                                    <a href="../../release/2020/index.html" rel="tag">2020</a>
+                                    <a href="../../release/2021/index.html" rel="tag">2021</a>
                                   </div>
                                 </div>
                                 <div class="post-content_item">
@@ -393,12 +380,12 @@
                                       <script type="text/javascript">
                                         var requireLogin2BookMark = true;
                                       </script>
-                                      <a href="#" class="wp-manga-action-button" data-action="bookmark" data-post="467" data-chapter="" data-page="1" title="Bookmark">
+                                      <a href="#" class="wp-manga-action-button" data-action="bookmark" data-post="5250" data-chapter="" data-page="1" title="Bookmark">
                                         <i class="icon ion-ios-bookmark"></i>
                                       </a>
                                     </div>
                                     <div class="action_detail">
-                                      <span>2.6K Users bookmarked This</span>
+                                      <span>1.4K Users bookmarked This</span>
                                     </div>
                                   </div>
                                 </div>
@@ -412,7 +399,10 @@
                           <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                             <div class="description-summary" style="margin-bottom:0px;">
                               <div class="summary__content ">
-                                <p>Shin Youngwoo punya kehidupan yang bernasib sial. Ia terpaksa bekerja kasar di sebuah tempat kontruksi untuk membayar biaya sekolah dan uang game yang ia gunakan. Bahkan ia juga kerja kasar di VR Game yang bernama Satisfy. Namun, hidupnya mulai berubah ketika karakternya sebagai &#8216;Grid&#8217; di game menemukan &#8216;Pagma&#8217;s Rare Book&#8217; hingga menjadi legendary class player.</p>
+                                <p>Yi Zaha. Crazy Demon yang tergila-gila pada seni bela diri.</p>
+                                <p>Saat dia melarikan diri setelah mencuri Heavenly Pearl dari Lord Kultus Demonic , dia jatuh dari tebing.</p>
+                                <p>Setelah berpikir bahwa semuanya sudah berakhir, dia membuka matanya untuk melihat bahwa dia telah kembali ke saat dia menjadi Servant …</p>
+                                <p>Dan dia dipukuli karena sesuatu yang tidak dia lakukan. Crazy Demon yang kembali ke awal hari-harinya sebagai Servant !</p>
                               </div>
                             </div>
                           </div>
@@ -441,78 +431,39 @@
                               <ul class="main version-chap no-volumn">
                                 <li class="wp-manga-chapter   has-thumb  ">
                                   <div class="chapter-thumbnail">
-                                    <img class="thumb" src="https://wuz.shinigami.id/wp-content/uploads/2022/04/13121906/OVG-180.jpg" />
+                                    <img class="thumb" src="https://wuz.shinigami.id/wp-content/uploads/2022/09/11231219/Mad-71.jpg" />
                                   </div>
                                   <div class="chapter-link">
-                                    <a href="chapter-180/index.html" style="width:100%;">
-                                      <p class="chapter-manhwa-title">Chapter 180</p>
+                                    <a href="chapter-71/index.html" style="width:100%;">
+                                      <p class="chapter-manhwa-title">Chapter 71</p>
                                       <span class="chapter-release-date">
-                                        <i>12 mins ago</i>
+                                        <i>2 days ago</i>
                                       </span>
                                     </a>
                                   </div>
                                 </li>
                                 <li class="wp-manga-chapter   has-thumb  ">
                                   <div class="chapter-thumbnail">
-                                    <img class="thumb" src="https://wuz.shinigami.id/wp-content/uploads/2022/04/06052755/OVG-179.webp" />
+                                    <img class="thumb" src="https://wuz.shinigami.id/wp-content/uploads/2022/09/05030444/Mad-70.jpg" />
                                   </div>
                                   <div class="chapter-link">
-                                    <a href="chapter-179/index.html" style="width:100%;">
-                                      <p class="chapter-manhwa-title">Chapter 179</p>
+                                    <a href="chapter-70/index.html" style="width:100%;">
+                                      <p class="chapter-manhwa-title">Chapter 70</p>
                                       <span class="chapter-release-date">
-                                        <i>May 6, 2023</i>
+                                        <i>May 5, 2023</i>
                                       </span>
                                     </a>
                                   </div>
                                 </li>
                                 <li class="wp-manga-chapter   has-thumb  ">
                                   <div class="chapter-thumbnail">
-                                    <img class="thumb" src="https://wuz.shinigami.id/wp-content/uploads/2022/04/29145629/OVG-178.jpg" />
+                                    <img class="thumb" src="https://wuz.shinigami.id/wp-content/uploads/2022/09/30042616/Mad-69.jpg" />
                                   </div>
                                   <div class="chapter-link">
-                                    <a href="chapter-178/index.html" style="width:100%;">
-                                      <p class="chapter-manhwa-title">Chapter 178</p>
+                                    <a href="chapter-69/index.html" style="width:100%;">
+                                      <p class="chapter-manhwa-title">Chapter 69</p>
                                       <span class="chapter-release-date">
-                                        <i>April 29, 2023</i>
-                                      </span>
-                                    </a>
-                                  </div>
-                                </li>
-                                <li class="wp-manga-chapter   has-thumb  ">
-                                  <div class="chapter-thumbnail">
-                                    <img class="thumb" src="https://wuz.shinigami.id/wp-content/uploads/2022/04/22020307/OVG-177.jpg" />
-                                  </div>
-                                  <div class="chapter-link">
-                                    <a href="chapter-177/index.html" style="width:100%;">
-                                      <p class="chapter-manhwa-title">Chapter 177</p>
-                                      <span class="chapter-release-date">
-                                        <i>April 22, 2023</i>
-                                      </span>
-                                    </a>
-                                  </div>
-                                </li>
-                                <li class="wp-manga-chapter   has-thumb  ">
-                                  <div class="chapter-thumbnail">
-                                    <img class="thumb" src="https://wuz.shinigami.id/wp-content/uploads/2022/04/15051002/OVG-176.webp" />
-                                  </div>
-                                  <div class="chapter-link">
-                                    <a href="chapter-176/index.html" style="width:100%;">
-                                      <p class="chapter-manhwa-title">Chapter 176</p>
-                                      <span class="chapter-release-date">
-                                        <i>April 15, 2023</i>
-                                      </span>
-                                    </a>
-                                  </div>
-                                </li>
-                                <li class="wp-manga-chapter   has-thumb  ">
-                                  <div class="chapter-thumbnail">
-                                    <img class="thumb" src="https://wuz.shinigami.id/wp-content/uploads/2022/04/08064343/OVG-175.webp" />
-                                  </div>
-                                  <div class="chapter-link">
-                                    <a href="chapter-175/index.html" style="width:100%;">
-                                      <p class="chapter-manhwa-title">Chapter 175</p>
-                                      <span class="chapter-release-date">
-                                        <i>April 8, 2023</i>
+                                        <i>April 30, 2023</i>
                                       </span>
                                     </a>
                                   </div>
@@ -535,68 +486,68 @@
                           <div class="col-12 col-sm-6 col-md-3">
                             <div class="related-reading-wrap related-style-1">
                               <div class="related-reading-img widget-thumbnail c-image-hover">
-                                <a title="I Obtained a Mythic Item" href="../i-obtained-a-mythic-item/index.html">
-                                  <img width="75" height="106" data-src="https://wuz.shinigami.id/wp-content/uploads/2022/06/20025811/I-Obtained-a-Mythic-Item-2-75x106.jpg" data-srcset="https://wuz.shinigami.id/wp-content/uploads/2022/06/20025811/I-Obtained-a-Mythic-Item-2-75x106.jpg 75w, https://wuz.shinigami.id/wp-content/uploads/2022/06/20025811/I-Obtained-a-Mythic-Item-2-210x300.jpg 210w, https://wuz.shinigami.id/wp-content/uploads/2022/06/20025811/I-Obtained-a-Mythic-Item-2.jpg 720w" data-sizes="(max-width: 75px) 100vw, 75px" class="img-responsive lazyload effect-fade" src="https://wuz.shinigami.id/wp-content/themes/madara/images/dflazy.jpg" style="padding-top:106px;" alt="I Obtained a Mythic Item" />
+                                <a title="The Greatest Estate Developer" href="../the-greatest-estate-developer/index.html">
+                                  <img width="75" height="106" data-src="https://wuz.shinigami.id/wp-content/uploads/2023/02/21115755/The-Greatest-Estate-Developer-75x106.jpg" data-srcset="https://wuz.shinigami.id/wp-content/uploads/2023/02/21115755/The-Greatest-Estate-Developer-75x106.jpg 75w, https://wuz.shinigami.id/wp-content/uploads/2023/02/21115755/The-Greatest-Estate-Developer-210x300.jpg 210w, https://wuz.shinigami.id/wp-content/uploads/2023/02/21115755/The-Greatest-Estate-Developer.jpg 720w" data-sizes="(max-width: 75px) 100vw, 75px" class="img-responsive lazyload effect-fade" src="../../wp-content/themes/madara/images/dflazy.jpg" style="padding-top:106px;" alt="The Greatest Estate Developer" />
                                 </a>
                               </div>
                               <div class="related-reading-content">
                                 <h5 class="widget-title">
-                                  <a href="../i-obtained-a-mythic-item/index.html" title="I Obtained a Mythic Item"> I Obtained a Mythic Item </a>
+                                  <a href="../the-greatest-estate-developer/index.html" title="The Greatest Estate Developer"> The Greatest Estate Developer </a>
                                 </h5>
                               </div>
                               <div class="post-on font-meta">
-                                <span> May 8, 2023 </span>
+                                <span> May 12, 2023 </span>
                               </div>
                             </div>
                           </div>
                           <div class="col-12 col-sm-6 col-md-3">
                             <div class="related-reading-wrap related-style-1">
                               <div class="related-reading-img widget-thumbnail c-image-hover">
-                                <a title="Worthless Regression" href="../worthless-regression/index.html">
-                                  <img width="75" height="106" data-src="https://wuz.shinigami.id/wp-content/uploads/2023/02/28004348/da2e321-e1648393143428-75x106.jpg" class="img-responsive lazyload effect-fade" src="../../assets/icon/dflazy.jpg" style="padding-top:106px;" alt="da2e321-e1648393143428" />
+                                <a title="Infinite Level Up in Murim" href="../infinite-level-up-in-murim/index.html">
+                                  <img width="75" height="106" data-src="https://wuz.shinigami.id/wp-content/uploads/2023/03/06092737/61609-e1614173643487-75x106.jpg" class="img-responsive lazyload effect-fade" src="../../wp-content/themes/madara/images/dflazy.jpg" style="padding-top:106px;" alt="61609-e1614173643487" />
                                 </a>
                               </div>
                               <div class="related-reading-content">
                                 <h5 class="widget-title">
-                                  <a href="../worthless-regression/index.html" title="Worthless Regression"> Worthless Regression </a>
+                                  <a href="../infinite-level-up-in-murim/index.html" title="Infinite Level Up in Murim"> Infinite Level Up in Murim </a>
                                 </h5>
                               </div>
                               <div class="post-on font-meta">
-                                <span> April 3, 2023 </span>
+                                <span> May 13, 2023 </span>
                               </div>
                             </div>
                           </div>
                           <div class="col-12 col-sm-6 col-md-3">
                             <div class="related-reading-wrap related-style-1">
                               <div class="related-reading-img widget-thumbnail c-image-hover">
-                                <a title="Volcanic Age" href="../volcanic-age/index.html">
-                                  <img width="75" height="106" data-src="https://wuz.shinigami.id/wp-content/uploads/2023/02/22032822/Volcanic-Age-75x106.png" class="img-responsive lazyload effect-fade" src="../../assets/icon/dflazy.jpg" style="padding-top:106px;" alt="Volcanic-Age" />
+                                <a title="Superhuman Battlefield" href="../superhuman-battlefield/index.html">
+                                  <img width="75" height="106" data-src="https://wuz.shinigami.id/wp-content/uploads/2022/06/20032520/Superhuman-Battlefield-1-75x106.jpg" data-srcset="https://wuz.shinigami.id/wp-content/uploads/2022/06/20032520/Superhuman-Battlefield-1-75x106.jpg 75w, https://wuz.shinigami.id/wp-content/uploads/2022/06/20032520/Superhuman-Battlefield-1-210x300.jpg 210w, https://wuz.shinigami.id/wp-content/uploads/2022/06/20032520/Superhuman-Battlefield-1.jpg 720w" data-sizes="(max-width: 75px) 100vw, 75px" class="img-responsive lazyload effect-fade" src="../../wp-content/themes/madara/images/dflazy.jpg" style="padding-top:106px;" alt="Superhuman Battlefield" />
                                 </a>
                               </div>
                               <div class="related-reading-content">
                                 <h5 class="widget-title">
-                                  <a href="../volcanic-age/index.html" title="Volcanic Age"> Volcanic Age </a>
-                                </h5>
-                              </div>
-                              <div class="post-on font-meta">
-                                <span> March 7, 2023 </span>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-12 col-sm-6 col-md-3">
-                            <div class="related-reading-wrap related-style-1">
-                              <div class="related-reading-img widget-thumbnail c-image-hover">
-                                <a title="Return of the SSS-Class Ranker" href="../return-of-the-sss-class-ranker/index.html">
-                                  <img width="75" height="106" data-src="https://wuz.shinigami.id/wp-content/uploads/2022/08/22195230/Return_of_the_sss_classs_ranker-3-75x106.jpg" data-srcset="https://wuz.shinigami.id/wp-content/uploads/2022/08/22195230/Return_of_the_sss_classs_ranker-3-75x106.jpg 75w, https://wuz.shinigami.id/wp-content/uploads/2022/08/22195230/Return_of_the_sss_classs_ranker-3-210x300.jpg 210w, https://wuz.shinigami.id/wp-content/uploads/2022/08/22195230/Return_of_the_sss_classs_ranker-3.jpg 720w" data-sizes="(max-width: 75px) 100vw, 75px" class="img-responsive lazyload effect-fade" src="../../assets/icon/dflazy.jpg" style="padding-top:106px;" alt="Return_of_the_sss_classs_ranker" />
-                                </a>
-                              </div>
-                              <div class="related-reading-content">
-                                <h5 class="widget-title">
-                                  <a href="../return-of-the-sss-class-ranker/index.html" title="Return of the SSS-Class Ranker"> Return of the SSS-Class Ranker </a>
+                                  <a href="../superhuman-battlefield/index.html" title="Superhuman Battlefield"> Superhuman Battlefield </a>
                                 </h5>
                               </div>
                               <div class="post-on font-meta">
                                 <span> May 9, 2023 </span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-sm-6 col-md-3">
+                            <div class="related-reading-wrap related-style-1">
+                              <div class="related-reading-img widget-thumbnail c-image-hover">
+                                <a title="Ranker&#8217;s Return (Remake)" href="../rankers-return-remake/index.html">
+                                  <img width="75" height="106" data-src="https://wuz.shinigami.id/wp-content/uploads/2022/04/20031807/Rankers-Return-75x106.jpg" data-srcset="https://wuz.shinigami.id/wp-content/uploads/2022/04/20031807/Rankers-Return-75x106.jpg 75w, https://wuz.shinigami.id/wp-content/uploads/2022/04/20031807/Rankers-Return-210x300.jpg 210w, https://wuz.shinigami.id/wp-content/uploads/2022/04/20031807/Rankers-Return.jpg 720w" data-sizes="(max-width: 75px) 100vw, 75px" class="img-responsive lazyload effect-fade" src="../../wp-content/themes/madara/images/dflazy.jpg" style="padding-top:106px;" alt="Ranker’s Return" />
+                                </a>
+                              </div>
+                              <div class="related-reading-content">
+                                <h5 class="widget-title">
+                                  <a href="../rankers-return-remake/index.html" title="Ranker&#8217;s Return (Remake)"> Ranker&#8217;s Return (Remake) </a>
+                                </h5>
+                              </div>
+                              <div class="post-on font-meta">
+                                <span> April 19, 2023 </span>
                               </div>
                             </div>
                           </div>
@@ -617,21 +568,21 @@
                   <div class="nav-footer">
                     <ul class="list-inline font-nav">
                       <li id="menu-item-1010" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1010">
-                        <a href="#">Kontak Kami</a>
+                        <a href="../../kontak-kami/index.html">Kontak Kami</a>
                       </li>
                       <li id="menu-item-1011" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1011">
-                        <a href="#">Terms and Conditions</a>
+                        <a href="../../terms-conditions/index.html">Terms and Conditions</a>
                       </li>
                       <li id="menu-item-1012" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-1012">
-                        <a rel="privacy-policy" href="#">Privacy Policy</a>
+                        <a rel="privacy-policy" href="../../privacy-policy/index.html">Privacy Policy</a>
                       </li>
                       <li id="menu-item-1013" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1013">
-                        <a href="#">Disclaimer</a>
+                        <a href="../../disclaimer/index.html">Disclaimer</a>
                       </li>
                     </ul>
                   </div>
                   <div class="copyright">
-                    <p>DyBaca</p>
+                    <p>DyBaca, 2023</p>
                   </div>
                 </div>
               </div>
@@ -776,14 +727,13 @@
     <div class="go-to-top active">
       <i class="icon ion-md-arrow-up"></i>
     </div>
-
-
     <script type='text/javascript' src='../../js/lazysizes.min.js' id='lazysizes-js'></script>
     <script type='text/javascript' src='../../js/bootstrap.min.js' id='bootstrap-js'></script>
     <script type='text/javascript' src='../../js/template.js' id='madara-js-js'></script>
     <script type='text/javascript' id='wp-manga-login-ajax-js-extra'>
       /* 
-																																								<![CDATA[ */
+																																								
+																																	<![CDATA[ */
       var wpMangaLogin = {
         "admin_ajax": "https:\/\/shinigami.id\/wp-admin\/admin-ajax.php",
         "home_url": "https:\/\/shinigami.id",

@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>The Return Of the Crazy Demon - Chapter 71 - Shinigami ID</title>
+    
+    <link rel='stylesheet' id='fontawesome-css' href='../../../assets/fontawesome/web-fonts-with-css/css/all.min52d5.css' type='text/css' media='all' />
+
+    <link rel='stylesheet' id='bootstrap-css' href='../../../css/bootstrap.min.css' type='text/css' media='all' />
+ 
+    <link rel='stylesheet' id='madara-css-child-css' href='../../../css/styleae.css' type='text/css' media='all' />
+
+    <link rel='stylesheet' id='ionicons-css' href='../../../assets/ionicons/css/ionicons.min.css' media='all' />
+
+    <link rel='stylesheet' id='loaders-css' href='../../../css/loaders.min.css' type='text/css' media='all' />
+
+   <link rel="stylesheet" href="../../../css/style.css">
+
+
+    <script type='text/javascript' src='../../../js/jquery.min.js' id='jquery-core-js'></script>
+
+    <link rel="icon" href="../../../assets/icon/ic-32x32.png" sizes="32x32" />
+    <link rel="icon" href="../../../assets/icon/ic-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="../../../assets/icon/ic-180x180.png" />
+    <meta name="msapplication-TileImage" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjjm4K7olnWiwO1lCysQvu4XSpHBmUx7runbsPnjCz2X9TNNijmDgmOCYlWVCVvgRytEwO0mlItlc10yGIcdyDJQGJtTe0CC5j_wvXEibz9NeRW93sw9Xl5MIvFP-48U2ua6r8YcAE8T73k2z-AZ5_knn-kZnz3PRZt2xhelDw5RSfwEVnKVsf8tbx3/s270/ic-270.png" />
+  </head>
+  <body class="wp-manga-template-default single single-wp-manga postid-5250 wp-embed-responsive wp-manga-page reading-manga click-to-scroll keyboard-navigate page header-style-1 text-ui-light manga-reading-list-style">
+    <div class="wrap">
+      <div class="body-wrap">
+        <header class="site-header">
+            <div class="c-header__top">
+              <ul class="search-main-menu">
+                <li>
+                  <form id="blog-post-search" class="ajax" action="#" method="get">
+                    <input type="text" placeholder="Masukan nama komik..." name="s" value="">
+                    <input type="submit" value="Cari">
+                    <div class="loader-inner line-scale">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                    </div>
+                  </form>
+                </li>
+              </ul>
+              <div class="main-navigation style-1 ">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="main-navigation_wrap">
+                        <div class="wrap_branding">
+                          <a class="logo" href="../../../index.html" title="DyBaca">
+                            <img class="img-responsive" src="../../../assets/icon/logo.png" alt="DyBaca" />
+                          </a>
+                        </div>
+                        <div class="main-menu">
+                          <ul class="nav navbar-nav main-navbar">
+                            <li id="menu-item-84" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-84">
+                              <a href="../../../index.html">Home</a>
+                            </li>
+                            <li id="menu-item-85" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-85">
+                              <a href="../../../semua-series/index.html">Komik</a>
+                            </li>
+                            <li id="menu-item-85" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-85">
+                              <a href="../../../construction.html">Jadwal</a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="search-navigation search-sidebar">
+                          <div id="manga-search-2" class="widget col-12 col-md-12   default  no-icon heading-style-1 manga-widget widget-manga-search">
+                            <div class="widget__inner manga-widget widget-manga-search__inner c-widget-wrap">
+                              <div class="widget-content">
+                                <div class="search-navigation__wrap">
+                                  <script>
+                                    jQuery(document).ready(function($) {
+                                          if ($('.c-header__top .manga-search-form').length !== 0 && $('.c-header__top .manga-search-form.search-form').length !== 0) {
+                                            $('form#blog-post-search').append(' < input type = "hidden"
+                                                name = "post_type"
+                                                value = "wp-manga" > ');
+                                                $('form#blog-post-search').addClass("manga-search-form"); $('form#blog-post-search input[name="s"]').addClass("manga-search-field"); $('form.manga-search-form.ajax input.manga-search-field').each(function() {
+                                                    var searchIcon = $(this).parent().children('.ion-ios-search-strong');
+                                                    var append = $(this).parent();
+                                                    $(this).autocomplete({
+                                                        appendTo: append,
+                                                        source: function(request, resp) {
+                                                          $.ajax({
+                                                            url: manga.ajax_url,
+                                                            type: 'POST',
+                                                            dataType: 'json',
+                                                            data: {
+                                                              action: 'wp-manga-search-manga',
+                                                              title: request.term,
+                                                            },
+                                                            success: function(data) {
+                                                              resp($.map(data.data, function(item) {
+                                                                if (true == data.success) {
+                                                                  return {
+                                                                    label: item.title,
+                                                                    value: item.title,
+                                                                    url: item.url,
+                                                                    type: item.type
+                                                                  }
+                                                                } else {
+                                                                  return {
+                                                                    label: item.message,
+                                                                    value: item.message,
+                                                                    type: item.type,
+                                                                    click: false
+                                                                  }
+                                                                }
+                                                              }))
+                                                            }
+                                                          });
+                                                        },
+                                                        select: function(e, ui) {
+                                                          if (ui.item.url) {
+                                                            window.location.href = ui.item.url;
+                                                          } else {
+                                                            if (ui.item.click) {
+                                                              return true;
+                                                            } else {
+                                                              return false;
+                                                            }
+                                                          }
+                                                        },
+                                                        open: function(e, ui) {
+                                                          var acData = $(this).data('uiAutocomplete');
+                                                          acData.menu.element.addClass('manga-autocomplete').find('li div').each(function() {
+                                                              var $self = $(this),
+                                                                keyword = $.trim(acData.term).split(' ').join('|');
+                                                              $self.html($self.text().replace(new RegExp("(" + keyword + ")", "gi"), ' < span class = "manga-text-highlight" > $1 < /span>' ) );
+                                                              });
+                                                            }
+                                                          }).autocomplete("instance")._renderItem = function(ul, item) {
+                                                          return $(" < li class = 'search-item' > " ).append(" < div class = 'manga-type-" + item.type + "' > " + item.label + " < /div>" ).appendTo(ul);
+                                                            };
+                                                          });
+                                                      }
+                                                    });
+                                  </script>
+                                  <ul class="main-menu-search nav-menu">
+                                    <li class="menu-search">
+                                      <a href="javascript:;" class="open-search-main-menu">
+                                        <i class="icon ion-ios-search"></i>
+                                        <i class="icon ion-android-close"></i>
+                                      </a>
+                                      <ul ul class="search-main-menu">
+                                        <li>
+                                          <form class="manga-search-form search-form ajax" action="index.html" method="get">
+                                            <input class="manga-search-field" type="text" placeholder="Masukan nama komik..." name="s" value="">
+                                            <input type="hidden" name="post_type" value="wp-manga">
+                                            <i class="icon ion-ios-search"></i>
+                                            <div class="loader-inner ball-clip-rotate-multiple">
+                                              <div></div>
+                                              <div></div>
+                                            </div>
+                                            <input type="submit" value="Cari">
+                                          </form>
+                                        </li>
+                                      </ul>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="c-togle__menu">
+                          <button type="button" class="menu_icon__open">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mobile-menu menu-collapse off-canvas">
+              <div class="close-nav">
+                <button class="menu_icon__close">
+                  <span></span>
+                  <span></span>
+                </button>
+              </div>
+              <div class="c-modal_item">
+                <span class="c-modal_sign-in">
+                  <a href="#" data-toggle="modal" data-target="#form-login" class="btn-active-modal">Sign in</a>
+                </span>
+                <span class="c-modal_sign-up">
+                  <a href="javascript:void(0)" data-toggle="modal" data-target="#form-sign-up" class="btn-active-modal">Sign up</a>
+                </span>
+              </div>
+              <nav class="off-menu">
+                <ul id="menu-main-menu-1" class="nav navbar-nav main-navbar">
+                  <li id="nav-menu-item-84" class="main-menu-item menu-item-depth-0 menu-item menu-item-type-custom menu-item-object-custom parent dropdown">
+                    <a href="../../../index.html" class="menu-link disabled main-menu-link">Home </a>
+                  </li>
+                  <li id="nav-menu-item-85" class="main-menu-item menu-item-depth-0 menu-item menu-item-type-custom menu-item-object-custom">
+                    <a href="../../../semua-series/index.html" class="menu-link disabled main-menu-link">Komik </a>
+                  </li>
+                  <li id="nav-menu-item-1036" class="sub-menu-item menu-item-depth-1 menu-item menu-item-type-post_type menu-item-object-page">
+                    <a href="../../../construction.html" class="menu-link  sub-menu-link">Jadwal </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class=" c-sub-header-nav with-border  hide-sticky-menu">
+              <div class="container-fluid">
+                <div class="c-sub-nav_wrap">
+                  <div class="sub-nav_content">
+                    <ul class="sub-nav_list list-inline second-menu">
+                      <li id="menu-item-1123" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1123">
+                      </li>
+                      <i class="mobile-icon icon ion-md-more"></i>
+                    </ul>
+                  </div>
+                  <div class="c-modal_item">
+                    <a href="javascript:void(0)" data-toggle="modal" data-target="#form-login" class="btn-active-modal no-underline">Sign in</a>
+                    <a href="javascript:void(0)" data-toggle="modal" data-target="#form-sign-up" class="btn-active-modal no-underline">Sign up</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </header>
+        <div class="site-content">
+          <div class="c-page-content style-1 reading-content-wrap chapter-type-manga" data-site-url="../../../index.html">
+            <div class="content-area">
+              <div class="container">
+                <div class="row">
+                  <div class="main-col col-md-12 col-sm-12 sidebar-hidden">
+                    <h1 id="chapter-heading">The Return Of the Crazy Demon - Chapter 71</h1>
+                    <div class="main-col-inner">
+                      <div class="c-blog-post">
+                        <div class="entry-header header" id="manga-reading-nav-head" data-position="header" data-chapter="chapter-71" data-id="5250">
+                          <div class="wp-manga-nav">
+                            <div class="entry-header_wrap">
+                              <div class="c-breadcrumb-wrapper">
+                                <div class="c-breadcrumb">
+                                  <ol class="breadcrumb">
+                                    <li>
+                                      <a href="../../../index.html"> Home </a>
+                                    </li>
+                                    <li>
+                                      <a href="../../../semua-series/index.html"> All Series </a>
+                                    </li>
+                                    <li>
+                                      <a href="../index.html"> The Return Of the Crazy Demon </a>
+                                    </li>
+                                    <li class="active"> Chapter 71 </li>
+                                  </ol>
+                                </div>
+                                <div class="action-icon">
+                                  <ul class="action_list_icon list-inline">
+                                    <li>
+                                      <script type="text/javascript">
+                                        var requireLogin2BookMark = true;
+                                      </script>
+                                      <a href="#" class="wp-manga-action-button" data-action="bookmark" data-post="5250" data-chapter="20125" data-page="1" title="Bookmark">
+                                        <i class="icon ion-ios-bookmark"></i>
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="#" class="wp-manga-action-button" data-action="toggle-contrast" title="Toggle Dark/Light Mode">
+                                        <i class="icon ion-md-contrast"></i>
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="select-view">
+                              <div class="chapters_selectbox_holder" data-manga="5250" data-chapter="chapter-71" data-vol="0" data-type="manga" data-style="list">
+                                <div class="c-selectpicker selectpicker_chapter" for="volume-id-0">
+                                  <label>
+                                    <select class="selectpicker single-chapter-select">
+                                      <option class="short " data-limit="40" value="chapter-71" data-redirect="../chapter-71/index.html" data-navigation="" selected='selected'> Chapter 71 </option>
+                                      <option class="short " data-limit="40" value="chapter-70" data-redirect="../chapter-70/index.html" data-navigation=""> Chapter 70 </option>
+                                      <option class="short " data-limit="40" value="chapter-69" data-redirect="../chapter-69/index.html" data-navigation=""> Chapter 69 </option>
+                                    </select>
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="select-pagination">
+                              <div class="nav-links">
+                                <i class="mobile-nav-btn icon ion-md-menu"></i>
+                                <div class="nav-previous ">
+                                  <a href="../chapter-70/index.html" class="btn prev_page"> Prev </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="entry-content">
+                          <div class="entry-content_wrap">
+                            <div class="read-container">
+                              <div class="reading-content" style="padding:0;">
+                                <input type="hidden" id="wp-manga-current-chap" data-id="20125" value="chapter-71" />
+                                <div class="page-break no-gaps">
+                                  <img id="image-0" data-src="			
+			http://shinigami.id/wp-content/uploads/WP-manga/data/manga_6310f02785ab0/e06e94b3180a6358248aa5efee0ec223/00.jpg" class="wp-manga-chapter-img img-responsive lazyload effect-fade">
+                                </div>
+                                <div class="page-break no-gaps">
+                                  <img id="image-1" data-src="			
+			http://shinigami.id/wp-content/uploads/WP-manga/data/manga_6310f02785ab0/e06e94b3180a6358248aa5efee0ec223/01.jpg" class="wp-manga-chapter-img img-responsive lazyload effect-fade">
+                                </div>
+                                <div class="page-break no-gaps">
+                                  <img id="image-2" data-src="			
+			http://shinigami.id/wp-content/uploads/WP-manga/data/manga_6310f02785ab0/e06e94b3180a6358248aa5efee0ec223/02.jpg" class="wp-manga-chapter-img img-responsive lazyload effect-fade">
+                                </div>
+                                <div class="page-break no-gaps">
+                                  <img id="image-3" data-src="			
+			http://shinigami.id/wp-content/uploads/WP-manga/data/manga_6310f02785ab0/e06e94b3180a6358248aa5efee0ec223/03.jpg" class="wp-manga-chapter-img img-responsive lazyload effect-fade">
+                                </div>
+                                <div class="page-break no-gaps">
+                                  <img id="image-4" data-src="			
+			http://shinigami.id/wp-content/uploads/WP-manga/data/manga_6310f02785ab0/e06e94b3180a6358248aa5efee0ec223/04.jpg" class="wp-manga-chapter-img img-responsive lazyload effect-fade">
+                                </div>
+                                <div class="page-break no-gaps">
+                                  <img id="image-5" data-src="			
+			http://shinigami.id/wp-content/uploads/WP-manga/data/manga_6310f02785ab0/e06e94b3180a6358248aa5efee0ec223/05.jpg" class="wp-manga-chapter-img img-responsive lazyload effect-fade">
+                                </div>
+                                <div class="page-break no-gaps">
+                                  <img id="image-6" data-src="			
+			http://shinigami.id/wp-content/uploads/WP-manga/data/manga_6310f02785ab0/e06e94b3180a6358248aa5efee0ec223/06.jpg" class="wp-manga-chapter-img img-responsive lazyload effect-fade">
+                                </div>
+                                <div class="page-break no-gaps">
+                                  <img id="image-7" data-src="			
+			http://shinigami.id/wp-content/uploads/WP-manga/data/manga_6310f02785ab0/e06e94b3180a6358248aa5efee0ec223/07.jpg" class="wp-manga-chapter-img img-responsive lazyload effect-fade">
+                                </div>
+                                <div class="page-break no-gaps">
+                                  <img id="image-8" data-src="			
+			http://shinigami.id/wp-content/uploads/WP-manga/data/manga_6310f02785ab0/e06e94b3180a6358248aa5efee0ec223/08.jpg" class="wp-manga-chapter-img img-responsive lazyload effect-fade">
+                                </div>
+                                <div class="page-break no-gaps">
+                                  <img id="image-9" data-src="			
+			http://shinigami.id/wp-content/uploads/WP-manga/data/manga_6310f02785ab0/e06e94b3180a6358248aa5efee0ec223/09.jpg" class="wp-manga-chapter-img img-responsive lazyload effect-fade">
+                                </div>
+                                <div class="page-break no-gaps">
+                                  <img id="image-10" data-src="			
+			http://shinigami.id/wp-content/uploads/WP-manga/data/manga_6310f02785ab0/e06e94b3180a6358248aa5efee0ec223/10.jpg" class="wp-manga-chapter-img img-responsive lazyload effect-fade">
+                                </div>
+                                <div class="page-break no-gaps">
+                                  <img id="image-11" data-src="			
+			http://shinigami.id/wp-content/uploads/WP-manga/data/manga_6310f02785ab0/e06e94b3180a6358248aa5efee0ec223/11.jpg" class="wp-manga-chapter-img img-responsive lazyload effect-fade">
+                                </div>
+                                <div class="page-break no-gaps">
+                                  <img id="image-12" data-src="			
+			http://shinigami.id/wp-content/uploads/WP-manga/data/manga_6310f02785ab0/e06e94b3180a6358248aa5efee0ec223/12.jpg" class="wp-manga-chapter-img img-responsive lazyload effect-fade">
+                                </div>
+                                <div class="page-break no-gaps">
+                                  <img id="image-13" data-src="			
+			http://shinigami.id/wp-content/uploads/WP-manga/data/manga_6310f02785ab0/e06e94b3180a6358248aa5efee0ec223/13.jpg" class="wp-manga-chapter-img img-responsive lazyload effect-fade">
+                                </div>
+                                <div class="page-break no-gaps">
+                                  <img id="image-14" data-src="			
+			http://shinigami.id/wp-content/uploads/WP-manga/data/manga_6310f02785ab0/e06e94b3180a6358248aa5efee0ec223/14.jpg" class="wp-manga-chapter-img img-responsive lazyload effect-fade">
+                                </div>
+                                <div class="page-break no-gaps">
+                                  <img id="image-15" data-src="			
+			http://shinigami.id/wp-content/uploads/WP-manga/data/manga_6310f02785ab0/e06e94b3180a6358248aa5efee0ec223/15.jpg" class="wp-manga-chapter-img img-responsive lazyload effect-fade">
+                                </div>
+                                <div class="page-break no-gaps">
+                                  <img id="image-16" data-src="			
+			http://shinigami.id/wp-content/uploads/WP-manga/data/manga_6310f02785ab0/e06e94b3180a6358248aa5efee0ec223/16.jpg" class="wp-manga-chapter-img img-responsive lazyload effect-fade">
+                                </div>
+                                <div class="page-break no-gaps">
+                                  <img id="image-17" data-src="			
+			http://shinigami.id/wp-content/uploads/WP-manga/data/manga_6310f02785ab0/e06e94b3180a6358248aa5efee0ec223/98.jpg" class="wp-manga-chapter-img img-responsive lazyload effect-fade">
+                                </div>
+                                <div class="page-break no-gaps">
+                                  <img id="image-18" data-src="			
+			http://shinigami.id/wp-content/uploads/WP-manga/data/manga_6310f02785ab0/e06e94b3180a6358248aa5efee0ec223/99.jpg" class="wp-manga-chapter-img img-responsive lazyload effect-fade">
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="entry-header footer" id="manga-reading-nav-foot" data-position="footer" data-id="5250">
+                          <div class="wp-manga-nav">
+                            <div class="entry-header_wrap">
+                              <div class="c-breadcrumb-wrapper">
+                                <div class="c-breadcrumb">
+                                  <ol class="breadcrumb">
+                                    <li>
+                                      <a href="../../../index.html"> Home </a>
+                                    </li>
+                                    <li>
+                                      <a href="../../../semua-series/index.html"> All Series </a>
+                                    </li>
+                                    <li>
+                                      <a href="../index.html"> The Return Of the Crazy Demon </a>
+                                    </li>
+                                    <li class="active"> Chapter 71 </li>
+                                  </ol>
+                                </div>
+                                <div class="action-icon">
+                                  <ul class="action_list_icon list-inline">
+                                    <li>
+                                      <script type="text/javascript">
+                                        var requireLogin2BookMark = true;
+                                      </script>
+                                      <a href="#" class="wp-manga-action-button" data-action="bookmark" data-post="5250" data-chapter="20125" data-page="1" title="Bookmark">
+                                        <i class="icon ion-ios-bookmark"></i>
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="#" class="wp-manga-action-button" data-action="toggle-contrast" title="Toggle Dark/Light Mode">
+                                        <i class="icon ion-md-contrast"></i>
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="select-view">
+                              <div class="chapters_selectbox_holder" data-manga="5250" data-chapter="chapter-71" data-vol="0" data-type="manga" data-style="list">
+                                <div class="c-selectpicker selectpicker_chapter" for="volume-id-0">
+                                  <label>
+                                    <select class="selectpicker single-chapter-select">
+                                      <option class="short " data-limit="40" value="chapter-71" data-redirect="../the-return-of-the-crazy-demon/chapter-71/index.html" data-navigation="" selected='selected'> Chapter 71 </option>
+                                      <option class="short " data-limit="40" value="chapter-70" data-redirect="../the-return-of-the-crazy-demon/chapter-70/index.html" data-navigation=""> Chapter 70 </option>
+                                      <option class="short " data-limit="40" value="chapter-69" data-redirect="../the-return-of-the-crazy-demon/chapter-69/index.html" data-navigation=""> Chapter 69 </option>
+                                    </select>
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="select-pagination">
+                              <div class="nav-links">
+                                <i class="mobile-nav-btn icon ion-md-menu"></i>
+                                <div class="nav-previous ">
+                                  <a href="../chapter-70/index.html" class="btn prev_page"> Prev </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="d-flex justify-content-center">
+                        <h1 style="font-weight: 200;">Selanjutnya</h1>
+                      </div>
+                      <section class="latest read-next" style="background-color:#171717">
+                        <div class="video-bg">
+                          <div class="container">
+                            <div class="row">
+                              <div class="col-12"></div>
+                              <div class="col-md-12  col-sm-12 col-xs-12" style="padding: 0px;">
+                                <div class="d-flex justify-content-center" style="flex-wrap:wrap;">
+                                  <div class="col-6 col-sm-6 col-md-6 col-xl-2">
+                                    <div class="card series novel" style="border-radius:10px;margin-bottom:5px; overflow:hidden;">
+                                      <div class="image-series">
+                                        <a href="../index.html">
+                                          <img src="https://wuz.shinigami.id/wp-content/uploads/2022/09/27182651/The-Return-Of-the-Crazy-Demon-1.jpg" style="border-radius:10px;" class="series-image">
+                                        </a>
+                                      </div>
+                                    </div>
+                                    <div class="series-content">
+                                      <a href="../index.html">
+                                        <h5>The Return Of the Crazy Demon</h5>
+                                      </a>
+                                    </div>
+                                  </div>
+                                  <div class="col-6 col-sm-6 col-md-6 col-xl-2">
+                                    <div class="card series novel" style="border-radius:10px;margin-bottom:5px; overflow:hidden;">
+                                      <div class="image-series">
+                                        <a href="../../demonic-emperor/index.html">
+                                          <img src="https://wuz.shinigami.id/wp-content/uploads/2022/06/20055510/dff66ff8776c027322a7c5dd79388840_waifu2x_art_noise1_tta_1.png" style="border-radius:10px;" class="series-image">
+                                        </a>
+                                        <span class="manga-title-badges custom manhua" style="align-self: center; position:absolute; right:0; margin-top:5px;"> Manhua </span>
+                                      </div>
+                                    </div>
+                                    <div class="series-content">
+                                      <a href="../../demonic-emperor/index.html">
+                                        <h5>Demonic Emperor</h5>
+                                      </a>
+                                    </div>
+                                  </div>
+                                  <div class="col-6 col-sm-6 col-md-6 col-xl-2">
+                                    <div class="card series novel" style="border-radius:10px;margin-bottom:5px; overflow:hidden;">
+                                      <div class="image-series">
+                                        <a href="../../how-to-live-as-an-illegal-healer/index.html">
+                                          <img src="https://wuz.shinigami.id/wp-content/uploads/2023/04/30020605/adawf5464.jpg" style="border-radius:10px;" class="series-image">
+                                        </a>
+                                        <span class="manga-title-badges custom manhwa" style="align-self: center; position:absolute; right:0; margin-top:5px;"> Manhwa </span>
+                                      </div>
+                                    </div>
+                                    <div class="series-content">
+                                      <a href="../../how-to-live-as-an-illegal-healer/index.html">
+                                        <h5>How To Live As An Illegal Healer</h5>
+                                      </a>
+                                    </div>
+                                  </div>
+                                  <div class="col-6 col-sm-6 col-md-6 col-xl-2">
+                                    <div class="card series novel" style="border-radius:10px;margin-bottom:5px; overflow:hidden;">
+                                      <div class="image-series">
+                                        <a href="../../i-used-to-be-the-boss/index.html">
+                                          <img src="https://wuz.shinigami.id/wp-content/uploads/2022/11/20030027/I_Used_To_Be_The_Boss.jpg" style="border-radius:10px;" class="series-image">
+                                        </a>
+                                        <span class="manga-title-badges custom manhwa" style="align-self: center; position:absolute; right:0; margin-top:5px;"> Manhwa </span>
+                                      </div>
+                                    </div>
+                                    <div class="series-content">
+                                      <a href="../../i-used-to-be-the-boss/index.html">
+                                        <h5>I Used To Be The Boss</h5>
+                                      </a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                      </section>
+                      <div class="row ">
+                        <div class="sidebar-hidden col-12 col-sm-12 col-md-12 col-lg-12">
+                          <div id="manga-discussion" class="c-blog__heading style-2 font-heading" style="text-align:center; font-family:bebas-neue; letter-spacing:3px;">
+                            <h4 style="font-size:30px;"> DISCUSSION </h4>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row c-row related-manga">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                          <div class="c-blog__heading style-2 font-heading">
+                            <h4>
+                              <i class="icon ion-ios-star"></i> YOU MAY ALSO LIKE
+                            </h4>
+                          </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-3">
+                          <div class="related-reading-wrap related-style-1">
+                            <div class="related-reading-img widget-thumbnail c-image-hover">
+                              <a title="The Greatest Estate Developer" href="../../the-greatest-estate-developer/index.html">
+                                <img width="75" height="106" data-src="https://wuz.shinigami.id/wp-content/uploads/2023/02/21115755/The-Greatest-Estate-Developer-75x106.jpg" data-srcset="https://wuz.shinigami.id/wp-content/uploads/2023/02/21115755/The-Greatest-Estate-Developer-75x106.jpg 75w, https://wuz.shinigami.id/wp-content/uploads/2023/02/21115755/The-Greatest-Estate-Developer-210x300.jpg 210w, https://wuz.shinigami.id/wp-content/uploads/2023/02/21115755/The-Greatest-Estate-Developer.jpg 720w" data-sizes="(max-width: 75px) 100vw, 75px" class="img-responsive lazyload effect-fade" src="../../../assets/icon/dflazy.jpg" style="padding-top:106px;" alt="The Greatest Estate Developer" />
+                              </a>
+                            </div>
+                            <div class="related-reading-content">
+                              <h5 class="widget-title">
+                                <a href="../../the-greatest-estate-developer/index.html" title="The Greatest Estate Developer"> The Greatest Estate Developer </a>
+                              </h5>
+                            </div>
+                            <div class="post-on font-meta">
+                              <span> May 12, 2023 </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-3">
+                          <div class="related-reading-wrap related-style-1">
+                            <div class="related-reading-img widget-thumbnail c-image-hover">
+                              <a title="Reincarnation Of Suicidal Battle God" href="../../reincarnation-of-suicidal-battle-god/index.html">
+                                <img width="75" height="106" data-src="https://wuz.shinigami.id/wp-content/uploads/2022/05/25203827/Reincarnation-Of-Suicidal-Battle-God2-75x106.jpg" data-srcset="https://wuz.shinigami.id/wp-content/uploads/2022/05/25203827/Reincarnation-Of-Suicidal-Battle-God2-75x106.jpg 75w, https://wuz.shinigami.id/wp-content/uploads/2022/05/25203827/Reincarnation-Of-Suicidal-Battle-God2-210x300.jpg 210w, https://wuz.shinigami.id/wp-content/uploads/2022/05/25203827/Reincarnation-Of-Suicidal-Battle-God2.jpg 720w" data-sizes="(max-width: 75px) 100vw, 75px" class="img-responsive lazyload effect-fade" src="../../../assets/icon/dflazy.jpg" style="padding-top:106px;" alt="Reincarnation Of Suicidal Battle God2" />
+                              </a>
+                            </div>
+                            <div class="related-reading-content">
+                              <h5 class="widget-title">
+                                <a href="../../reincarnation-of-suicidal-battle-god/index.html" title="Reincarnation Of Suicidal Battle God"> Reincarnation Of Suicidal Battle God </a>
+                              </h5>
+                            </div>
+                            <div class="post-on font-meta">
+                              <span> May 6, 2023 </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-3">
+                          <div class="related-reading-wrap related-style-1">
+                            <div class="related-reading-img widget-thumbnail c-image-hover">
+                              <a title="Mushoku Tensei Isekai Ittara Honki Dasu" href="../../mushoku-tensei-isekai-ittara-honki-dasu/index.html">
+                                <img width="75" height="106" data-src="https://wuz.shinigami.id/wp-content/uploads/2023/03/09043315/mt72352342342-e1657761638837-75x106.jpg" class="img-responsive lazyload effect-fade" src="../../../assets/icon/dflazy.jpg" style="padding-top:106px;" alt="mt72352342342-e1657761638837" />
+                              </a>
+                            </div>
+                            <div class="related-reading-content">
+                              <h5 class="widget-title">
+                                <a href="../../mushoku-tensei-isekai-ittara-honki-dasu/index.html" title="Mushoku Tensei Isekai Ittara Honki Dasu"> Mushoku Tensei Isekai Ittara Honki Dasu </a>
+                              </h5>
+                            </div>
+                            <div class="post-on font-meta">
+                              <span> April 24, 2023 </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-3">
+                          <div class="related-reading-wrap related-style-1">
+                            <div class="related-reading-img widget-thumbnail c-image-hover">
+                              <a title="Overbearing Tyrant" href="../../overbearing-tyrant/index.html">
+                                <img width="75" height="106" data-src="https://wuz.shinigami.id/wp-content/uploads/2022/05/20031419/Overbearing-Tyrant-1-75x106.jpg" data-srcset="https://wuz.shinigami.id/wp-content/uploads/2022/05/20031419/Overbearing-Tyrant-1-75x106.jpg 75w, https://wuz.shinigami.id/wp-content/uploads/2022/05/20031419/Overbearing-Tyrant-1-210x300.jpg 210w, https://wuz.shinigami.id/wp-content/uploads/2022/05/20031419/Overbearing-Tyrant-1.jpg 720w" data-sizes="(max-width: 75px) 100vw, 75px" class="img-responsive lazyload effect-fade" src="../../../assets/icon/dflazy.jpg" style="padding-top:106px;" alt="Overbearing Tyrant" />
+                              </a>
+                            </div>
+                            <div class="related-reading-content">
+                              <h5 class="widget-title">
+                                <a href="../../overbearing-tyrant/index.html" title="Overbearing Tyrant"> Overbearing Tyrant </a>
+                              </h5>
+                            </div>
+                            <div class="post-on font-meta">
+                              <span> January 8, 2023 </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="site-footer">
+          <div class="bottom-footer">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="nav-footer">
+                    <ul class="list-inline font-nav">
+                      <li id="menu-item-1010" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1010">
+                        <a href="../../../kontak-kami/index.html">Kontak Kami</a>
+                      </li>
+                      <li id="menu-item-1011" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1011">
+                        <a href="../../../terms-conditions/index.html">Terms and Conditions</a>
+                      </li>
+                      <li id="menu-item-1012" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-1012">
+                        <a rel="privacy-policy" href="../../../privacy-policy/index.html">Privacy Policy</a>
+                      </li>
+                      <li id="menu-item-1013" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1013">
+                        <a href="../../../disclaimer/index.html">Disclaimer</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="copyright">
+                    <p>DyBaca, 2023</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <div class="wp-manga-section">
+      <input type="hidden" name="bookmarking" value="0" />
+      <div class="modal fade" id="form-login" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div id="login" class="login">
+                <h3>
+                  <a href="index.html" title="DyBaca" tabindex="-1">Sign in</a>
+                </h3>
+                <p class="message login"></p>
+                <form name="loginform" id="loginform" method="post">
+                  <p>
+                    <label>Username or Email Address * <br>
+                      <input type="text" name="log" class="input user_login" value="" size="20">
+                    </label>
+                  </p>
+                  <p>
+                    <label>Password * <br>
+                      <input type="password" autocomplete="" name="pwd" class="input user_pass" value="" size="20">
+                    </label>
+                  </p>
+                  <p></p>
+                  <p class="forgetmenot">
+                    <label>
+                      <input name="rememberme" type="checkbox" id="rememberme" value="forever">Remember Me </label>
+                  </p>
+                  <p class="submit">
+                    <input type="submit" name="wp-submit" class="button button-primary button-large wp-submit" value="Log In">
+                    <input type="hidden" name="redirect_to" value="index.html">
+                    <input type="hidden" name="testcookie" value="1">
+                  </p>
+                </form>
+                <p class="nav">
+                  <a href="javascript:avoid(0)" class="to-reset">Lost your password?</a>
+                </p>
+                <p class="backtoblog">
+                  <a href="javascript:void(0)">&larr; Back to DyBaca</a>
+                </p>
+              </div>
+            </div>
+            <div class="modal-footer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="form-sign-up" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div id="sign-up" class="login">
+                <h3>
+                  <a href="index.html" title="DyBaca" tabindex="-1">Sign Up</a>
+                </h3>
+                <p class="message register">Register For This Site.</p>
+                <form name="registerform" id="registerform" novalidate="novalidate">
+                  <p>
+                    <label>Username * <br>
+                      <input type="text" name="user_sign-up" class="input user_login" value="" size="20">
+                    </label>
+                  </p>
+                  <p>
+                    <label>Email Address * <br>
+                      <input type="email" name="email_sign-up" class="input user_email" value="" size="20">
+                    </label>
+                  </p>
+                  <p>
+                    <label>Password * <br>
+                      <input type="password" name="pass_sign-up" autocomplete="" class="input user_pass" value="" size="25">
+                    </label>
+                  </p>
+                  <p></p>
+                  <input type="hidden" name="redirect_to" value="">
+                  <p class="submit">
+                    <input type="submit" name="wp-submit" class="button button-primary button-large wp-submit" value="Register">
+                  </p>
+                </form>
+                <p class="nav">
+                  <a href="javascript:void(0)" class="to-login">Log in</a> | <a href="javascript:void(0)" class="to-reset">Lost your password?</a>
+                </p>
+                <p class="backtoblog">
+                  <a href="javascript:void(0)">&larr; Back to DyBaca</a>
+                </p>
+              </div>
+            </div>
+            <div class="modal-footer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="form-reset" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div id="reset" class="login">
+                <h3>
+                  <a href="javascript:void(0)" class="to-reset">Lost your password?</a>
+                </h3>
+                <p class="message reset">Please enter your username or email address. You will receive a link to create a new password via email.</p>
+                <form name="resetform" id="resetform" method="post">
+                  <p>
+                    <label>Username or Email Address <br>
+                      <input type="text" name="user_reset" id="user_reset" class="input" value="" size="20">
+                    </label>
+                  </p>
+                  <p class="submit">
+                    <input type="submit" name="wp-submit" class="button button-primary button-large wp-submit" value="Get New Password">
+                    <input type="hidden" name="testcookie" value="1">
+                  </p>
+                </form>
+                <p>
+                  <a class="backtoblog" href="javascript:void(0)">&larr; Back to DyBaca</a>
+                </p>
+              </div>
+            </div>
+            <div class="modal-footer"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="go-to-top active">
+      <i class="icon ion-md-arrow-up"></i>
+    </div>
+    <script type='text/javascript' src='../../../js/lazysizes.min.js' id='lazysizes-js'></script>
+    <script type='text/javascript' src='../../../js/bootstrap.min.js' id='bootstrap-js'></script>
+  
+    <script type='text/javascript' src='../../../js/template.js' id='madara-js-js'></script>
+    
+    <script type='text/javascript' src='../../../js/loginae.js' id='wp-manga-login-ajax-js'></script>
+   
+    <script type='text/javascript' src='../../../js/script.js' id='wp-manga-js'></script>
+
+    <script type='text/javascript' id='wp-manga-login-ajax-js-extra'>
+      /* 
+																																																																				<![CDATA[ */
+      var wpMangaLogin = {
+        "admin_ajax": "https:\/\/shinigami.id\/wp-admin\/admin-ajax.php",
+        "home_url": "https:\/\/shinigami.id",
+        "messages": {
+          "please_enter_username": "Please enter username",
+          "please_enter_password": "Please enter password",
+          "invalid_username_or_password": "Invalid username or password",
+          "server_error": "Server Error!",
+          "username_or_email_cannot_be_empty": "Username or Email cannot be empty",
+          "please_fill_all_fields": "Please fill in all password fields.",
+          "password_cannot_less_than_12": "Password cannot has less than 12 characters",
+          "password_doesnot_match": "Password doesn&#039;t match. Please  try again.",
+          "username_cannot_empty": "Username cannot be empty",
+          "email_cannot_empty": "Email cannot be empty",
+          "password_cannot_empty": "Password cannot be empty"
+        }
+      };
+      /* ]]> */
+    </script>
+  </body>
+</html>
